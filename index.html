@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kang Ruli | Solusi Digital & Edukasi Web</title>
     
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4454451699877502" crossorigin="anonymous"></script>
+
     <meta name="description" content="Kang Ruli - Platform edukasi dan solusi digital modern untuk pengembangan website dan konten kreatif.">
     <meta name="keywords" content="Kang Ruli, Web Design, Tutorial Web, Solusi Digital, Indonesia">
     <meta name="author" content="Kang Ruli">
@@ -12,24 +14,36 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     
     <style>
-        /* CSS RESET & BASE */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        /* CSS DASAR (Sama seperti sebelumnya dengan sedikit polesan) */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; line-height: 1.6; color: #333; background-color: #f4f7f6; scroll-behavior: smooth; }
+
+        /* --- STYLING IKLAN (AD CONTAINER) --- */
+        .ad-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 10px;
+            text-align: center;
+            background: #fdfdfd;
+            border: 1px dashed #ddd; /* Memberi tanda area iklan agar rapi */
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-        body {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f4f7f6;
-            scroll-behavior: smooth;
-            overflow-x: hidden; /* Mencegah scroll horizontal tidak sengaja */
+        .ad-label {
+            font-size: 10px;
+            color: #aaa;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+            display: block;
         }
 
         /* --- NAVIGATION --- */
         nav {
-            background: rgba(255, 255, 255, 0.95); /* Sedikit transparan */
+            background: rgba(255, 255, 255, 0.95);
             padding: 15px 5%;
             display: flex;
             justify-content: space-between;
@@ -39,57 +53,22 @@
             top: 0;
             z-index: 1000;
             box-shadow: 0 2px 15px rgba(0,0,0,0.05);
-            backdrop-filter: blur(10px); /* Efek blur di belakang navigasi */
+            backdrop-filter: blur(10px);
         }
-        .logo img {
-            height: 50px;
-            width: auto;
-            transition: transform 0.3s ease; /* Tambahan transisi */
-        }
-        /* Efek hover pada logo */
-        .logo img:hover {
-            transform: scale(1.05);
-        }
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-        nav ul li {
-            margin-left: 25px;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: 0.3s;
-            position: relative;
-        }
-        nav ul li a:hover {
-            color: #ff8c00;
-        }
-        /* Garis bawah animasi pada menu */
-        nav ul li a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -5px;
-            left: 0;
-            background-color: #ff8c00;
-            transition: width 0.3s ease-in-out;
-        }
-        nav ul li a:hover::after {
-            width: 100%;
-        }
+        .logo img { height: 50px; transition: 0.3s; }
+        .logo img:hover { transform: scale(1.05); }
+        nav ul { display: flex; list-style: none; }
+        nav ul li { margin-left: 25px; }
+        nav ul li a { text-decoration: none; color: #333; font-weight: 500; transition: 0.3s; }
+        nav ul li a:hover { color: #ff8c00; }
 
         /* --- HERO SECTION --- */
         .hero {
             margin-top: 80px;
-            height: 85vh; /* Sedikit lebih tinggi */
-            /* Overlay sedikit dipergelap (0.5) agar teks lebih kontras dengan gambar ramai */
+            height: 75vh;
             background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://raw.githubusercontent.com/AdminPKBM/blog/main/banner-hero.jpg');
             background-size: cover;
-            background-position: center center; /* Posisi tengah agar aman di berbagai layar */
+            background-position: center;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -97,188 +76,30 @@
             color: #fff;
             padding: 0 20px;
         }
-        .hero-content {
-            max-width: 800px; /* Membatasi lebar teks agar fokus */
-            /* Animasi masuk */
-            animation: fadeUp 1s ease-out;
-        }
-        .hero-content h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-            font-weight: 700;
-            text-shadow: 2px 2px 15px rgba(0,0,0,0.7);
-            line-height: 1.2;
-        }
-        .hero-content p {
-             text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
-             font-size: 1.3rem;
-             margin-bottom: 35px;
-             font-weight: 300;
-        }
-        .btn-cta {
-            padding: 12px 35px;
-            background: #ff8c00;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(255,140,0,0.4);
-            display: inline-block;
-        }
-        .btn-cta:hover {
-            background: #e67e00;
-            transform: translateY(-5px); /* Naik sedikit lebih tinggi */
-            box-shadow: 0 10px 25px rgba(255,140,0,0.5);
-        }
+        .hero-content h1 { font-size: 3.5rem; font-weight: 700; text-shadow: 2px 2px 15px rgba(0,0,0,0.7); }
+        .btn-cta { padding: 12px 35px; background: #ff8c00; color: #fff; text-decoration: none; border-radius: 50px; font-weight: 600; transition: 0.3s; display: inline-block; box-shadow: 0 4px 15px rgba(255,140,0,0.4); }
+        .btn-cta:hover { transform: translateY(-5px); background: #e67e00; }
 
-        /* --- ABOUT / MASCOT SECTION --- */
-        .about {
-            padding: 100px 10%;
-            display: flex;
-            align-items: center;
-            gap: 70px; /* Jarak antar elemen diperlebar */
-            background: #fff;
-            overflow: hidden; /* Untuk mengatasi jika animasi keluar area */
-        }
-        .about-img {
-            flex: 1;
-            text-align: center;
-            /* Menambahkan animasi floating pada container gambar */
-            animation: floating 3s ease-in-out infinite;
-        }
-        .about-img img {
-            max-width: 300px; /* Gambar sedikit diperbesar */
-            border-radius: 50%;
-            /* MENGHAPUS BORDER TEBAL yang kaku */
-            /* border: 8px solid #f0f0f0;  <- Dihapus */
-            /* Menambahkan shadow glow berwarna oranye/hangat agar lebih hidup */
-            box-shadow: 0 20px 40px rgba(255, 140, 0, 0.2), 0 0 20px rgba(255, 140, 0, 0.1) inset;
-        }
-        .about-text {
-            flex: 1.5;
-        }
-        .about-text h2 {
-            font-size: 2.5rem;
-            margin-bottom: 25px;
-            color: #0056b3;
-            position: relative;
-        }
-        .about-text h2::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: -10px;
-            width: 60px;
-            height: 4px;
-            background: #ff8c00;
-            border-radius: 2px;
-        }
+        /* --- ABOUT & FEATURES --- */
+        .about { padding: 80px 10%; display: flex; align-items: center; gap: 60px; background: #fff; }
+        .about-img img { max-width: 280px; border-radius: 50%; box-shadow: 0 20px 40px rgba(255,140,0,0.2); animation: floating 3s ease-in-out infinite; }
+        .about-text h2 { font-size: 2.5rem; color: #0056b3; margin-bottom: 20px; }
 
-        /* --- FEATURES SECTION --- */
-        .features {
-            padding: 100px 10%;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 40px;
-            background: #f9fbfd;
-        }
-        .card {
-            background: #fff;
-            padding: 40px 30px;
-            border-radius: 20px;
-            text-align: left;
-            transition: all 0.4s ease;
-            /* Mengubah border bawah menjadi shadow yang lebih modern */
-            border-bottom: none;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            position: relative;
-            overflow: hidden;
-        }
-        /* Garis accent di atas kartu */
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: #ddd;
-            transition: background 0.4s ease;
-        }
-        .card:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-        }
-        .card:hover::before {
-            background: #ff8c00; /* Garis atas berubah warna saat hover */
-        }
-        .card h3 {
-            margin-top: 15px;
-            margin-bottom: 15px;
-            font-size: 1.4rem;
-            color: #222;
-        }
+        .features { padding: 80px 10%; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; background: #f9fbfd; }
+        .card { background: #fff; padding: 40px 30px; border-radius: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: 0.4s; }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
 
         /* --- FOOTER --- */
-        footer {
-            background: #111; /* Warna sedikit lebih gelap */
-            color: #bbb;
-            padding: 70px 10% 30px;
-            text-align: center;
-        }
-        .footer-logo img {
-            height: 80px;
-            margin-bottom: 25px;
-            filter: brightness(0) invert(1); 
-            opacity: 0.8;
-            transition: opacity 0.3s;
-        }
-        .footer-logo img:hover {
-            opacity: 1;
-        }
-        footer p {
-            max-width: 600px;
-            margin: 0 auto 30px;
-            font-weight: 300;
-        }
-        .copyright {
-            margin-top: 40px;
-            font-size: 0.9rem;
-            border-top: 1px solid #2a2a2a;
-            padding-top: 25px;
-            color: #777;
-        }
+        footer { background: #111; color: #bbb; padding: 60px 10% 20px; text-align: center; }
+        .footer-logo img { height: 70px; filter: brightness(0) invert(1); opacity: 0.8; margin-bottom: 20px; }
 
-        /* --- ANIMATIONS --- */
-        /* Animasi Melayang untuk Maskot */
-        @keyframes floating {
-            0% { transform: translate(0,  0px); }
-            50% { transform: translate(0, 15px); }
-            100% { transform: translate(0, -0px); }
-        }
-        /* Animasi Muncul untuk Teks Hero */
-        @keyframes fadeUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+        @keyframes floating { 0% { transform: translateY(0); } 50% { transform: translateY(15px); } 100% { transform: translateY(0); } }
 
-        /* --- RESPONSIVE DESIGN --- */
         @media (max-width: 768px) {
-            nav { padding: 15px 20px; }
             nav ul { display: none; }
             .hero-content h1 { font-size: 2.2rem; }
-            .about { flex-direction: column; text-align: center; padding: 60px 5%; gap: 40px;}
-            .about-text h2::after { left: 50%; transform: translateX(-50%); }
-            .features { padding: 60px 5%; }
-            .card { text-align: center; }
-            .about-img img { max-width: 250px; } /* Perkecil sedikit di mobile */
+            .about { flex-direction: column; text-align: center; }
+            .ad-container { margin: 10px 0; }
         }
     </style>
 </head>
@@ -299,10 +120,23 @@
     <section class="hero">
         <div class="hero-content">
             <h1>Selamat Datang di KangRuli.web.id</h1>
-            <p>Solusi Digital Kreatif & Inovatif untuk Masa Depan Anda.</p>
+            <p style="margin-bottom: 30px;">Solusi Digital Kreatif & Inovatif untuk Masa Depan Anda.</p>
             <a href="#tentang" class="btn-cta">Mulai Menjelajah</a>
         </div>
     </section>
+
+    <div class="ad-container">
+        <div>
+            <span class="ad-label">Rekomendasi</span>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-4454451699877502"
+                 data-ad-slot="AUTO_DI_SINI"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+    </div>
 
     <section class="about" id="tentang">
         <div class="about-img">
@@ -310,33 +144,49 @@
         </div>
         <div class="about-text">
             <h2>Halo, Saya Kang Ruli!</h2>
-            <p>Kami hadir sebagai mitra terpercaya untuk membantu Anda membangun kehadiran digital yang profesional dan berkelas. Dengan memadukan teknologi web modern dan estetika desain terkini, kami memastikan website Anda tidak hanya terlihat menarik secara visual, tetapi juga memiliki performa tinggi, cepat diakses, dan dioptimalkan untuk mesin pencari (SEO Friendly).</p>
+            <p>Membantu Anda membangun kehadiran digital yang profesional dengan teknologi web modern dan SEO yang kuat.</p>
         </div>
     </section>
+
+    <div class="ad-container" style="background: transparent; border: none;">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-format="fluid"
+             data-ad-layout-key="-fb+5w+4e-db+86"
+             data-ad-client="ca-pub-4454451699877502"
+             data-ad-slot="AUTO_DI_SINI"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
 
     <section class="features" id="layanan">
         <div class="card">
-            <h3>Web Design Premium</h3>
-            <p>Kami menciptakan tampilan website yang elegan, modern, dan sepenuhnya responsif, memastikan pengalaman pengguna yang luar biasa di smartphone, tablet, maupun desktop.</p>
+            <h3>Web Design</h3>
+            <p>Tampilan elegan dan responsif untuk semua perangkat.</p>
         </div>
         <div class="card">
-            <h3>SEO Optimization (On-Page)</h3>
-            <p>Struktur website dibangun dengan fondasi SEO yang kuat agar bisnis atau profil Anda lebih mudah ditemukan oleh audiens target melalui Google dan mesin pencari lainnya.</p>
+            <h3>SEO Expert</h3>
+            <p>Optimasi agar website Anda berada di halaman pertama Google.</p>
         </div>
         <div class="card">
-            <h3>Modern Web Technology</h3>
-            <p>Menggunakan standar teknologi web terbaru (HTML5, CSS3) untuk menjamin kecepatan, keamanan, dan kompatibilitas jangka panjang website Anda.</p>
+            <h3>Branding</h3>
+            <p>Membangun identitas digital yang unik dan terpercaya.</p>
         </div>
     </section>
 
+    <div class="ad-container">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-4454451699877502"
+             data-ad-slot="AUTO_DI_SINI"
+             data-ad-format="autorelaxed"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
     <footer>
         <div class="footer-logo">
-            <img src="https://raw.githubusercontent.com/AdminPKBM/blog/main/logo-lengkap.png" alt="Kang Ruli Logo White">
+            <img src="https://raw.githubusercontent.com/AdminPKBM/blog/main/logo-lengkap.png" alt="Kang Ruli Logo">
         </div>
-        <p>Platform edukasi dan solusi digital terdepan. Ikuti kami untuk mendapatkan wawasan terbaru seputar teknologi web dan pengembangan digital.</p>
-        <div class="copyright">
-            &copy; 2025 KangRuli.web.id - Dibuat dengan <span style="color: #ff8c00;">❤</span> untuk Web Indonesia.
-        </div>
+        <p>&copy; 2025 KangRuli.web.id - Solusi Digital Terpercaya.</p>
     </footer>
 
 </body>
