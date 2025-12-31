@@ -3,196 +3,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kang Ruli | Solusi Digital, SEO & Edukasi Web Modern</title>
+    <title>Kang Ruli | Solusi Digital & Portal Edukasi Web Terlengkap</title>
     
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4454451699877502" crossorigin="anonymous"></script>
 
-    <meta name="description" content="Kang Ruli adalah platform edukasi digital modern. Temukan tutorial web design, strategi SEO 2025, dan solusi pengembangan bisnis digital terlengkap.">
-    <meta name="keywords" content="Kang Ruli, Tutorial SEO, Web Design Indonesia, Belajar AdSense, Digital Marketing, Coding Pemula">
-    <meta name="author" content="Kang Ruli">
+    <meta name="description" content="Pusat tutorial website, strategi SEO 2025, dan solusi digital modern. Temukan ratusan panduan pilar untuk meningkatkan trafik dan pendapatan AdSense Anda.">
+    <meta name="keywords" content="Kang Ruli, Tutorial Blog, SEO 2025, AdSense High CPC, Web Development Indonesia, Belajar Coding">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     
     <style>
-        :root {
-            --primary-color: #ff8c00;
-            --secondary-color: #0056b3;
-            --dark-bg: #111;
-            --light-bg: #f4f7f6;
-            --text-main: #333;
-            --shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-
+        :root { --primary: #ff8c00; --secondary: #0056b3; --dark: #1a1a1a; --gray: #f4f7f6; --white: #ffffff; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Poppins', sans-serif; line-height: 1.6; color: var(--text-main); background-color: var(--light-bg); scroll-behavior: smooth; }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--gray); color: #333; line-height: 1.6; }
 
-        /* --- IKLAN --- */
-        .ad-container { width: 100%; max-width: 1100px; margin: 25px auto; padding: 10px; text-align: center; background: #fff; border: 1px solid #eee; border-radius: 8px; }
-        .ad-label { font-size: 10px; color: #bbb; text-transform: uppercase; margin-bottom: 8px; display: block; }
-
-        /* --- NAVIGATION --- */
-        nav { background: rgba(255, 255, 255, 0.98); padding: 15px 8%; display: flex; justify-content: space-between; align-items: center; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 2px 15px rgba(0,0,0,0.05); backdrop-filter: blur(10px); }
-        .logo img { height: 45px; }
+        /* HEADER & NAV */
+        nav { background: #fff; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .logo { font-weight: 700; font-size: 1.5rem; color: var(--primary); text-decoration: none; letter-spacing: 1px; }
         nav ul { display: flex; list-style: none; }
-        nav ul li { margin-left: 25px; }
-        nav ul li a { text-decoration: none; color: var(--text-main); font-weight: 500; transition: 0.3s; font-size: 0.95rem; }
-        nav ul li a:hover { color: var(--primary-color); }
+        nav ul li { margin-left: 20px; }
+        nav ul li a { text-decoration: none; color: #444; font-weight: 500; font-size: 0.9rem; transition: 0.3s; }
+        nav ul li a:hover { color: var(--primary); }
 
-        /* --- HERO --- */
-        .hero { margin-top: 75px; height: 65vh; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://raw.githubusercontent.com/AdminPKBM/blog/main/banner-hero.jpg') center/cover; display: flex; align-items: center; justify-content: center; text-align: center; color: #fff; padding: 0 20px; }
-        .hero-content h1 { font-size: 3rem; margin-bottom: 15px; }
-        .btn-cta { padding: 14px 40px; background: var(--primary-color); color: #fff; text-decoration: none; border-radius: 50px; font-weight: 600; transition: 0.3s; box-shadow: 0 5px 20px rgba(255,140,0,0.4); }
-        .btn-cta:hover { transform: translateY(-3px); background: #e67e00; }
+        /* HERO SECTION */
+        .hero { background: linear-gradient(135deg, var(--dark) 0%, #333 100%); color: white; padding: 140px 5% 80px; text-align: center; }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 15px; }
+        .hero p { font-size: 1.1rem; opacity: 0.9; max-width: 700px; margin: 0 auto 30px; }
+        .search-box { max-width: 500px; margin: 0 auto; display: flex; }
+        .search-box input { flex: 1; padding: 12px 20px; border-radius: 25px 0 0 25px; border: none; outline: none; }
+        .search-box button { padding: 12px 25px; border-radius: 0 25px 25px 0; border: none; background: var(--primary); color: white; font-weight: 600; cursor: pointer; }
 
-        /* --- BLOG / ARTIKEL PILAR SECTION --- */
-        .main-container { max-width: 1200px; margin: 0 auto; padding: 60px 5%; display: grid; grid-template-columns: 2fr 1fr; gap: 40px; }
-        
-        .section-title { font-size: 2rem; margin-bottom: 30px; border-left: 5px solid var(--primary-color); padding-left: 15px; }
+        /* MAIN CONTENT */
+        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: 1fr 300px; gap: 30px; }
+        .section-header { margin-bottom: 25px; border-bottom: 3px solid var(--primary); display: inline-block; padding-bottom: 5px; font-size: 1.5rem; }
 
-        .article-grid { display: grid; grid-template-columns: 1fr; gap: 25px; }
-        .post-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow); transition: 0.3s; display: flex; flex-direction: column; }
-        .post-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
-        .post-content { padding: 25px; }
-        .post-category { color: var(--primary-color); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; }
-        .post-content h3 { margin: 10px 0; font-size: 1.4rem; line-height: 1.3; }
-        .post-content p { color: #666; font-size: 0.9rem; margin-bottom: 15px; }
-        .read-more { color: var(--secondary-color); text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+        /* ARTICLE GRID */
+        .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+        .article-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: 0.3s; border: 1px solid #eee; }
+        .article-card:hover { transform: translateY(-8px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .card-img { height: 180px; background: #eee; position: relative; overflow: hidden; }
+        .card-img::after { content: 'KANG RULI'; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #ccc; font-weight: 700; opacity: 0.5; }
+        .card-body { padding: 20px; }
+        .card-category { font-size: 10px; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; }
+        .card-body h3 { font-size: 1.1rem; margin: 10px 0; line-height: 1.4; color: #222; }
+        .card-body p { font-size: 0.85rem; color: #666; margin-bottom: 15px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+        .read-btn { font-size: 0.85rem; font-weight: 600; color: var(--secondary); text-decoration: none; display: flex; align-items: center; }
+        .read-btn:hover { text-decoration: underline; }
 
-        /* --- SIDEBAR --- */
-        .sidebar { position: sticky; top: 100px; height: fit-content; }
-        .sidebar-widget { background: #fff; padding: 25px; border-radius: 12px; box-shadow: var(--shadow); margin-bottom: 30px; }
-        .sidebar-widget h4 { margin-bottom: 15px; border-bottom: 2px solid #f4f7f6; padding-bottom: 10px; }
-        .sidebar-list { list-style: none; }
-        .sidebar-list li { margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #eee; }
-        .sidebar-list li a { text-decoration: none; color: #444; font-size: 0.9rem; transition: 0.2s; }
-        .sidebar-list li a:hover { color: var(--primary-color); }
+        /* SIDEBAR */
+        aside { height: fit-content; position: sticky; top: 100px; }
+        .widget { background: #fff; padding: 20px; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        .widget h4 { margin-bottom: 15px; border-left: 4px solid var(--primary); padding-left: 10px; font-size: 1rem; }
+        .widget ul { list-style: none; }
+        .widget ul li { margin-bottom: 12px; border-bottom: 1px solid #f0f0f0; padding-bottom: 8px; }
+        .widget ul li a { text-decoration: none; color: #555; font-size: 0.85rem; transition: 0.2s; }
+        .widget ul li a:hover { color: var(--primary); padding-left: 5px; }
 
-        /* --- FOOTER --- */
-        footer { background: var(--dark-bg); color: #888; padding: 60px 8% 20px; text-align: center; }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; text-align: left; margin-bottom: 40px; }
-        .footer-logo img { height: 50px; filter: brightness(0) invert(1); margin-bottom: 20px; }
-        
-        @media (max-width: 992px) {
-            .main-container { grid-template-columns: 1fr; }
-            .hero-content h1 { font-size: 2.2rem; }
+        /* FOOTER */
+        footer { background: var(--dark); color: #fff; padding: 60px 5% 20px; text-align: center; margin-top: 50px; }
+        .footer-grid { max-width: 1200px; margin: 0 auto 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; text-align: left; }
+        .footer-about h3 { color: var(--primary); margin-bottom: 15px; }
+        .footer-links h4 { margin-bottom: 15px; position: relative; }
+        .footer-links ul { list-style: none; }
+        .footer-links ul li { margin-bottom: 8px; }
+        .footer-links ul li a { color: #ccc; text-decoration: none; font-size: 0.9rem; }
+        .copyright { border-top: 1px solid #333; padding-top: 20px; font-size: 0.8rem; opacity: 0.7; }
+
+        @media (max-width: 900px) { 
+            .container { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 1.8rem; }
         }
     </style>
 </head>
 <body>
 
     <nav>
-        <div class="logo">
-            <img src="https://raw.githubusercontent.com/AdminPKBM/blog/main/logo-lengkap.png" alt="Kang Ruli Logo">
-        </div>
+        <a href="#" class="logo">KANG RULI</a>
         <ul>
             <li><a href="#">Beranda</a></li>
-            <li><a href="#blog">Artikel</a></li>
-            <li><a href="#">Tutorial</a></li>
-            <li><a href="#">Layanan SEO</a></li>
+            <li><a href="#">Programming</a></li>
+            <li><a href="#">SEO</a></li>
+            <li><a href="#">AdSense</a></li>
+            <li><a href="#">Bisnis</a></li>
         </ul>
     </nav>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Expertise Digital untuk Bisnis Anda</h1>
-            <p style="margin-bottom: 25px; font-size: 1.1rem; opacity: 0.9;">Belajar Web Development, SEO Modern, dan Strategi AdSense dari Ahlinya.</p>
-            <a href="#blog" class="btn-cta">Baca Artikel Pilar</a>
+    <header class="hero">
+        <h1>Kuasai Dunia Digital Bersama Kang Ruli</h1>
+        <p>Tutorial pemrograman, strategi SEO modern, dan panduan optimasi AdSense terlengkap untuk membangun aset digital masa depan Anda.</p>
+        <div class="search-box">
+            <input type="text" placeholder="Cari tutorial apa hari ini?">
+            <button>Cari</button>
         </div>
-    </section>
+    </header>
 
-    <div class="ad-container">
-        <span class="ad-label">Rekomendasi Sponsor</span>
-        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4454451699877502" data-ad-slot="AUTO" data-ad-format="auto" data-full-width-responsive="true"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-    </div>
-
-    <main class="main-container" id="blog">
-        <div class="content-area">
-            <h2 class="section-title">Artikel Pilar Terbaru</h2>
+    <div class="container">
+        <main>
+            <h2 class="section-header">Artikel Pilar Unggulan</h2>
             
-            <div class="article-grid">
-                <article class="post-card">
-                    <div class="post-content">
-                        <span class="post-category">Web Development</span>
-                        <h3>Cara Optimasi Core Web Vitals 2025: Skor 100 di Google PageSpeed</h3>
-                        <p>Panduan teknis mendalam tentang cara mempercepat loading website menggunakan kompresi gambar generasi terbaru dan minifikasi database.</p>
-                        <a href="#" class="read-more">Baca Selengkapnya →</a>
-                    </div>
-                </article>
+            <div class="blog-grid" id="article-container">
+                <script>
+                    const articles = [
+                        { cat: "SEO", title: "Panduan Lengkap SEO 2025: Dominasi Google Tanpa Backlink", desc: "Temukan rahasia optimasi konten menggunakan teknik Semantic Search, E-E-A-T, dan User Intent untuk tahun 2025." },
+                        { cat: "Web Dev", title: "Optimasi Core Web Vitals: Skor 100 di PageSpeed Insights", desc: "Langkah teknis memperbaiki LCP, FID, dan CLS menggunakan Next.js dan teknik image optimization terbaru." },
+                        { cat: "AdSense", title: "10 Niche Blog Indonesia dengan CPC Tertinggi (Update 2025)", desc: "Daftar kategori blog yang membayar mahal. Dari Teknologi Finansial hingga Asuransi Properti." },
+                        { cat: "Artificial Intelligence", title: "Integrasi ChatGPT & Claude API ke Website WordPress", desc: "Cara otomatisasi konten dan chatbot pintar untuk meningkatkan interaksi pengunjung blog Anda." },
+                        { cat: "Programming", title: "Mastering React.js & TypeScript untuk Fullstack Developer", desc: "Panduan berkarir sebagai developer handal dengan stack teknologi paling populer saat ini." },
+                        { cat: "Business", title: "Strategi LinkedIn Marketing untuk Freelancer High-Ticket", desc: "Membangun personal branding yang menjual untuk mendapatkan proyek ribuan dollar dari luar negeri." },
+                        { cat: "Security", title: "Hardening WordPress: Amankan Situs dari Brute Force & Malware", desc: "Langkah-langkah wajib mengamankan database dan file sistem WordPress agar tidak mudah ditembus hacker." },
+                        { cat: "Digital Marketing", title: "Membangun Email List dengan Konversi Tinggi", desc: "Mengapa email marketing masih menjadi raja di tahun 2025 dan bagaimana cara mengelolanya." },
+                        { cat: "Mobile Apps", title: "Belajar Flutter: Membuat Aplikasi Android & iOS Sekaligus", desc: "Panduan praktis membangun aplikasi mobile modern dengan satu basis kode (single codebase)." },
+                        { cat: "AdSense", title: "Cara Mengatasi 'Ad Serving Limit' di Google AdSense", desc: "Tips ampuh menghilangkan pembatasan iklan akibat trafik tidak valid atau masalah kebijakan lainnya." }
+                    ];
 
-                <div class="ad-container" style="border:none; background:transparent;">
-                    <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-fb+5w+4e-db+86" data-ad-client="ca-pub-4454451699877502" data-ad-slot="AUTO"></ins>
-                    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-                </div>
-
-                <article class="post-card">
-                    <div class="post-content">
-                        <span class="post-category">SEO Strategy</span>
-                        <h3>Strategi SEO Tanpa Backlink: Mendominasi Halaman 1 Google</h3>
-                        <p>Siapa bilang butuh ribuan backlink? Pelajari teknik Semantic SEO dan optimasi Intent User untuk menaikkan peringkat secara organik.</p>
-                        <a href="#" class="read-more">Baca Selengkapnya →</a>
-                    </div>
-                </article>
-
-                <article class="post-card">
-                    <div class="post-content">
-                        <span class="post-category">AdSense Tips</span>
-                        <h3>7 Niche Blog dengan CPC Tertinggi di Indonesia Tahun 2025</h3>
-                        <p>Ingin pendapatan AdSense melonjak? Fokuslah pada topik-topik ini yang memiliki nilai klik iklan paling mahal dari pengiklan besar.</p>
-                        <a href="#" class="read-more">Baca Selengkapnya →</a>
-                    </div>
-                </article>
+                    // Generate 24 artikel (sebagai contoh pilar)
+                    let htmlContent = "";
+                    for (let i = 0; i < 24; i++) {
+                        const art = articles[i % articles.length];
+                        htmlContent += `
+                            <article class="article-card">
+                                <div class="card-img"></div>
+                                <div class="card-body">
+                                    <span class="card-category">${art.cat}</span>
+                                    <h3>${art.title}</h3>
+                                    <p>${art.desc}</p>
+                                    <a href="#" class="read-btn">Baca Selengkapnya →</a>
+                                </div>
+                            </article>
+                        `;
+                        // Sisipkan Iklan In-Feed setiap 4 artikel
+                        if ((i + 1) % 4 === 0) {
+                            htmlContent += `
+                                <div class="article-card" style="background:#fdfdfd; display:flex; align-items:center; justify-content:center; border: 2px dashed #ddd;">
+                                    <div style="text-align:center">
+                                        <span style="font-size:10px; color:#999; display:block">ADVERTISEMENT</span>
+                                        <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-fb+5w+4e-db+86" data-ad-client="ca-pub-4454451699877502" data-ad-slot="AUTO"></ins>
+                                    </div>
+                                </div>
+                            `;
+                        }
+                    }
+                    document.getElementById('article-container').innerHTML = htmlContent;
+                </script>
             </div>
-        </div>
+        </main>
 
-        <aside class="sidebar">
-            <div class="sidebar-widget">
-                <h4>Topik Terpopuler</h4>
-                <ul class="sidebar-list">
-                    <li><a href="#">Panduan Lengkap Belajar HTML5 & CSS3</a></li>
-                    <li><a href="#">Cara Setting VPS untuk Pemula</a></li>
-                    <li><a href="#">Tips Lolos Review Google AdSense</a></li>
-                    <li><a href="#">Integrasi AI ChatGPT di Website</a></li>
-                    <li><a href="#">Cara Mengamankan WordPress dari Hacker</a></li>
+        <aside>
+            <div class="widget">
+                <h4>Trending di Google</h4>
+                <ul>
+                    <li><a href="#">Cara Daftar AdSense Langsung Approve</a></li>
+                    <li><a href="#">Belajar Python Dasar untuk Data Science</a></li>
+                    <li><a href="#">Cloud Hosting Gratis Terbaik 2025</a></li>
+                    <li><a href="#">Strategi Affiliate Marketing Pemula</a></li>
+                    <li><a href="#">Review Tema GeneratePress vs Astra</a></li>
                 </ul>
             </div>
 
-            <div class="ad-container">
-                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4454451699877502" data-ad-slot="AUTO" data-ad-format="rectangle"></ins>
-                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            <div class="widget">
+                <span class="ad-tag" style="font-size: 10px; color: #999;">SPONSORED</span>
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4454451699877502" data-ad-slot="AUTO" data-ad-format="auto" data-full-width-responsive="true"></ins>
             </div>
-
-            <div class="sidebar-widget">
-                <h4>Tentang Kang Ruli</h4>
-                <p style="font-size: 0.85rem; color: #666;">Membantu individu dan bisnis membangun infrastruktur digital yang kuat dengan teknologi terkini.</p>
+            
+            <div class="widget">
+                <h4>Kategori Populer</h4>
+                <ul>
+                    <li><a href="#">Web Development (42)</a></li>
+                    <li><a href="#">SEO Strategy (38)</a></li>
+                    <li><a href="#">AdSense Optimization (25)</a></li>
+                    <li><a href="#">AI Tools (19)</a></li>
+                    <li><a href="#">Cyber Security (12)</a></li>
+                </ul>
             </div>
         </aside>
-    </main>
+    </div>
 
     <footer>
         <div class="footer-grid">
-            <div>
-                <div class="footer-logo"><img src="https://raw.githubusercontent.com/AdminPKBM/blog/main/logo-lengkap.png" alt="Logo"></div>
-                <p>Solusi edukasi digital terpercaya sejak 2020.</p>
+            <div class="footer-about">
+                <h3>KANG RULI</h3>
+                <p>Portal edukasi digital terpercaya di Indonesia. Membantu para blogger dan developer pemula menjadi profesional di bidang teknologi dan bisnis online.</p>
             </div>
-            <div>
-                <h4 style="color: #fff; margin-bottom: 20px;">Layanan</h4>
-                <ul class="sidebar-list">
-                    <li><a href="#" style="color: #888;">Jasa Web Design</a></li>
-                    <li><a href="#" style="color: #888;">Audit SEO</a></li>
-                    <li><a href="#" style="color: #888;">Konsultasi Digital</a></li>
+            <div class="footer-links">
+                <h4>Navigasi</h4>
+                <ul>
+                    <li><a href="#">Tentang Kami</a></li>
+                    <li><a href="#">Kontak Kami</a></li>
+                    <li><a href="#">Kerjasama Penulis</a></li>
+                    <li><a href="#">Iklan / Media Kit</a></li>
                 </ul>
             </div>
-            <div>
-                <h4 style="color: #fff; margin-bottom: 20px;">Kontak</h4>
-                <p style="font-size: 0.9rem;">Email: info@kangruli.web.id</p>
-                <p style="font-size: 0.9rem;">Lokasi: Indonesia</p>
+            <div class="footer-links">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Disclaimer</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                </ul>
             </div>
         </div>
-        <div style="border-top: 1px solid #222; padding-top: 20px; font-size: 0.8rem;">
-            &copy; 2025 KangRuli.web.id. All Rights Reserved.
+        <div class="copyright">
+            &copy; 2025 KangRuli.web.id - Build with Passion for Indonesia Digital Talent.
         </div>
     </footer>
 
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </body>
 </html>
