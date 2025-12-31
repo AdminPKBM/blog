@@ -33,6 +33,10 @@
         .search-box input { flex: 1; padding: 12px 20px; border-radius: 25px 0 0 25px; border: none; outline: none; }
         .search-box button { padding: 12px 25px; border-radius: 0 25px 25px 0; border: none; background: var(--primary); color: white; font-weight: 600; cursor: pointer; }
 
+        /* AD SPOT STYLING */
+        .ad-unit-wrapper { background: #fff; border: 1px solid #eee; margin: 20px 0; padding: 10px; text-align: center; border-radius: 8px; overflow: hidden; }
+        .ad-label { font-size: 10px; color: #aaa; display: block; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px; }
+
         /* MAIN CONTENT */
         .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: 1fr 300px; gap: 30px; }
         .section-header { margin-bottom: 25px; border-bottom: 3px solid var(--primary); display: inline-block; padding-bottom: 5px; font-size: 1.5rem; }
@@ -59,7 +63,6 @@
 
         /* FOOTER */
         footer { background: var(--dark); color: #fff; padding: 60px 5% 20px; text-align: center; margin-top: 50px; }
-        .footer-grid { max-width: 1200px; margin: 0 auto 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; text-align: left; }
         .copyright { border-top: 1px solid #333; padding-top: 20px; font-size: 0.8rem; opacity: 0.7; }
 
         @media (max-width: 900px) { .container { grid-template-columns: 1fr; } .hero h1 { font-size: 1.8rem; } }
@@ -80,7 +83,7 @@
 
     <header class="hero">
         <h1>Kuasai Dunia Digital Bersama Kang Ruli</h1>
-        <p>Tutorial pemrograman, strategi SEO modern 2025, dan panduan optimasi AdSense terlengkap untuk aset digital Anda.</p>
+        <p>Tutorial pemrograman, strategi SEO modern 2025, dan panduan optimasi AdSense terlengkap.</p>
         <div class="search-box">
             <input type="text" placeholder="Cari tutorial apa hari ini?">
             <button>Cari</button>
@@ -89,58 +92,32 @@
 
     <div class="container">
         <main>
+            <div class="ad-unit-wrapper">
+                <span class="ad-label">Advertisement</span>
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-4454451699877502"
+                     data-ad-slot="AUTO"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
+
             <h2 class="section-header">Artikel Pilar Unggulan</h2>
             
             <div class="blog-grid" id="article-grid-pilar">
                 <script>
                     const pilarArticles = [
-                        { 
-                            cat: "SEO", 
-                            title: "Panduan Lengkap SEO 2025: Dominasi Google Tanpa Backlink", 
-                            desc: "Rahasia optimasi konten menggunakan teknik Semantic Search dan E-E-A-T.",
-                            img: "https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?q=80&w=600&auto=format&fit=crop"
-                        },
-                        { 
-                            cat: "Web Dev", 
-                            title: "Cara Optimasi Core Web Vitals Hingga Skor 100", 
-                            desc: "Teknik teknis meningkatkan kecepatan loading LCP dan stabilitas visual CLS.",
-                            img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600&auto=format&fit=crop"
-                        },
-                        { 
-                            cat: "AdSense", 
-                            title: "10 Niche Blog dengan CPC Tertinggi di Indonesia", 
-                            desc: "Daftar topik yang memberikan bayaran iklan paling mahal bagi pemilik blog.",
-                            img: "https://images.unsplash.com/photo-1554224155-169641357599?q=80&w=600&auto=format&fit=crop"
-                        },
-                        { 
-                            cat: "Digital", 
-                            title: "Cara Integrasi ChatGPT API ke dalam Website WordPress", 
-                            desc: "Gunakan AI untuk fitur chatbot dan generator konten otomatis di blog Anda.",
-                            img: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=600&auto=format&fit=crop"
-                        },
-                        { 
-                            cat: "Programming", 
-                            title: "Belajar JavaScript Modern (ES6) untuk Pemula", 
-                            desc: "Kuasai Arrow Functions, Destructuring, dan Async/Await dengan mudah.",
-                            img: "https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?q=80&w=600&auto=format&fit=crop"
-                        },
-                        { 
-                            cat: "Business", 
-                            title: "Strategi Membangun Personal Branding di LinkedIn", 
-                            desc: "Cara mendapatkan proyek freelance high-ticket dari klien luar negeri.",
-                            img: "https://images.unsplash.com/photo-1611926653458-09294b3142bf?q=80&w=600&auto=format&fit=crop"
-                        },
-                        { 
-                            cat: "Security", 
-                            title: "7 Langkah Mengamankan WordPress dari Serangan Hacker", 
-                            desc: "Langkah hardening sistem agar website Anda tidak bisa ditembus malware.",
-                            img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=600&auto=format&fit=crop"
-                        }
+                        { cat: "SEO", title: "Panduan Lengkap SEO 2025: Dominasi Google Tanpa Backlink", desc: "Rahasia optimasi konten menggunakan teknik Semantic Search dan E-E-A-T.", img: "https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?q=80&w=600&auto=format&fit=crop" },
+                        { cat: "Web Dev", title: "Cara Optimasi Core Web Vitals Hingga Skor 100", desc: "Teknik teknis meningkatkan kecepatan loading LCP dan stabilitas visual CLS.", img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600&auto=format&fit=crop" },
+                        { cat: "AdSense", title: "10 Niche Blog dengan CPC Tertinggi di Indonesia", desc: "Daftar topik yang memberikan bayaran iklan paling mahal bagi pemilik blog.", img: "https://images.unsplash.com/photo-1554224155-169641357599?q=80&w=600&auto=format&fit=crop" },
+                        { cat: "AI", title: "Cara Integrasi ChatGPT API ke dalam Website WordPress", desc: "Gunakan AI untuk fitur chatbot dan generator konten otomatis di blog Anda.", img: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=600&auto=format&fit=crop" },
+                        { cat: "Programming", title: "Belajar JavaScript Modern (ES6) untuk Pemula", desc: "Kuasai Arrow Functions, Destructuring, dan Async/Await dengan mudah.", img: "https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?q=80&w=600&auto=format&fit=crop" },
+                        { cat: "Security", title: "7 Langkah Mengamankan WordPress dari Hacker", desc: "Langkah hardening sistem agar website Anda tidak bisa ditembus malware.", img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=600&auto=format&fit=crop" }
                     ];
 
                     let content = "";
-                    // Loop untuk membuat 20 artikel sebagai sampel pilar
-                    for (let i = 0; i < 20; i++) {
+                    for (let i = 0; i < 16; i++) {
                         const art = pilarArticles[i % pilarArticles.length];
                         content += `
                             <article class="article-card">
@@ -153,12 +130,18 @@
                                 </div>
                             </article>
                         `;
-                        // Masukkan iklan di tengah grid (Setiap 4 artikel)
+                        // IN-FEED AD: Inserted every 4 articles
                         if ((i + 1) % 4 === 0) {
                             content += `
-                                <div class="article-card" style="background:#fdfdfd; display:flex; align-items:center; justify-content:center; border: 2px dashed #ddd;">
-                                    <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-fb+5w+4e-db+86" data-ad-client="ca-pub-4454451699877502" data-ad-slot="AUTO"></ins>
-                                    <p style="font-size:10px; color:#999;">ADSENSE UNIT</p>
+                                <div class="article-card ad-unit-wrapper" style="border: 2px dashed #ddd; display:flex; flex-direction:column; justify-content:center;">
+                                    <span class="ad-label">Promoted Content</span>
+                                    <ins class="adsbygoogle"
+                                         style="display:block"
+                                         data-ad-format="fluid"
+                                         data-ad-layout-key="-fb+5w+4e-db+86"
+                                         data-ad-client="ca-pub-4454451699877502"
+                                         data-ad-slot="AUTO"></ins>
+                                    <script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script>
                                 </div>
                             `;
                         }
@@ -175,31 +158,28 @@
                     <li><a href="#">Cara Daftar AdSense 2025</a></li>
                     <li><a href="#">Tutorial Python Dasar</a></li>
                     <li><a href="#">Optimasi Kecepatan Hosting</a></li>
-                    <li><a href="#">Review Tema WordPress</a></li>
-                    <li><a href="#">Bisnis Online Modal Kecil</a></li>
                 </ul>
             </div>
             
-            <div class="widget">
-                <span style="font-size:10px; color:#999; display:block; margin-bottom:5px;">SPONSORED</span>
-                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4454451699877502" data-ad-slot="AUTO" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <div class="widget" style="padding: 10px; text-align: center;">
+                <span class="ad-label">Sponsor</span>
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-4454451699877502"
+                     data-ad-slot="AUTO"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
             </div>
         </aside>
     </div>
 
     <footer>
-        <div class="footer-grid">
-            <div style="padding: 0 5%;">
-                <h3 style="color:var(--primary); margin-bottom:15px;">KANG RULI</h3>
-                <p style="font-size:0.9rem; opacity:0.8;">Portal edukasi digital terlengkap untuk blogger dan developer Indonesia. Fokus pada SEO, Programming, dan Monetisasi.</p>
-            </div>
-        </div>
         <div class="copyright">
             &copy; 2025 KangRuli.web.id - Portal Edukasi Digital Indonesia<br>
             <span style="opacity:0.5; font-size:11px;">Sitemap | Privacy Policy | Terms of Service</span>
         </div>
     </footer>
 
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </body>
 </html>
