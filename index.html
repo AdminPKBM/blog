@@ -7,24 +7,20 @@
     <title id="page-title">Kang Ruli | Solusi Digital & Portal Edukasi Web</title>
     <meta name="description" id="meta-desc" content="Tutorial pemrograman, strategi SEO modern 2025, dan optimasi AdSense terlengkap dari Kang Ruli.">
     <meta name="author" content="Kang Ruli">
-    <link rel="canonical" href="https://blog.kangruli.web.id/">
+    <link rel="canonical" id="canonical-url" href="https://blog.kangruli.web.id/">
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://blog.kangruli.web.id/">
-    <meta property="og:title" content="Kang Ruli | Solusi Digital & Portal Edukasi Web">
-    <meta property="og:image" content="assets/banner-hero.webp"> <script type="application/ld+json" id="schema-data">
+    <meta property="og:title" id="og-title" content="Kang Ruli | Solusi Digital & Portal Edukasi Web">
+    <meta property="og:description" id="og-desc" content="Tutorial pemrograman dan strategi SEO modern 2025.">
+    <meta property="og:image" id="og-img" content="assets/banner-hero.webp">
+
+    <script type="application/ld+json" id="schema-data">
     {
       "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "headline": "Kang Ruli Digital Portal",
-      "publisher": {
-        "@type": "Organization",
-        "name": "Kang Ruli Blog",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "assets/logo-lengkap.webp" 
-        }
-      }
+      "@type": "Blog",
+      "name": "Kang Ruli Digital Portal",
+      "url": "https://blog.kangruli.web.id/"
     }
     </script>
 
@@ -33,156 +29,237 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style>
-        :root { --primary: #ff8c00; --secondary: #0056b3; --dark: #1a1a1a; --gray: #f4f7f6; --text: #333; --bg-card: #fff; }
-        body.dark-mode { --gray: #121212; --text: #e0e0e0; --bg-card: #1e1e1e; --dark: #000; }
+        :root { --primary: #ff8c00; --secondary: #0056b3; --dark: #1a1a1a; --gray: #f4f7f6; --text: #333; --bg-card: #fff; --border: #eee; }
+        body.dark-mode { --gray: #121212; --text: #e0e0e0; --bg-card: #1e1e1e; --dark: #000; --border: #333; }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Poppins', sans-serif; background-color: var(--gray); color: var(--text); transition: 0.3s; }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--gray); color: var(--text); transition: background 0.3s, color 0.3s; line-height: 1.6; }
 
-        #progress-bar { position: fixed; top: 0; left: 0; width: 0%; height: 5px; background: var(--primary); z-index: 2000; }
+        #progress-bar { position: fixed; top: 0; left: 0; width: 0%; height: 4px; background: var(--primary); z-index: 2000; transition: width 0.1s; }
 
-        nav { background: var(--bg-card); padding: 10px 5%; display: flex; justify-content: space-between; align-items: center; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        .logo-img { height: 40px; }
+        nav { background: var(--bg-card); padding: 10px 5%; display: flex; justify-content: space-between; align-items: center; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); border-bottom: 1px solid var(--border); }
+        .logo-img { height: 35px; cursor: pointer; }
 
         .hero { background: linear-gradient(135deg, var(--dark) 0%, #333 100%); color: white; padding: 140px 5% 80px; text-align: center; }
-        .search-box { max-width: 500px; margin: 20px auto; display: flex; box-shadow: 0 4px 15px rgba(0,0,0,0.2); border-radius: 25px; overflow: hidden; background: white; }
-        .search-box input { flex: 1; padding: 12px 20px; border: none; outline: none; color: #333; }
-        .search-box button { padding: 12px 25px; border: none; background: var(--primary); color: white; cursor: pointer; }
+        .search-box { max-width: 600px; margin: 25px auto; display: flex; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border-radius: 30px; overflow: hidden; background: white; border: 2px solid transparent; transition: 0.3s; }
+        .search-box:focus-within { border-color: var(--primary); }
+        .search-box input { flex: 1; padding: 15px 25px; border: none; outline: none; font-size: 16px; color: #333; }
+        .search-box button { padding: 0 25px; border: none; background: var(--primary); color: white; cursor: pointer; font-size: 18px; }
 
-        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: 1fr 300px; gap: 30px; }
-        .article-card { background: var(--bg-card); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: 0.4s; display: flex; flex-direction: column; cursor: pointer; }
-        .article-card:hover { transform: translateY(-10px); }
-        .card-img { height: 180px; background-size: cover; background-position: center; }
-        .card-body { padding: 20px; flex-grow: 1; }
+        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: 1fr 320px; gap: 30px; }
+        
+        .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px; }
+        .article-card { background: var(--bg-card); border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: 0.3s; cursor: pointer; border: 1px solid var(--border); }
+        .article-card:hover { transform: translateY(-8px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); border-color: var(--primary); }
+        .card-img { height: 190px; background-size: cover; background-position: center; transition: 0.5s; }
+        .article-card:hover .card-img { transform: scale(1.05); }
+        .card-body { padding: 20px; }
+        .badge { background: var(--primary); color: white; font-size: 10px; padding: 3px 10px; border-radius: 20px; font-weight: bold; text-transform: uppercase; }
 
-        /* DETAIL VIEW STYLES */
         #detail-view { display: none; }
-        .btn-back { display: inline-block; margin-bottom: 20px; color: var(--primary); text-decoration: none; font-weight: 600; cursor: pointer; }
+        .content-area { background: var(--bg-card); padding: 40px; border-radius: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
+        .btn-back { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 25px; color: var(--primary); text-decoration: none; font-weight: 600; transition: 0.2s; }
+        .btn-back:hover { gap: 12px; }
 
-        aside .widget { background: var(--bg-card); padding: 20px; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
-        footer { background: var(--dark); color: #fff; padding: 40px 5%; text-align: center; }
+        aside .widget { background: var(--bg-card); padding: 25px; border-radius: 15px; margin-bottom: 25px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border: 1px solid var(--border); }
+        .popular-item { display: flex; gap: 10px; margin-bottom: 15px; text-decoration: none; color: inherit; align-items: center; }
+        .popular-item:hover { color: var(--primary); }
 
-        @media (max-width: 900px) { .container { grid-template-columns: 1fr; } }
+        footer { background: var(--dark); color: #888; padding: 50px 5%; text-align: center; margin-top: 50px; }
+        
+        #back-to-top { position: fixed; bottom: 30px; right: 30px; background: var(--primary); color: white; width: 45px; height: 45px; border-radius: 50%; display: none; align-items: center; justify-content: center; cursor: pointer; z-index: 1000; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+
+        @media (max-width: 900px) { 
+            .container { grid-template-columns: 1fr; } 
+            .hero { padding: 120px 5% 60px; }
+        }
     </style>
 </head>
 <body>
 
     <div id="progress-bar"></div>
+    <div id="back-to-top" onclick="window.scrollTo({top:0, behavior:'smooth'})"><i class="fas fa-chevron-up"></i></div>
 
     <nav>
-        <a href="/" onclick="showHome(event)"><img src="assets/logo-lengkap.webp" alt="Kang Ruli Logo" class="logo-img"></a>
+        <img src="assets/logo-lengkap.webp" alt="Kang Ruli" class="logo-img" onclick="showHome()">
         <div class="nav-tools">
-            <div id="dark-mode-toggle" style="cursor:pointer; color:var(--primary);"><i class="fas fa-moon"></i></div>
+            <div id="dark-mode-toggle" style="cursor:pointer; font-size: 20px; color:var(--primary);"><i class="fas fa-moon"></i></div>
         </div>
     </nav>
 
     <div id="home-view">
         <header class="hero">
-            <h1>🚀 Kuasai Dunia Digital</h1>
-            <p>Strategi SEO 2025, Coding, dan Optimasi AdSense Terpercaya.</p>
+            <h1>🚀 Portal Edukasi Digital</h1>
+            <p>Strategi SEO 2025, AdSense, dan Coding untuk Kreator Indonesia.</p>
             <div class="search-box">
-                <input type="text" id="searchInput" placeholder="Cari tutorial...">
+                <input type="text" id="searchInput" placeholder="Cari tutorial (contoh: SEO, Adsense...)" onkeyup="if(event.key==='Enter') filterArtikel()">
                 <button onclick="filterArtikel()"><i class="fas fa-search"></i></button>
             </div>
         </header>
 
         <div class="container">
-            <main id="main-content">
-                <h2 style="margin-bottom: 20px;">Artikel Terbaru</h2>
-                <div class="blog-grid" id="article-list" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px;"></div>
+            <main>
+                <h2 id="result-title" style="margin-bottom: 25px;">Artikel Terbaru</h2>
+                <div class="blog-grid" id="article-list">
+                    </div>
             </main>
 
             <aside>
                 <div class="widget">
-                    <h4>🔥 Populer</h4>
-                    <ul id="popular-list" style="list-style:none; padding-top:10px;"></ul>
+                    <h4>🔥 Paling Populer</h4>
+                    <div id="popular-list" style="padding-top:15px;"></div>
                 </div>
                 <div class="widget" style="text-align:center;">
-                    <span style="font-size:10px; color:#aaa;">SPONSOR</span>
-                    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4454451699877502" data-ad-slot="AUTO" data-ad-format="auto"></ins>
-                    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+                    <span style="font-size:10px; color:#aaa; letter-spacing: 1px;">SPONSOR</span>
+                    <div style="background: #f9f9f9; height: 250px; display: flex; align-items: center; justify-content: center; border: 1px dashed #ccc; margin-top: 10px;">
+                        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4454451699877502" data-ad-slot="AUTO" data-ad-format="auto"></ins>
+                    </div>
                 </div>
             </aside>
         </div>
     </div>
 
-    <div id="detail-view" class="container">
-        <main>
+    <div id="detail-view" class="container" style="margin-top: 100px;">
+        <main class="content-area">
             <div id="article-detail-content"></div>
         </main>
-        <aside id="detail-sidebar"></aside>
+        <aside id="detail-sidebar">
+            <div class="widget">
+                <h4>Rekomendasi</h4>
+                <div id="related-list"></div>
+            </div>
+        </aside>
     </div>
 
     <footer>
-        <p>&copy; 2025 KangRuli.web.id - Portal Edukasi Digital</p>
+        <p>&copy; 2025 KangRuli.web.id - Built with ❤️ for Digital Mastery</p>
     </footer>
 
     <script>
-        // DATA ARTIKEL (Gunakan Slug untuk SEO Friendly URL)
+        // Masukkan data 100 artikel Anda di sini (disingkat untuk contoh)
         const databaseArtikel = [
-            { slug: "riset-keyword-2025", cat: "SEO", title: "Cara Riset Keyword 2025", desc: "Panduan mencari keyword rendah persaingan namun tinggi trafik.", img: "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=600", content: "<h3>Langkah 1: Gunakan AI</h3><p>Tahun 2025 adalah era AI. Gunakan tools seperti Claude atau ChatGPT untuk brainstorming topik...</p>" },
-            { slug: "tips-cpc-adsense", cat: "AdSense", title: "Tips High CPC AdSense", desc: "Optimasi penempatan iklan untuk pendapatan maksimal.", img: "https://images.unsplash.com/photo-1554224155-169641357599?w=600", content: "<h3>Optimasi Unit Iklan</h3><p>Gunakan unit iklan 'Multiplex' di bawah artikel untuk meningkatkan CTR...</p>" }
+            { "slug": "panduan-seo-2025-pemula", "cat": "SEO", "title": "Panduan Lengkap SEO Modern 2025", "desc": "Kuasai teknik EEAT dan optimasi SGE.", "img": "https://images.unsplash.com/photo-1571721738239-7b2111d4d73b?w=600", "content": "<h3>Apa itu SEO 2025?</h3><p>SEO tahun 2025 berfokus pada <b>User Intent</b>...</p>" },
+            { "slug": "cara-daftar-adsense-cepat-approve", "cat": "AdSense", "title": "Cara Daftar AdSense Agar Cepat Diterima", "desc": "Tips rahasia lolos review AdSense dalam 48 jam.", "img": "https://images.unsplash.com/photo-1554224155-169641357599?w=600", "content": "<h3>Lolos Review</h3><p>Pastikan konten Anda original dan navigasi rapi...</p>" },
+            // ... Tambahkan 98 artikel lainnya dari daftar sebelumnya
         ];
 
-        // ROUTING LOGIC
+        // 1. ROUTING & INISIALISASI
         function init() {
             const hash = window.location.hash.replace('#/', '');
             if (hash) {
                 openArticle(hash);
             } else {
-                renderHome();
+                renderHome(databaseArtikel);
             }
         }
 
-        function renderHome() {
+        // 2. TAMPILKAN DAFTAR ARTIKEL (HOME)
+        function renderHome(data) {
             document.getElementById('home-view').style.display = 'block';
             document.getElementById('detail-view').style.display = 'none';
+            
             const list = document.getElementById('article-list');
-            list.innerHTML = databaseArtikel.map(post => `
-                <div class="article-card" onclick="location.hash='#/${post.slug}'">
+            if(data.length === 0) {
+                list.innerHTML = "<p>Artikel tidak ditemukan.</p>";
+                return;
+            }
+
+            list.innerHTML = data.map(post => `
+                <article class="article-card" onclick="location.hash='#/${post.slug}'">
                     <div class="card-img" style="background-image: url('${post.img}')"></div>
                     <div class="card-body">
-                        <span style="color:var(--primary); font-size:10px; font-weight:700;">${post.cat}</span>
-                        <h3 style="margin:10px 0;">${post.title}</h3>
-                        <p style="font-size:13px; opacity:0.8;">${post.desc}</p>
+                        <span class="badge">${post.cat}</span>
+                        <h3 style="margin:12px 0; font-size: 18px;">${post.title}</h3>
+                        <p style="font-size:13px; opacity:0.8; height: 40px; overflow: hidden;">${post.desc}</p>
                     </div>
-                </div>
+                </article>
+            `).join('');
+
+            // Sidebar Populer (Acak 5 artikel)
+            const popular = [...databaseArtikel].sort(() => 0.5 - Math.random()).slice(0, 5);
+            document.getElementById('popular-list').innerHTML = popular.map(p => `
+                <a href="#/${p.slug}" class="popular-item">
+                    <div style="min-width:50px; height:50px; background:url('${p.img}') center/cover; border-radius:8px;"></div>
+                    <span style="font-size:13px; font-weight:600;">${p.title}</span>
+                </a>
             `).join('');
             
-            // Render Populer
-            document.getElementById('popular-list').innerHTML = databaseArtikel.map(a => `<li><a href="#/${a.slug}" style="text-decoration:none; color:inherit; font-size:14px;">• ${a.title}</a></li>`).join('');
+            updateMetadata("Kang Ruli | Solusi Digital & Portal Edukasi Web", "Tutorial pemrograman dan SEO terlengkap.");
         }
 
+        // 3. BUKA DETAIL ARTIKEL
         function openArticle(slug) {
             const post = databaseArtikel.find(a => a.slug === slug);
-            if(!post) return (location.hash = '');
+            if(!post) return showHome();
 
             document.getElementById('home-view').style.display = 'none';
             document.getElementById('detail-view').style.display = 'grid';
             
             document.getElementById('article-detail-content').innerHTML = `
-                <div style="background:var(--bg-card); padding:30px; border-radius:15px;">
-                    <a href="#" onclick="event.preventDefault(); location.hash='';" class="btn-back">← Kembali ke Beranda</a>
-                    <img src="${post.img}" style="width:100%; border-radius:10px; margin-bottom:20px;">
-                    <h1>${post.title}</h1>
-                    <div style="margin-top:20px; line-height:1.8;">${post.content}</div>
-                </div>
+                <a href="#" onclick="showHome(event)" class="btn-back"><i class="fas fa-arrow-left"></i> Kembali ke Beranda</a>
+                <img src="${post.img}" style="width:100%; height:400px; object-fit:cover; border-radius:15px; margin-bottom:30px;">
+                <span class="badge">${post.cat}</span>
+                <h1 style="font-size:32px; margin: 15px 0 25px;">${post.title}</h1>
+                <div class="article-text" style="font-size:17px; color:var(--text);">${post.content}</div>
             `;
             
-            document.title = `${post.title} | Kang Ruli`;
-            window.scrollTo(0,0);
+            updateMetadata(`${post.title} - Kang Ruli`, post.desc);
+            window.scrollTo({top: 0, behavior: 'smooth'});
         }
 
-        // UI LOGIC
+        // 4. FUNGSI PENCARIAN
+        function filterArtikel() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const filtered = databaseArtikel.filter(a => 
+                a.title.toLowerCase().includes(query) || 
+                a.cat.toLowerCase().includes(query)
+            );
+            document.getElementById('result-title').innerText = `Hasil Pencarian: "${query}"`;
+            renderHome(filtered);
+            window.scrollTo({top: document.getElementById('main-content').offsetTop - 100, behavior: 'smooth'});
+        }
+
+        // 5. NAVIGASI HOME
+        function showHome(e) {
+            if(e) e.preventDefault();
+            window.location.hash = '';
+            document.getElementById('searchInput').value = '';
+            document.getElementById('result-title').innerText = "Artikel Terbaru";
+            renderHome(databaseArtikel);
+        }
+
+        // 6. UPDATE SEO SECARA DINAMIS
+        function updateMetadata(title, desc) {
+            document.title = title;
+            document.getElementById('meta-desc').setAttribute('content', desc);
+            document.getElementById('og-title').setAttribute('content', title);
+            document.getElementById('og-desc').setAttribute('content', desc);
+            document.getElementById('canonical-url').setAttribute('href', window.location.href);
+        }
+
+        // 7. UI ENHANCEMENT (Dark Mode & Progress)
         const toggle = document.getElementById('dark-mode-toggle');
         toggle.addEventListener('click', () => {
             document.body.classList.toggle('dark-mode');
-            toggle.innerHTML = document.body.classList.contains('dark-mode') ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+            const isDark = document.body.classList.contains('dark-mode');
+            toggle.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
         });
 
+        // Load theme preference
+        if(localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-mode');
+            toggle.innerHTML = '<i class="fas fa-sun"></i>';
+        }
+
         window.onscroll = () => {
-            let scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
             document.getElementById("progress-bar").style.width = scrolled + "%";
+            
+            const btt = document.getElementById("back-to-top");
+            btt.style.display = winScroll > 300 ? "flex" : "none";
         };
 
         window.addEventListener('hashchange', init);
