@@ -3,97 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Kang Ruli | Solusi Digital & Portal Edukasi Web Terlengkap</title>
-    
+    <meta name="description" content="Tutorial pemrograman, strategi SEO modern 2025, optimasi AdSense, dan panduan belajar web development terlengkap dari Kang Ruli.">
+    <meta name="keywords" content="SEO 2025, Tutorial Web, Belajar AdSense, Kang Ruli, Pemrograman Indonesia">
+    <meta name="author" content="Kang Ruli">
+    <link rel="canonical" href="http://blog.kangruli.web.id/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://blog.kangruli.web.id/">
+    <meta property="og:title" content="Kang Ruli | Solusi Digital & Portal Edukasi Web">
+    <meta property="og:description" content="Kuasai dunia digital dengan tutorial berkualitas tinggi tentang SEO, Code, dan AdSense.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=1200">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Kang Ruli Digital Portal",
+      "description": "Tutorial pemrograman dan SEO modern 2025.",
+      "author": {
+        "@type": "Person",
+        "name": "Kang Ruli"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Kang Ruli Blog",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://kangruli.web.id/logo.png"
+        }
+      }
+    }
+    </script>
+
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4454451699877502" crossorigin="anonymous"></script>
-
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
-    <style>
-        :root { --primary: #ff8c00; --secondary: #0056b3; --dark: #1a1a1a; --gray: #f4f7f6; }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Poppins', sans-serif; background-color: var(--gray); color: #333; line-height: 1.6; }
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-        /* NAV & HERO */
-        nav { background: #fff; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        .logo { font-weight: 700; font-size: 1.5rem; color: var(--primary); text-decoration: none; letter-spacing: 1px; }
-        nav ul { display: flex; list-style: none; }
-        nav ul li { margin-left: 20px; }
-        nav ul li a { text-decoration: none; color: #444; font-weight: 500; font-size: 0.9rem; }
+    <style>
+        :root { 
+            --primary: #ff8c00; 
+            --secondary: #0056b3; 
+            --dark: #1a1a1a; 
+            --gray: #f4f7f6;
+            --text-color: #333;
+            --bg-card: #fff;
+        }
+
+        /* DARK MODE THEME */
+        body.dark-mode {
+            --gray: #121212;
+            --text-color: #e0e0e0;
+            --bg-card: #1e1e1e;
+            --dark: #000;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--gray); color: var(--text-color); transition: 0.3s; }
+
+        /* READING PROGRESS BAR */
+        #progress-container { position: fixed; top: 0; left: 0; width: 100%; height: 5px; z-index: 2000; }
+        #progress-bar { height: 100%; background: var(--primary); width: 0%; }
+
+        nav { background: var(--bg-card); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .logo { font-weight: 700; font-size: 1.5rem; color: var(--primary); text-decoration: none; }
+
+        .nav-tools { display: flex; align-items: center; gap: 15px; }
+        #dark-mode-toggle { cursor: pointer; font-size: 1.2rem; color: var(--primary); }
 
         .hero { background: linear-gradient(135deg, var(--dark) 0%, #333 100%); color: white; padding: 140px 5% 80px; text-align: center; }
-        .hero h1 { font-size: 2.5rem; margin-bottom: 15px; font-weight: 700; }
-        .hero p { font-size: 1.1rem; opacity: 0.9; max-width: 700px; margin: 0 auto 30px; }
+        .hero h1 { font-size: 2.8rem; margin-bottom: 15px; }
         
-        .search-box { max-width: 500px; margin: 0 auto; display: flex; }
-        .search-box input { flex: 1; padding: 12px 20px; border-radius: 25px 0 0 25px; border: none; outline: none; }
-        .search-box button { padding: 12px 25px; border-radius: 0 25px 25px 0; border: none; background: var(--primary); color: white; font-weight: 600; cursor: pointer; }
+        .search-box { max-width: 500px; margin: 0 auto; display: flex; box-shadow: 0 4px 15px rgba(0,0,0,0.2); border-radius: 25px; overflow: hidden; }
+        .search-box input { flex: 1; padding: 15px 20px; border: none; outline: none; }
+        .search-box button { padding: 15px 25px; border: none; background: var(--primary); color: white; cursor: pointer; }
 
-        /* GRID & CARDS */
         .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: 1fr 300px; gap: 30px; }
         .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
-        .article-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: 0.3s; border: 1px solid #eee; display: flex; flex-direction: column; }
-        .article-card:hover { transform: translateY(-8px); }
-        .card-img { height: 180px; background-size: cover; background-position: center; }
+        
+        .article-card { background: var(--bg-card); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: 0.4s; display: flex; flex-direction: column; position: relative; }
+        .article-card:hover { transform: translateY(-10px); }
+        .card-img { height: 180px; background-size: cover; background-position: center; transition: 0.5s; }
+        .article-card:hover .card-img { transform: scale(1.1); }
         .card-body { padding: 20px; flex-grow: 1; }
-        .card-category { font-size: 10px; font-weight: 700; color: var(--primary); text-transform: uppercase; }
-        .card-body h3 { font-size: 1.1rem; margin: 10px 0; color: #222; }
         
-        /* AD STYLING */
-        .ad-unit-wrapper { background: #fff; border: 1px solid #eee; margin: 20px 0; padding: 10px; text-align: center; border-radius: 8px; }
-        .ad-label { font-size: 10px; color: #aaa; display: block; margin-bottom: 5px; text-transform: uppercase; }
+        /* SHARE BUTTONS */
+        .share-btn { margin-top: 15px; display: flex; gap: 10px; }
+        .share-btn a { color: #888; font-size: 14px; transition: 0.3s; }
+        .share-btn a:hover { color: var(--primary); }
 
-        aside { height: fit-content; position: sticky; top: 100px; }
-        .widget { background: #fff; padding: 20px; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        /* WIDGET NEWSLETTER */
+        .newsletter-widget { background: var(--primary); color: white; padding: 25px; border-radius: 12px; margin-top: 20px; }
+        .newsletter-widget input { width: 100%; padding: 10px; margin-top: 10px; border-radius: 5px; border: none; }
+        .newsletter-widget button { width: 100%; margin-top: 10px; padding: 10px; background: var(--dark); color: white; border: none; border-radius: 5px; cursor: pointer; }
 
-        footer { background: var(--dark); color: #fff; padding: 40px 5%; text-align: center; margin-top: 50px; }
+        footer { background: var(--dark); color: #fff; padding: 60px 5% 20px; text-align: center; margin-top: 50px; }
         
-        /* LOAD MORE BUTTON */
-        .load-more-container { text-align: center; margin-top: 40px; grid-column: 1 / -1; }
-        .btn-load { padding: 12px 30px; background: var(--secondary); color: white; border: none; border-radius: 25px; cursor: pointer; font-weight: 600; transition: 0.3s; }
-        .btn-load:hover { background: #004494; }
-
-        @media (max-width: 900px) { .container { grid-template-columns: 1fr; } }
+        @media (max-width: 900px) { 
+            .container { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 2rem; }
+        }
     </style>
 </head>
-<body>
+<body class="">
+
+    <div id="progress-container">
+        <div id="progress-bar"></div>
+    </div>
 
     <nav>
         <a href="#" class="logo">KANG RULI</a>
-        <ul>
-            <li><a href="#">Beranda</a></li>
-            <li><a href="#">SEO</a></li>
-            <li><a href="#">AdSense</a></li>
-        </ul>
+        <div class="nav-tools">
+            <ul style="display: flex; list-style: none; gap: 15px;">
+                <li><a href="#" style="text-decoration:none; color:var(--text-color);">SEO</a></li>
+                <li><a href="#" style="text-decoration:none; color:var(--text-color);">AdSense</a></li>
+            </ul>
+            <div id="dark-mode-toggle"><i class="fas fa-moon"></i></div>
+        </div>
     </nav>
 
     <header class="hero">
-        <h1>Kuasai Dunia Digital Bersama Kang Ruli</h1>
-        <p>Tutorial pemrograman, strategi SEO modern 2025, dan panduan optimasi AdSense.</p>
+        <h1>🚀 Kuasai Dunia Digital</h1>
+        <p>Strategi SEO modern 2025, Coding, dan Optimasi Pendapatan AdSense.</p>
         <div class="search-box">
-            <input type="text" id="searchInput" placeholder="Cari tutorial...">
-            <button onclick="cariArtikel()">Cari</button>
+            <input type="text" id="searchInput" placeholder="Cari tutorial apa hari ini?">
+            <button onclick="cariArtikel()"><i class="fas fa-search"></i> Cari</button>
         </div>
     </header>
 
     <div class="container">
         <main>
-            <h2 style="margin-bottom: 20px; border-bottom: 3px solid var(--primary); display: inline-block;">Artikel Terbaru</h2>
+            <div style="margin-bottom: 20px; font-size: 14px; color: #888;">
+                Beranda > <span style="color:var(--primary)">Artikel Terbaru</span>
+            </div>
             
             <div class="blog-grid" id="main-content"></div>
 
-            <div class="load-more-container">
-                <button class="btn-load" onclick="tambahLagi()">Muat Lebih Banyak Artikel</button>
+            <div style="text-align: center; margin-top: 40px;">
+                <button class="btn-load" style="padding: 15px 40px; background: var(--secondary); color: white; border: none; border-radius: 30px; cursor: pointer; font-weight: 600;" onclick="tambahLagi()">Muat Lebih Banyak Artikel</button>
             </div>
         </main>
 
         <aside>
-            <div class="widget">
-                <h4>Trending Topik</h4>
-                <ul id="trending-list" style="list-style:none; padding-top:10px;"></ul>
+            <div class="newsletter-widget">
+                <h4>Newsletter Gratis</h4>
+                <p style="font-size: 12px; opacity: 0.9;">Dapatkan tips SEO terbaru langsung di email Anda.</p>
+                <input type="email" placeholder="Email Anda...">
+                <button>Berlangganan</button>
             </div>
-            <div class="widget" style="text-align:center;">
-                <span class="ad-label">Sponsor</span>
+
+            <div class="widget" style="background:#fff; padding:20px; border-radius:12px; margin-top:20px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+                <h4 style="border-bottom: 2px solid var(--primary); padding-bottom: 5px;">🔥 Populer</h4>
+                <ul id="trending-list" style="list-style:none; padding-top:15px; color: var(--text-color);"></ul>
+            </div>
+
+            <div class="widget" style="text-align:center; margin-top:20px;">
+                <span style="font-size: 10px; color:#aaa;">SPONSOR</span>
                 <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4454451699877502" data-ad-slot="AUTO" data-ad-format="auto"></ins>
                 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
             </div>
@@ -101,68 +167,76 @@
     </div>
 
     <footer>
+        <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 20px; font-size: 20px;">
+            <a href="#" style="color:white"><i class="fab fa-facebook"></i></a>
+            <a href="#" style="color:white"><i class="fab fa-instagram"></i></a>
+            <a href="#" style="color:white"><i class="fab fa-youtube"></i></a>
+        </div>
         <p>&copy; 2025 KangRuli.web.id - Portal Edukasi Digital Indonesia</p>
     </footer>
 
     <script>
-        // 1. DATA DATABASE (Anda cukup tambah di sini saja)
+        // DATA ARTIKEL
         const databaseArtikel = [
-            { cat: "SEO", title: "Cara Riset Keyword 2025", desc: "Temukan kata kunci dengan volume tinggi dan persaingan rendah.", img: "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=600" },
-            { cat: "AdSense", title: "Tips High CPC AdSense", desc: "Cara meningkatkan pendapatan klik iklan blog Anda hingga 2x lipat.", img: "https://images.unsplash.com/photo-1554224155-169641357599?w=600" },
-            { cat: "Code", title: "Belajar HTML5 dalam 10 Menit", desc: "Panduan cepat struktur website modern untuk pemula.", img: "https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=600" },
-            { cat: "AI", title: "Review ChatGPT Plus vs Claude", desc: "Mana AI yang lebih pintar untuk membantu menulis artikel blog?", img: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600" },
-            { cat: "Web Dev", title: "Hosting Gratis Terbaik 2025", desc: "Daftar layanan hosting tanpa biaya dengan performa maksimal.", img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc51?w=600" },
-            { cat: "Security", title: "Lindungi Blog dari Malware", desc: "Cara memasang firewall gratis di WordPress Anda.", img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600" }
+            { cat: "SEO", title: "Cara Riset Keyword 2025", desc: "Temukan kata kunci dengan volume tinggi dan persaingan rendah untuk tahun 2025.", img: "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=600" },
+            { cat: "AdSense", title: "Tips High CPC AdSense", desc: "Cara meningkatkan pendapatan klik iklan blog Anda hingga 2x lipat secara organik.", img: "https://images.unsplash.com/photo-1554224155-169641357599?w=600" },
+            { cat: "Code", title: "Belajar HTML5 Modern", desc: "Panduan cepat struktur website modern yang ramah SEO untuk pemula.", img: "https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=600" },
+            { cat: "AI", title: "Claude vs ChatGPT", desc: "Perbandingan AI terbaik untuk membantu penulisan konten blog secara otomatis.", img: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600" }
         ];
 
-        // 2. FUNGSI UNTUK MERENDER ARTIKEL KE LAYAR
         function renderArtikel(jumlah) {
             const container = document.getElementById('main-content');
             let output = "";
 
             for (let i = 0; i < jumlah; i++) {
-                // Mengambil data secara acak dari database agar terlihat bervariasi
                 const data = databaseArtikel[Math.floor(Math.random() * databaseArtikel.length)];
-                
                 output += `
                     <article class="article-card">
                         <div class="card-img" style="background-image: url('${data.img}')"></div>
                         <div class="card-body">
-                            <span class="card-category">${data.cat}</span>
-                            <h3>${data.title}</h3>
-                            <p>${data.desc}</p>
-                            <a href="#" style="color:var(--secondary); text-decoration:none; font-size:13px; font-weight:600;">Baca Detail →</a>
+                            <span style="font-size:10px; color:var(--primary); font-weight:700;">${data.cat}</span>
+                            <h3 style="margin:10px 0; font-size:1.2rem;">${data.title}</h3>
+                            <p style="font-size:13px; opacity:0.8;">${data.desc}</p>
+                            <div class="share-btn">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fas fa-link"></i></a>
+                            </div>
+                            <a href="#" style="display:block; margin-top:15px; color:var(--secondary); text-decoration:none; font-weight:600; font-size:13px;">BACA SELENGKAPNYA →</a>
                         </div>
                     </article>
                 `;
-
-                // Sisipkan iklan setiap 3 artikel
-                if ((i + 1) % 3 === 0) {
-                    output += `
-                        <div class="article-card ad-unit-wrapper">
-                            <span class="ad-label">Iklan AdSense</span>
-                            <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-fb+5w+4e-db+86" data-ad-client="ca-pub-4454451699877502" data-ad-slot="AUTO"></ins>
-                            <script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script>
-                        </div>
-                    `;
-                }
             }
             container.innerHTML += output;
         }
 
-        // 3. FUNGSI TOMBOL MUAT LEBIH BANYAK
-        function tambahLagi() {
-            renderArtikel(6); // Tambah 6 artikel lagi setiap klik
-        }
+        // DARK MODE LOGIC
+        const toggle = document.getElementById('dark-mode-toggle');
+        toggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            const icon = toggle.querySelector('i');
+            if(document.body.classList.contains('dark-mode')) {
+                icon.classList.replace('fa-moon', 'fa-sun');
+            } else {
+                icon.classList.replace('fa-sun', 'fa-moon');
+            }
+        });
 
-        // Jalankan saat pertama kali dibuka
+        // PROGRESS BAR LOGIC
+        window.onscroll = function() {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            document.getElementById("progress-bar").style.width = scrolled + "%";
+        };
+
+        function tambahLagi() { renderArtikel(3); }
+
         window.onload = () => {
-            renderArtikel(6); // Tampilkan 6 artikel pertama
-            
-            // Render trending list otomatis
+            renderArtikel(6);
             const trendList = document.getElementById('trending-list');
-            databaseArtikel.slice(0, 4).forEach(item => {
-                trendList.innerHTML += `<li style="margin-bottom:10px;"><a href="#" style="text-decoration:none; color:#666; font-size:14px;">• ${item.title}</a></li>`;
+            databaseArtikel.forEach(item => {
+                trendList.innerHTML += `<li style="margin-bottom:12px; font-size:14px;"><a href="#" style="text-decoration:none; color:inherit;">• ${item.title}</a></li>`;
             });
         };
     </script>
