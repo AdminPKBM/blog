@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="page-title">Kang Ruli | Solusi Digital & Portal Edukasi Web</title>
-    <meta name="description" id="meta-desc" content="Tutorial pemrograman, strategi SEO modern 2025, dan optimasi AdSense terlengkap.">
+    <title>Kang Ruli | Solusi Digital & Portal Edukasi</title>
     
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style>
@@ -14,7 +13,7 @@
         body.dark-mode { --bg: #020617; --card: #0f172a; --text: #f1f5f9; --muted: #94a3b8; --border: #1e293b; }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.6; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.6; transition: 0.3s; }
 
         nav { background: var(--card); height: 70px; display: flex; justify-content: space-between; align-items: center; padding: 0 5%; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border-bottom: 1px solid var(--border); }
         .logo { font-weight: 800; font-size: 1.5rem; color: var(--primary); text-decoration: none; }
@@ -23,25 +22,26 @@
 
         .hero { background: var(--dark); color: white; padding: 140px 5% 60px; text-align: center; }
         .search-container { max-width: 600px; margin: 30px auto; position: relative; }
-        .search-container input { width: 100%; padding: 15px 25px; border-radius: 50px; border: none; outline: none; font-size: 1rem; }
+        .search-container input { width: 100%; padding: 15px 25px; border-radius: 50px; border: none; outline: none; font-size: 1rem; color: #333; }
         .search-container button { position: absolute; right: 5px; top: 5px; bottom: 5px; width: 50px; border-radius: 50%; border: none; background: var(--primary); color: white; cursor: pointer; }
 
         .main-wrapper { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: 1fr 320px; gap: 40px; }
         
-        .cat-btn { padding: 8px 20px; border-radius: 20px; border: 1px solid var(--border); background: var(--card); color: var(--text); cursor: pointer; margin: 5px; }
+        .cat-btn { padding: 8px 20px; border-radius: 20px; border: 1px solid var(--border); background: var(--card); color: var(--text); cursor: pointer; margin: 5px; font-weight: 600; }
         .cat-btn.active { background: var(--primary); color: white; border-color: var(--primary); }
 
         .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px; }
-        .post-card { background: var(--card); border-radius: 16px; overflow: hidden; border: 1px solid var(--border); transition: 0.3s; cursor: pointer; }
+        .post-card { background: var(--card); border-radius: 16px; overflow: hidden; border: 1px solid var(--border); transition: 0.3s; cursor: pointer; display: flex; flex-direction: column; }
         .post-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
         .post-img { width: 100%; height: 180px; object-fit: cover; }
-        .post-info { padding: 20px; }
+        .post-info { padding: 20px; flex-grow: 1; }
 
         #detail-view { display: none; margin-top: 100px; }
         .article-body { background: var(--card); padding: 40px; border-radius: 20px; border: 1px solid var(--border); }
-        .article-body img { width: 100%; border-radius: 12px; margin-bottom: 25px; }
+        .article-body img { width: 100%; border-radius: 12px; margin-bottom: 25px; max-height: 450px; object-fit: cover; }
 
         #load-more { display: block; margin: 40px auto; padding: 12px 30px; background: transparent; border: 2px solid var(--primary); color: var(--primary); border-radius: 50px; font-weight: 600; cursor: pointer; }
+        #load-more:hover { background: var(--primary); color: white; }
 
         footer { background: var(--dark); color: #94a3b8; padding: 40px; text-align: center; margin-top: 50px; }
         @media (max-width: 992px) { .main-wrapper { grid-template-columns: 1fr; } }
@@ -53,15 +53,15 @@
 
 <nav>
     <a href="#" onclick="goHome(event)" class="logo">KANG RULI</a>
-    <div id="dark-mode-toggle" style="cursor:pointer; color: var(--primary);"><i class="fas fa-moon"></i></div>
+    <div id="dark-mode-toggle" style="cursor:pointer; color: var(--primary); font-size: 1.2rem;"><i class="fas fa-moon"></i></div>
 </nav>
 
 <div id="home-view">
     <header class="hero">
-        <h1>Portal Edukasi Digital</h1>
-        <p>Tutorial SEO, AdSense, dan Web Development</p>
+        <h1>Kuasai Strategi Digital</h1>
+        <p>100+ Tutorial SEO, AdSense, Code, dan AI</p>
         <div class="search-container">
-            <input type="text" id="searchInput" placeholder="Cari artikel..." onkeyup="if(event.key==='Enter') runSearch()">
+            <input type="text" id="searchInput" placeholder="Cari materi..." onkeyup="if(event.key==='Enter') runSearch()">
             <button onclick="runSearch()"><i class="fas fa-search"></i></button>
         </div>
     </header>
@@ -72,16 +72,15 @@
                 <button class="cat-btn active" onclick="filterByCat('All')">Semua</button>
                 <button class="cat-btn" onclick="filterByCat('SEO')">SEO</button>
                 <button class="cat-btn" onclick="filterByCat('AdSense')">AdSense</button>
-                <button class="cat-btn" onclick="filterByCat('Web')">Web</button>
+                <button class="cat-btn" onclick="filterByCat('Code')">Code</button>
+                <button class="cat-btn" onclick="filterByCat('AI')">AI</button>
             </div>
-            <div class="blog-grid" id="postGrid">
-                </div>
+            <div class="blog-grid" id="postGrid"></div>
             <button id="load-more" onclick="loadMorePosts()">Muat Lebih Banyak</button>
         </main>
-
         <aside>
-            <div style="background: var(--card); padding: 20px; border-radius: 15px; border: 1px solid var(--border);">
-                <h3 style="margin-bottom:15px">Populer</h3>
+            <div style="background: var(--card); padding: 25px; border-radius: 15px; border: 1px solid var(--border);">
+                <h3 style="margin-bottom:15px; border-left: 4px solid var(--primary); padding-left: 10px;">Populer</h3>
                 <div id="popularPosts"></div>
             </div>
         </aside>
@@ -95,29 +94,108 @@
 </div>
 
 <footer>
-    <p>&copy; 2025 KangRuli.web.id</p>
+    <p>&copy; 2025 KangRuli.web.id - Portal Edukasi Digital</p>
 </footer>
 
 <script>
-    let articles = []; 
+    // DATA ARTIKEL (100 Artikel yang sudah diperbaiki)
+    const articles = [
+        /* DATA ANDA DISINI */
+        { "slug": "panduan-seo-2025-pemula", "cat": "SEO", "title": "Panduan Lengkap SEO Modern 2025 untuk Pemula", "desc": "Kuasai teknik SEO terbaru 2025 mulai dari EEAT hingga optimasi Search Generative Experience (SGE).", "img": "https://images.unsplash.com/photo-1571721738239-7b2111d4d73b?w=600", "content": "<h3>Apa itu SEO 2025?</h3><p>SEO tahun 2025 tidak lagi hanya tentang kata kunci, melainkan tentang <b>User Intent</b>. Google semakin pintar dengan teknologi AI...</p><h3>Elemen Penting</h3><ul><li>EEAT</li><li>Core Web Vitals</li><li>Voice Search</li></ul>" },
+        { "slug": "optimasi-lcp-core-web-vitals", "cat": "SEO", "title": "Cara Memperbaiki Skor LCP di Core Web Vitals", "desc": "Teknik mempercepat loading gambar utama website agar lolos audit Google Search Console.", "img": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600", "content": "<h3>Apa itu LCP?</h3><p>Largest Contentful Paint adalah waktu render elemen visual terbesar...</p><h3>Solusi Cepat</h3><ul><li>Gunakan WebP</li><li>Aktifkan Lazy Load</li></ul>" },
+        { "slug": "strategi-backlink-pbn-aman", "cat": "SEO", "title": "Strategi Backlink PBN Aman 2025", "desc": "Cara membangun jaringan blog pribadi tanpa terkena penalti Google.", "img": "https://images.unsplash.com/photo-1562577309-4932fdd64cd1?w=600", "content": "<h3>Footprint Zero</h3><p>Gunakan IP berbeda dan jangan saling link antar PBN untuk menghindari deteksi spam.</p>" },
+        { "slug": "cara-riset-keyword-gratisan", "cat": "SEO", "title": "Riset Keyword Menggunakan Tools Gratisan 100%", "desc": "Memanfaatkan Google Trends dan Suggest untuk ide konten viral.", "img": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600", "content": "<h3>Metode Suggest</h3><p>Gunakan teknik alfabet (keyword + a/b/c) di kolom pencarian Google.</p>" },
+        { "slug": "optimasi-voice-search", "cat": "SEO", "title": "Optimasi Blog untuk Pencarian Suara", "desc": "Cara agar artikel muncul di Google Assistant atau Siri.", "img": "https://images.unsplash.com/photo-1589254065878-42c9da997008?w=600", "content": "<h3>Conversational SEO</h3><p>Gunakan bahasa alami dan jawab pertanyaan secara langsung.</p>" },
+        { "slug": "mobile-first-indexing-guide", "cat": "SEO", "title": "Panduan Mobile-First Indexing 2025", "desc": "Memastikan tampilan mobile sempurna di mata Google Bot.", "img": "https://images.unsplash.com/photo-1522199755839-a2bacb67c546?w=600", "content": "<h3>Mobile Priority</h3><p>Google kini memprioritaskan versi mobile untuk indexing.</p>" },
+        { "slug": "penggunaan-tag-canonical", "cat": "SEO", "title": "Cara Penggunaan Tag Canonical yang Benar", "desc": "Menghindari masalah konten duplikat yang merusak otoritas.", "img": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=600", "content": "<h3>Canonical Tag</h3><p>Beritahu Google URL mana yang merupakan versi utama.</p>" },
+        { "slug": "cara-setting-redirect-301", "cat": "SEO", "title": "Tutorial Redirect 301 Tanpa Kehilangan Trafik", "desc": "Cara memindahkan URL lama ke baru dengan aman.", "img": "https://images.unsplash.com/photo-1558494949-ef010cbdcc51?w=600", "content": "<h3>301 Redirect</h3><p>Metode terbaik untuk menjaga link juice saat mengganti struktur URL.</p>" },
+        { "slug": "meningkatkan-domain-authority", "cat": "SEO", "title": "Cara Menaikkan Domain Authority (DA) Cepat", "desc": "Strategi meningkatkan reputasi website di mata Moz dan Google.", "img": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600", "content": "<h3>DA Hack</h3><p>Fokus pada link building dari situs otoritas tinggi.</p>" },
+        { "slug": "analisis-competitor-seo", "cat": "SEO", "title": "Cara Analisis SEO Kompetitor", "desc": "Mempelajari strategi lawan untuk mendominasi peringkat satu.", "img": "https://images.unsplash.com/photo-1551288049-bbbda536ad0a?w=600", "content": "<h3>Spying SEO</h3><p>Gunakan tools untuk melihat keyword lawan.</p>" },
+        { "slug": "seo-ecommerce-toko-online", "cat": "SEO", "title": "Strategi SEO untuk Toko Online", "desc": "Meningkatkan penjualan lewat trafik organik pencarian produk.", "img": "https://images.unsplash.com/photo-1557821552-17105176677c?w=600", "content": "<h3>Product SEO</h3><p>Optimasi deskripsi produk dan skrip review bintang.</p>" },
+        { "slug": "featured-snippets-tips", "cat": "SEO", "title": "Cara Mendapatkan Ranking 0 Google", "desc": "Strategi agar artikel muncul di kotak jawaban paling atas.", "img": "https://images.unsplash.com/photo-1432888495245-3d11fef9258b?w=600", "content": "<h3>Rich Content</h3><p>Gunakan tabel atau list yang ringkas.</p>" },
+        { "slug": "long-tail-keyword-mastery", "cat": "SEO", "title": "Kekuatan Long-tail Keyword", "desc": "Mengapa kata kunci panjang lebih menguntungkan blogger baru.", "img": "https://images.unsplash.com/photo-1553413077-190dd305871c?w=600", "content": "<h3>Keyword Spesifik</h3><p>Persaingan rendah namun konversi tinggi.</p>" },
+        { "slug": "schema-markup-tutorial", "cat": "SEO", "title": "Tutorial Pasang Schema Markup JSON-LD", "desc": "Membantu Google memahami konteks website Anda lebih cepat.", "img": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600", "content": "<h3>Structured Data</h3><p>Gunakan format JSON-LD untuk hasil terbaik.</p>" },
+        { "slug": "seo-lokal-gmb", "cat": "SEO", "title": "Optimasi SEO Lokal untuk Bisnis", "desc": "Cara mendominasi hasil pencarian di Google Maps.", "img": "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?w=600", "content": "<h3>GMB Strategy</h3><p>Lengkapi profil bisnis Anda di GMB.</p>" },
+        { "slug": "audit-seo-mandiri", "cat": "SEO", "title": "Panduan Audit SEO Website Sendiri", "desc": "Cara cek kesehatan blog tanpa bantuan jasa SEO.", "img": "https://images.unsplash.com/photo-1454165833767-1396b4b76ef4?w=600", "content": "<h3>Audit Checklist</h3><p>Periksa broken link dan meta description.</p>" },
+        { "slug": "mencegah-kanibalisasi-keyword", "cat": "SEO", "title": "Cara Mengatasi Kanibalisasi Kata Kunci", "desc": "Mencegah dua halaman bersaing untuk keyword yang sama.", "img": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600", "content": "<h3>SEO Clean</h3><p>Gabungkan konten yang mirip menjadi satu artikel pilar.</p>" },
+        { "slug": "internal-linking-efektif", "cat": "SEO", "title": "Teknik Internal Linking yang Powerfull", "desc": "Mendistribusikan link juice agar halaman dalam cepat terindex.", "img": "https://images.unsplash.com/photo-1558494949-ef010cbdcc51?w=600", "content": "<h3>Link Flow</h3><p>Gunakan anchor text yang relevan.</p>" },
+        { "slug": "bahaya-copas-artikel", "cat": "SEO", "title": "Bahaya Konten Duplikat & Copas", "desc": "Mengapa Anda harus menghindari copy-paste artikel orang lain.", "img": "https://images.unsplash.com/photo-1579389083078-4e7018379f7e?w=600", "content": "<h3>Plagiarism</h3><p>Google bisa melakukan deindex blog Anda.</p>" },
+        { "slug": "optimasi-alt-image-seo", "cat": "SEO", "title": "Optimasi Alt Text Gambar SEO", "desc": "Cara agar gambar Anda mendatangkan trafik dari Google Images.", "img": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600", "content": "<h3>Alt Text</h3><p>Gunakan deskripsi gambar yang mengandung keyword.</p>" },
+        { "slug": "meningkatkan-dwell-time", "cat": "SEO", "title": "Cara Meningkatkan Dwell Time Pengunjung", "desc": "Tips agar orang betah berlama-lama membaca blog Anda.", "img": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600", "content": "<h3>Engagement</h3><p>Gunakan paragraf pendek agar nyaman dibaca.</p>" },
+        { "slug": "external-link-authority", "cat": "SEO", "title": "Pentingnya Link ke Situs Otoritas", "desc": "Memberikan referensi ke situs besar untuk meningkatkan kepercayaan.", "img": "https://images.unsplash.com/photo-1434626881859-194d67b2b86f?w=600", "content": "<h3>Trust Signal</h3><p>Menghubungkan konten ke sumber terpercaya membantu EEAT.</p>" },
+        { "slug": "optimasi-url-slug-seo", "cat": "SEO", "title": "Cara Membuat URL Slug Ramah SEO", "desc": "Tips menyusun link artikel yang disukai mesin pencari.", "img": "https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?w=600", "content": "<h3>URL Structure</h3><p>Pastikan URL pendek dan mengandung keyword.</p>" },
+        { "slug": "seo-for-news-sites", "cat": "SEO", "title": "SEO untuk Blog Berita (Google News)", "desc": "Cara agar artikel muncul di tab Berita Google.", "img": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=600", "content": "<h3>Fast Indexing</h3><p>Gunakan sitemap berita khusus.</p>" },
+        { "slug": "future-of-seo-ai", "cat": "SEO", "title": "Masa Depan SEO di Era AI 2026", "desc": "Bagaimana cara bertahan saat AI menjawab semua pertanyaan user.", "img": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600", "content": "<h3>AI Survival</h3><p>Fokuslah pada opini personal dan pengalaman nyata.</p>" },
+        { "slug": "cara-daftar-adsense-cepat-approve", "cat": "AdSense", "title": "Cara Daftar AdSense 2025 Agar Cepat Diterima", "desc": "Tips rahasia menyiapkan blog agar lolos review AdSense.", "img": "https://images.unsplash.com/photo-1554224155-169641357599?w=600", "content": "<h3>Syarat Utama</h3><p>Konten original adalah kunci utama.</p>" },
+        { "slug": "meningkatkan-cpc-adsense-indonesia", "cat": "AdSense", "title": "Cara Meningkatkan CPC AdSense Blog Indonesia", "desc": "Strategi menaikkan nilai klik iklan agar setara dengan luar negeri.", "img": "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=600", "content": "<h3>Niche CPC Tinggi</h3><ul><li>Keuangan</li><li>Kesehatan</li><li>Properti</li></ul>" },
+        { "slug": "optimasi-multiplex-ads", "cat": "AdSense", "title": "Cara Pasang Multiplex Ads Terbaik", "desc": "Meningkatkan CTR dengan unit iklan rekomendasi konten.", "img": "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600", "content": "<h3>CTR Hack</h3><p>Pasang unit ini di bawah artikel.</p>" },
+        { "slug": "mengatasi-limit-adsense", "cat": "AdSense", "title": "Cara Mengatasi Limit Iklan AdSense", "desc": "Solusi ampuh jika iklan tidak muncul karena pembatasan.", "img": "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=600", "content": "<h3>Ad Limit</h3><p>Fokus pada trafik organik.</p>" },
+        { "slug": "tips-lolos-pin-adsense", "cat": "AdSense", "title": "Tips Cepat Dapat PIN AdSense", "desc": "Cara agar surat PIN sampai ke rumah tanpa nyasar.", "img": "https://images.unsplash.com/photo-1566837945700-300575276d46?w=600", "content": "<h3>Verifikasi Alamat</h3><p>Sertakan nomor HP di baris alamat.</p>" },
+        { "slug": "letak-iklan-mobile-tinggi-ctr", "cat": "AdSense", "title": "Letak Iklan Mobile Terbaik", "desc": "Maksimalkan pendapatan dari pengguna smartphone.", "img": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600", "content": "<h3>Mobile Ads</h3><p>Gunakan iklan Anchor (melayang).</p>" },
+        { "slug": "memahami-ads-txt-error", "cat": "AdSense", "title": "Cara Memperbaiki Error Ads.txt", "desc": "Solusi notifikasi Penghasilan Beresiko.", "img": "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600", "content": "<h3>Ads.txt Guide</h3><p>Pastikan file bisa diakses di domain.com/ads.txt.</p>" },
+        { "slug": "adsense-arbitrage-bahaya", "cat": "AdSense", "title": "Resiko AdSense Arbitrage", "desc": "Beli trafik untuk AdSense, amankah dilakukan?", "img": "https://images.unsplash.com/photo-1533750359089-6885c381351c?w=600", "content": "<h3>Arbitrage</h3><p>Resiko banned sangat tinggi.</p>" },
+        { "slug": "gajian-adsense-via-bank", "cat": "AdSense", "title": "Cara Setting Pembayaran Bank Lokal", "desc": "Panduan Wire Transfer AdSense ke Bank Indonesia.", "img": "https://images.unsplash.com/photo-1550565118-3d143c462310?w=600", "content": "<h3>Payment Setup</h3><p>Masukkan kode SWIFT bank dengan benar.</p>" },
+        { "slug": "optimasi-anchor-ads-sticky", "cat": "AdSense", "title": "Optimasi Anchor Ads Melayang", "desc": "Meningkatkan tayangan iklan tanpa mengganggu user.", "img": "https://images.unsplash.com/photo-1519389428731-1221bcad750f?w=600", "content": "<h3>Sticky Ads</h3><p>Iklan ini memiliki rasio klik paling stabil.</p>" },
+        { "slug": "analisis-ecpm-adsense", "cat": "AdSense", "title": "Cara Menganalisis Nilai eCPM", "desc": "Memahami potensi pendapatan per 1000 tayangan.", "img": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600", "content": "<h3>eCPM Metric</h3><p>Relevansi iklan menentukan nilai eCPM.</p>" },
+        { "slug": "blocking-iklan-judi-adsense", "cat": "AdSense", "title": "Cara Blokir Iklan Sensitif", "desc": "Menghapus iklan judi dari blog.", "img": "https://images.unsplash.com/photo-1589561084283-930aa7b1ce50?w=600", "content": "<h3>Ad Review</h3><p>Gunakan Ad Review Center.</p>" },
+        { "slug": "adsense-high-paying-niche", "cat": "AdSense", "title": "Daftar Niche AdSense Termahal 2025", "desc": "Topik blog yang memberikan bayaran dolar tertinggi.", "img": "https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=600", "content": "<h3>Premium Niche</h3><p>Hosting, dan Crypto menjadi raja CPC.</p>" },
+        { "slug": "mencegah-invalid-click", "cat": "AdSense", "title": "Cara Mencegah Bom Klik Iklan", "desc": "Melindungi akun AdSense dari serangan kompetitor.", "img": "https://images.unsplash.com/photo-1563986768494-0dd256c09296?w=600", "content": "<h3>Protection</h3><p>Pantau IP pengunjung secara ketat.</p>" },
+        { "slug": "privacy-policy-adsense-generator", "cat": "AdSense", "title": "Membuat Halaman Wajib AdSense", "desc": "Contoh Privacy Policy yang disukai Google AdSense.", "img": "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?w=600", "content": "<h3>Legal Page</h3><p>Sertakan poin penggunaan cookies.</p>" },
+        { "slug": "adsense-vs-affiliate", "cat": "AdSense", "title": "AdSense atau Afiliasi?", "desc": "Mana yang lebih cepat menghasilkan uang.", "img": "https://images.unsplash.com/photo-1434626881859-194d67b2b86f?w=600", "content": "<h3>Comparison</h3><p>AdSense untuk trafik besar.</p>" },
+        { "slug": "smart-pricing-avoid", "cat": "AdSense", "title": "Cara Menghindari Smart Pricing", "desc": "Mencegah penurunan nilai klik secara permanen.", "img": "https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=600", "content": "<h3>CPC Rescue</h3><p>Pastikan pengunjung melakukan aksi nyata.</p>" },
+        { "slug": "adsense-youtube-setup", "cat": "AdSense", "title": "Panduan AdSense untuk YouTube", "desc": "Menghubungkan channel ke AdSense.", "img": "https://images.unsplash.com/photo-1521316730702-829a8e30dfd0?w=600", "content": "<h3>YouTube Ads</h3><p>Pahami syarat monetisasi terbaru.</p>" },
+        { "slug": "native-ads-optimization", "cat": "AdSense", "title": "Optimasi Iklan Native AdSense", "desc": "Membuat iklan menyatu dengan teks.", "img": "https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?w=600", "content": "<h3>Native Ads</h3><p>Gunakan warna yang sama dengan blog.</p>" },
+        { "slug": "revenue-adsense-tips", "cat": "AdSense", "title": "Tips Melejitkan Penghasilan AdSense", "desc": "Meningkatkan pendapatan tanpa menambah trafik.", "img": "https://images.unsplash.com/photo-1554224155-169641357599?w=600", "content": "<h3>Profit Up</h3><p>Fokus pada penempatan 'Above the Fold'.</p>" },
+        { "slug": "policy-center-adsense", "cat": "AdSense", "title": "Cara Cek Pelanggaran Kebijakan", "desc": "Memastikan blog Anda selalu bersih.", "img": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600", "content": "<h3>Policy Check</h3><p>Selesaikan masalah sebelum banned.</p>" },
+        { "slug": "auto-ads-vs-manual-ads", "cat": "AdSense", "title": "Iklan Otomatis vs Manual", "desc": "Mana yang lebih menghasilkan uang?", "img": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600", "content": "<h3>Ad Strategy</h3><p>Kombinasikan keduanya.</p>" },
+        { "slug": "adsense-tax-form-indonesia", "cat": "AdSense", "title": "Cara Isi Formulir Pajak AdSense", "desc": "Panduan pajak AS untuk publisher Indonesia.", "img": "https://images.unsplash.com/photo-1554224155-169641357599?w=600", "content": "<h3>Tax Info</h3><p>Gunakan NPWP untuk potongan pajak rendah.</p>" },
+        { "slug": "matched-content-strategy", "cat": "AdSense", "title": "Strategi Matched Content Terbaru", "desc": "Mengganti fitur matched content.", "img": "https://images.unsplash.com/photo-1551288049-bbbda536ad0a?w=600", "content": "<h3>Recommendation</h3><p>Gunakan unit Multiplex Ads.</p>" },
+        { "slug": "gajian-adsense-tiap-bulan", "cat": "AdSense", "title": "Cara Gajian AdSense Tiap Bulan", "desc": "Strategi mencapai threshold $100 konsisten.", "img": "https://images.unsplash.com/photo-1550565118-3d143c462310?w=600", "content": "<h3>Consistency</h3><p>Posting minimal 3 kali seminggu.</p>" },
+        { "slug": "belajar-html5-untuk-seo", "cat": "Code", "title": "Optimasi Struktur HTML5 agar Ramah SEO", "desc": "Belajar menggunakan tag semantik HTML5.", "img": "https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=600", "content": "<h3>Semantic Tags</h3><p>Gunakan tag &lt;article&gt;.</p>" },
+        { "slug": "belajar-javascript-dasar-blogger", "cat": "Code", "title": "JavaScript Dasar untuk Modifikasi Blogger", "desc": "Tutorial JS sederhana fitur dark mode.", "img": "https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?w=600", "content": "<h3>JS Basics</h3><p>Gunakan document.querySelector.</p>" },
+        { "slug": "optimasi-gambar-webp-github", "cat": "Code", "title": "Cara Konversi Gambar ke WebP", "desc": "Memastikan aset blog ringan.", "img": "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=600", "content": "<h3>WebP Tech</h3><p>WebP menghemat ukuran file.</p>" },
+        { "slug": "membuat-favicon-web-statis", "cat": "Code", "title": "Cara Membuat Favicon Blog", "desc": "Tips branding logo di tab browser.", "img": "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=600", "content": "<h3>Favicon</h3><p>Gunakan format .ico.</p>" },
+        { "slug": "meta-og-graph-tutorial", "cat": "Code", "title": "Optimasi Meta Open Graph", "desc": "Memperbaiki tampilan share link di medsos.", "img": "https://images.unsplash.com/photo-1562577309-4932fdd64cd1?w=600", "content": "<h3>Social SEO</h3><p>Pasang tag og:image.</p>" },
+        { "slug": "konfigurasi-robots-txt-benar", "cat": "Code", "title": "Konfigurasi Robots.txt Sempurna", "desc": "Mengatur bot mana yang boleh masuk.", "img": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600", "content": "<h3>Robots Guide</h3><p>Jangan blokir folder CSS.</p>" },
+        { "slug": "manfaat-https-ssl", "cat": "Code", "title": "Cara Pasang SSL Gratis di GitHub", "desc": "Keamanan data pengunjung dan pengaruhnya.", "img": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600", "content": "<h3>HTTPS</h3><p>Gunakan SSL gratis Cloudflare.</p>" },
+        { "slug": "css-media-queries-responsive", "cat": "Code", "title": "Belajar CSS Media Queries", "desc": "Membuat blog tampil rapi di semua layar.", "img": "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=600", "content": "<h3>Responsive</h3><p>Gunakan breakpoint 768px.</p>" },
+        { "slug": "javascript-async-defer-guide", "cat": "Code", "title": "Cara Pakai Async dan Defer", "desc": "Mencegah render-blocking script.", "img": "https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?w=600", "content": "<h3>JS Speed</h3><p>Gunakan atribut defer.</p>" },
+        { "slug": "preconnect-dns-prefetch-hack", "cat": "Code", "title": "Teknik Preconnect Resource", "desc": "Mempercepat loading aset domain ketiga.", "img": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600", "content": "<h3>Speed Hack</h3><p>Gunakan dns-prefetch.</p>" },
+        { "slug": "lazy-loading-images-manual", "cat": "Code", "title": "Cara Pasang Lazy Load Gambar", "desc": "Menghemat bandwidth pengunjung.", "img": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600", "content": "<h3>Lazy Loading</h3><p>Gunakan loading='lazy'.</p>" },
+        { "slug": "browser-caching-setup", "cat": "Code", "title": "Memahami Browser Caching", "desc": "Membuat loading halaman lebih instan.", "img": "https://images.unsplash.com/photo-1558494949-ef010cbdcc51?w=600", "content": "<h3>Cache Control</h3><p>Atur expire header.</p>" },
+        { "slug": "minify-html-css-js-online", "cat": "Code", "title": "Cara Minify Kode Website", "desc": "Mengecilkan ukuran file.", "img": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=600", "content": "<h3>Minify</h3><p>Hapus spasi yang tidak perlu.</p>" },
+        { "slug": "alt-text-automation-js", "cat": "Code", "title": "Otomatisasi Alt Text dengan JS", "desc": "Skrip sederhana agar gambar punya deskripsi.", "img": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600", "content": "<h3>JS Automation</h3><p>Ambil title masukkan ke alt.</p>" },
+        { "slug": "design-404-custom-seo", "cat": "Code", "title": "Desain Halaman 404 Kustom", "desc": "Agar pengunjung tidak kabur saat link mati.", "img": "https://images.unsplash.com/photo-1594322436404-5a0526db4d13?w=600", "content": "<h3>404 Page</h3><p>Tambahkan navigasi kembali.</p>" },
+        { "slug": "nav-bar-sticky-css", "cat": "Code", "title": "Membuat Sticky Nav dengan CSS", "desc": "Tips UI/UX agar navigasi selalu terlihat.", "img": "https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?w=600", "content": "<h3>Sticky Menu</h3><p>Gunakan position: sticky.</p>" },
+        { "slug": "breadcrumbs-schema-seo", "cat": "Code", "title": "Cara Pasang Breadcrumbs SEO", "desc": "Membantu bot memahami struktur hierarki.", "img": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600", "content": "<h3>Breadcrumbs</h3><p>Gunakan markup schema.org.</p>" },
+        { "slug": "font-awesome-icon-cdn", "cat": "Code", "title": "Integrasi Icon Font Awesome", "desc": "Menambahkan ikon tanpa membebani server.", "img": "https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=600", "content": "<h3>Icons</h3><p>Gunakan library SVG.</p>" },
+        { "slug": "pwa-github-pages-tutorial", "cat": "Code", "title": "Memasang PWA di GitHub Pages", "desc": "Mengubah website menjadi aplikasi mobile.", "img": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600", "content": "<h3>PWA Guide</h3><p>Buat file manifest.json.</p>" },
+        { "slug": "custom-scroll-bar-css", "cat": "Code", "title": "Membuat Scroll Bar Kustom", "desc": "Mempercantik tampilan scroll browser.", "img": "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=600", "content": "<h3>UI Hack</h3><p>Gunakan pseudo-element.</p>" },
+        { "slug": "dark-mode-js-localstorage", "cat": "Code", "title": "Dark Mode dengan LocalStorage", "desc": "Menyimpan pilihan tema pengunjung.", "img": "https://images.unsplash.com/photo-1550439062-609e1531270e?w=600", "content": "<h3>Dark Mode</h3><p>Simpan state tema.</p>" },
+        { "slug": "github-actions-blog-auto", "cat": "Code", "title": "Otomasi Blog dengan GitHub Actions", "desc": "Deploy otomatis setiap push kode.", "img": "https://images.unsplash.com/photo-1558494949-ef010cbdcc51?w=600", "content": "<h3>DevOps</h3><p>Gunakan YAML script.</p>" },
+        { "slug": "google-font-swap-display", "cat": "Code", "title": "Optimasi Google Font Display", "desc": "Mencegah teks hilang saat dimuat.", "img": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=600", "content": "<h3>Font Swap</h3><p>Tambahkan &display=swap.</p>" },
+        { "slug": "membuat-sitemap-xml-otomatis", "cat": "Code", "title": "Sitemap XML Otomatis Blog", "desc": "Memastikan Google tahu update artikel.", "img": "https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?w=600", "content": "<h3>Sitemap</h3><p>Generate sitemap otomatis.</p>" },
+        { "slug": "clonning-repo-github-pages", "cat": "Code", "title": "Cara Clonning Repo GitHub Pages", "desc": "Langkah aman menyalin template blog.", "img": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600", "content": "<h3>Repo Clone</h3><p>Gunakan git clone.</p>" },
+        { "slug": "prompt-ai-nulis-artikel-pilar", "cat": "AI", "title": "Prompt ChatGPT Rahasia untuk Artikel Pilar", "desc": "Teknik prompt engineering konten humanis.", "img": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600", "content": "<h3>Prompting</h3><p>Gunakan perintah bertahap.</p>" },
+        { "slug": "midjourney-for-blog-images", "cat": "AI", "title": "Cara Pakai Midjourney untuk Blog", "desc": "Membuat ilustrasi artikel unik.", "img": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600", "content": "<h3>AI Art</h3><p>Gunakan prompt detail.</p>" },
+        { "slug": "linkedin-marketing-strategy", "cat": "AI", "title": "Strategi Marketing Lewat LinkedIn", "desc": "Mendapatkan trafik profesional.", "img": "https://images.unsplash.com/photo-1611944212129-29977ae1398c?w=600", "content": "<h3>Professional Traffic</h3><p>Share artikel ke grup LinkedIn.</p>" },
+        { "slug": "pinterest-traffic-hack-2025", "cat": "AI", "title": "Rahasia Trafik Pinterest 2025", "desc": "Mendatangkan pengunjung pencarian visual.", "img": "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=600", "content": "<h3>Pinterest SEO</h3><p>Gunakan keyword pada deskripsi pin.</p>" },
+        { "slug": "email-marketing-newsletter", "cat": "AI", "title": "Otomasi Email Marketing Blog", "desc": "Cara terhubung dengan pembaca setia.", "img": "https://images.unsplash.com/photo-1557200134-90327ee9fafa?w=600", "content": "<h3>Newsletter</h3><p>Kumpulkan database email.</p>" },
+        { "slug": "copywriting-aida-formula", "cat": "AI", "title": "Belajar Formula Copywriting AIDA", "desc": "Cara menulis pembukaan artikel menghipnotis.", "img": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=600", "content": "<h3>AIDA Formula</h3><p>Attention, Interest, Desire, Action.</p>" },
+        { "slug": "influencer-outreach-tips", "cat": "AI", "title": "Tips Kolaborasi Influencer", "desc": "Meningkatkan jangkauan blog.", "img": "https://images.unsplash.com/photo-1533750359089-6885c381351c?w=600", "content": "<h3>Networking</h3><p>Tawarkan nilai tambah.</p>" },
+        { "slug": "content-repurposing-guide", "cat": "AI", "title": "Strategi Content Repurposing", "desc": "Cara mengubah 1 artikel blog menjadi 10 konten medsos.", "img": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600", "content": "<h3>Efficiency</h3><p>Ubah poin artikel menjadi video TikTok.</p>" },
+        { "slug": "google-analytics-4-mastery", "cat": "AI", "title": "Panduan Lengkap GA4 2025", "desc": "Menganalisis perilaku pengunjung.", "img": "https://images.unsplash.com/photo-1551288049-bbbda536ad0a?w=600", "content": "<h3>Data Science</h3><p>Fokus pada Metrik Keterlibatan.</p>" },
+        { "slug": "hotjar-heatmap-blogger", "cat": "AI", "title": "Analisis User dengan Heatmap", "desc": "Melihat bagian mana dari blog yang diklik.", "img": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600", "content": "<h3>User Behavior</h3><p>Gunakan data heatmap.</p>" },
+        { "slug": "backlink-outreach-template", "cat": "AI", "title": "Template Email Outreach Backlink", "desc": "Cara kirim email tanpa dianggap spam.", "img": "https://images.unsplash.com/photo-1557200134-90327ee9fafa?w=600", "content": "<h3>Link Building</h3><p>Gunakan pendekatan personal.</p>" },
+        { "slug": "podcasting-for-bloggers-tips", "cat": "AI", "title": "Podcast Sebagai Pendukung Blog", "desc": "Membangun koneksi lebih dalam.", "img": "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=600", "content": "<h3>Audio Blog</h3><p>Embed podcast di artikel.</p>" },
+        { "slug": "community-building-blog", "cat": "AI", "title": "Membangun Komunitas Pembaca", "desc": "Cara membuat grup Telegram pembaca setia.", "img": "https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=600", "content": "<h3>Community</h3><p>Pembaca setia adalah trafik stabil.</p>" },
+        { "slug": "brand-storytelling-kang-ruli", "cat": "AI", "title": "Teknik Storytelling Brand", "desc": "Cara bercerita personal brand Anda.", "img": "https://images.unsplash.com/photo-1512428559083-a40ce10b8857?w=600", "content": "<h3>Storytelling</h3><p>Gunakan narasi yang jujur dan menginspirasi pembaca Anda.</p>" }
+    ];
+
     let itemsToShow = 6;
     let currentFilter = 'All';
 
-    // 1. Ambil data dari articles.json
-    async function loadArticles() {
-        try {
-            const response = await fetch('articles.json');
-            if (!response.ok) throw new Error("File articles.json tidak ditemukan!");
-            articles = await response.json();
-            init();
-            renderPopular();
-        } catch (error) {
-            console.error(error);
-            document.getElementById('postGrid').innerHTML = `<p style="text-align:center; grid-column:1/-1;">Gagal memuat artikel. Pastikan file <b>articles.json</b> ada di folder yang sama.</p>`;
-        }
-    }
-
-    // 2. Inisialisasi Routing
+    // INISIALISASI
     function init() {
         const hash = window.location.hash.replace('#/', '');
         if (hash) {
@@ -125,9 +203,10 @@
         } else {
             renderGrid();
         }
+        renderPopular();
     }
 
-    // 3. Render Beranda
+    // RENDER HALAMAN UTAMA
     function renderGrid(limit = itemsToShow) {
         document.getElementById('home-view').style.display = 'block';
         document.getElementById('detail-view').style.display = 'none';
@@ -138,11 +217,11 @@
         
         grid.innerHTML = displayData.map(post => `
             <div class="post-card" onclick="location.hash='#/${post.slug}'">
-                <img src="${post.img}" class="post-img" alt="${post.title}">
+                <img src="${post.img}" class="post-img" alt="${post.title}" loading="lazy">
                 <div class="post-info">
-                    <small style="color:var(--primary)">${post.cat}</small>
-                    <h3 style="margin:10px 0">${post.title}</h3>
-                    <p style="font-size:0.9rem; color:var(--muted)">${post.desc}</p>
+                    <small style="color:var(--primary); font-weight:700">${post.cat}</small>
+                    <h3 style="margin:10px 0; font-size:1.1rem">${post.title}</h3>
+                    <p style="font-size:0.85rem; color:var(--muted)">${post.desc}</p>
                 </div>
             </div>
         `).join('');
@@ -150,7 +229,7 @@
         document.getElementById('load-more').style.display = filtered.length > limit ? 'block' : 'none';
     }
 
-    // 4. Render Detail
+    // RENDER DETAIL
     function renderDetail(slug) {
         const post = articles.find(a => a.slug === slug);
         if (!post) return goHome();
@@ -159,10 +238,13 @@
         document.getElementById('detail-view').style.display = 'grid';
 
         document.getElementById('articleContent').innerHTML = `
-            <a href="#" onclick="goHome(event)" style="text-decoration:none; color:var(--primary); font-weight:bold;">&larr; Kembali</a>
-            <h1 style="margin:20px 0">${post.title}</h1>
-            <img src="${post.img}" alt="${post.title}">
-            <div style="font-size:1.1rem; line-height:1.8">${post.content}</div>
+            <a href="#" onclick="goHome(event)" style="text-decoration:none; color:var(--primary); font-weight:bold;">&larr; Kembali ke Beranda</a>
+            <div style="margin-top:30px">
+                <small style="color:var(--primary); font-weight:bold;">${post.cat}</small>
+                <h1 style="font-size:2.2rem; margin:15px 0 30px; line-height:1.2">${post.title}</h1>
+                <img src="${post.img}" alt="${post.title}">
+                <div style="font-size:1.1rem; line-height:1.8; color:var(--text)">${post.content}</div>
+            </div>
         `;
         window.scrollTo(0,0);
     }
@@ -177,7 +259,7 @@
         currentFilter = cat;
         itemsToShow = 6;
         document.querySelectorAll('.cat-btn').forEach(btn => {
-            btn.classList.toggle('active', btn.innerText === (cat === 'All' ? 'Semua' : cat));
+            btn.classList.toggle('active', (btn.innerText === cat || (cat === 'All' && btn.innerText === 'Semua')));
         });
         renderGrid();
     }
@@ -189,13 +271,15 @@
 
     function runSearch() {
         const query = document.getElementById('searchInput').value.toLowerCase();
-        const filtered = articles.filter(a => a.title.toLowerCase().includes(query));
-        currentFilter = 'All'; // Reset filter saat cari
+        if(!query) { renderGrid(); return; }
         
+        const filtered = articles.filter(a => a.title.toLowerCase().includes(query) || a.desc.toLowerCase().includes(query));
         const grid = document.getElementById('postGrid');
+        
         grid.innerHTML = filtered.map(post => `
             <div class="post-card" onclick="location.hash='#/${post.slug}'">
                 <div class="post-info">
+                    <small style="color:var(--primary)">${post.cat}</small>
                     <h3 style="margin:10px 0">${post.title}</h3>
                 </div>
             </div>
@@ -204,17 +288,19 @@
     }
 
     function renderPopular() {
-        const pop = articles.slice(0, 4);
+        const pop = articles.slice(0, 5);
         document.getElementById('popularPosts').innerHTML = pop.map(p => `
-            <div style="margin-bottom:15px; cursor:pointer;" onclick="location.hash='#/${p.slug}'">
-                <h4 style="font-size:0.9rem">${p.title}</h4>
+            <div style="margin-bottom:15px; cursor:pointer; border-bottom:1px solid var(--border); padding-bottom:10px" onclick="location.hash='#/${p.slug}'">
+                <h4 style="font-size:0.9rem; line-height:1.3">${p.title}</h4>
             </div>
         `).join('');
     }
 
-    // UI Logic
     document.getElementById('dark-mode-toggle').onclick = () => {
         document.body.classList.toggle('dark-mode');
+        const icon = document.querySelector('#dark-mode-toggle i');
+        icon.classList.toggle('fa-moon');
+        icon.classList.toggle('fa-sun');
     };
 
     window.onscroll = () => {
@@ -224,7 +310,7 @@
     };
 
     window.addEventListener('hashchange', init);
-    window.onload = loadArticles;
+    window.onload = init;
 </script>
 
 </body>
