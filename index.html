@@ -190,158 +190,156 @@
     <p style="font-size: 0.8rem; margin-top: 10px;">Portal Edukasi Strategi Digital & Optimasi Web</p>
 </footer>
 
-<script>
-    // DATA ARTIKEL
-    const articles = [
-        { id: 1, slug: "seo-2025-ai", cat: "SEO", title: "Strategi SEO 2025: Bertahan di Era AI Search", desc: "Cara mengoptimalkan konten agar tetap muncul di Google SGE.", img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600", content: "<h2>Era Baru Pencarian</h2><p>Tahun 2025 adalah titik balik di mana AI menguasai mesin pencari...</p>" },
-        { id: 2, slug: "tips-cpc-tinggi", cat: "AdSense", title: "5 Rahasia Meningkatkan CPC AdSense", desc: "Trik meningkatkan nilai klik iklan untuk penghasilan maksimal.", img: "https://images.unsplash.com/photo-1554224155-169641357599?w=600", content: "<h2>Optimasi Iklan</h2><p>Gunakan blok iklan yang relevan dengan niche high-paying...</p>" },
-        { id: 3, slug: "belajar-js-dasar", cat: "Web", title: "Panduan Belajar JavaScript Dasar untuk Pemula", desc: "Mengenal variabel, fungsi, dan DOM manipulation.", img: "https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?w=600", content: "<h2>Kenapa JS?</h2><p>JavaScript adalah bahasa wajib bagi pengembang web modern...</p>" },
-        // ... Masukkan sisa artikel Anda di sini
-    ];
+// Variabel Global
+let articles = []; 
+let itemsToShow = 6;
+let currentFilter = 'All';
 
-    let itemsToShow = 6;
-    let currentFilter = 'All';
-
-    // INISIALISASI
-    function init() {
-        const hash = window.location.hash.replace('#/', '');
-        if (hash) {
-            renderDetail(hash);
-        } else {
-            renderGrid();
-        }
+// 1. FUNGSI AMBIL DATA DARI JSON
+async function loadArticles() {
+    try {
+        const response = await fetch('articles.json'); // Mengambil file JSON
+        if (!response.ok) throw new Error("Gagal memuat data artikel");
+        
+        articles = await response.json();
+        
+        // Setelah data berhasil diambil, jalankan inisialisasi routing
+        init();
         renderPopular();
+    } catch (error) {
+        console.error("Error:", error);
+        document.getElementById('postGrid').innerHTML = `<p style="grid-column: 1/-1; text-align: center; padding: 50px;">Gagal memuat artikel. Pastikan file 'articles.json' tersedia.</p>`;
     }
+}
 
-    // RENDER LIST ARTIKEL
-    function renderGrid(limit = itemsToShow) {
-        document.getElementById('home-view').style.display = 'block';
-        document.getElementById('detail-view').style.display = 'none';
-
-        const grid = document.getElementById('postGrid');
-        const filtered = articles.filter(a => currentFilter === 'All' || a.cat === currentFilter);
-        
-        const displayData = filtered.slice(0, limit);
-        
-        grid.innerHTML = displayData.map(post => `
-            <div class="post-card" onclick="goToDetail('${post.slug}')">
-                <img src="${post.img}" class="post-img" alt="${post.title}" loading="lazy">
-                <div class="post-info">
-                    <span class="post-cat">${post.cat}</span>
-                    <h3 class="post-title">${post.title}</h3>
-                    <p style="font-size:0.9rem; color:var(--text-muted)">${post.desc}</p>
-                </div>
-            </div>
-        `).join('');
-
-        // Tampilkan/Sembunyikan tombol load more
-        document.getElementById('load-more').style.display = filtered.length > limit ? 'block' : 'none';
-        
-        updateSEO("Kang Ruli | Solusi Digital & Portal Edukasi Web", "Portal edukasi digital terbaik.");
-    }
-
-    // RENDER DETAIL ARTIKEL
-    function renderDetail(slug) {
-        const post = articles.find(a => a.slug === slug);
-        if (!post) return goHome();
-
-        document.getElementById('home-view').style.display = 'none';
-        document.getElementById('detail-view').style.display = 'grid';
-
-        document.getElementById('articleContent').innerHTML = `
-            <a href="#" onclick="goHome(event)" style="color:var(--primary); text-decoration:none; font-weight:600;"><i class="fas fa-arrow-left"></i> Kembali</a>
-            <div style="margin-top:20px;">
-                <span class="post-cat">${post.cat}</span>
-                <h1 style="font-size:2.5rem; margin:15px 0 30px;">${post.title}</h1>
-                <img src="${post.img}" alt="${post.title}">
-                <div class="content">${post.content}</div>
-            </div>
-        `;
-
-        updateSEO(`${post.title} - Kang Ruli`, post.desc);
-        window.scrollTo(0,0);
-    }
-
-    // FUNGSI NAVIGASI & FILTER
-    function goToDetail(slug) { window.location.hash = '#/' + slug; }
-    
-    function goHome(e) { 
-        if(e) e.preventDefault(); 
-        window.location.hash = ''; 
-        renderGrid(); 
-    }
-
-    function filterByCat(cat) {
-        currentFilter = cat;
-        itemsToShow = 6;
-        document.querySelectorAll('.cat-btn').forEach(btn => {
-            btn.classList.toggle('active', btn.innerText === (cat === 'Web' ? 'Web Dev' : cat === 'All' ? 'Semua' : cat));
-        });
+// 2. ROUTING LOGIC
+function init() {
+    const hash = window.location.hash.replace('#/', '');
+    if (hash) {
+        renderDetail(hash);
+    } else {
         renderGrid();
     }
+}
 
-    function loadMorePosts() {
-        itemsToShow += 6;
-        renderGrid(itemsToShow);
+// 3. RENDER GRID (BERANDA)
+function renderGrid(limit = itemsToShow) {
+    document.getElementById('home-view').style.display = 'block';
+    document.getElementById('detail-view').style.display = 'none';
+
+    const grid = document.getElementById('postGrid');
+    const filtered = articles.filter(a => currentFilter === 'All' || a.cat === currentFilter);
+    const displayData = filtered.slice(0, limit);
+    
+    if (displayData.length === 0) {
+        grid.innerHTML = "<p>Tidak ada artikel ditemukan.</p>";
+        return;
     }
 
-    // PENCARIAN
-    function handleSearch(e) { if(e.key === 'Enter') runSearch(); }
-    function runSearch() {
-        const query = document.getElementById('searchInput').value.toLowerCase();
-        const filtered = articles.filter(a => a.title.toLowerCase().includes(query) || a.desc.toLowerCase().includes(query));
-        currentFilter = 'Search';
-        renderFiltered(filtered);
-    }
-
-    function renderFiltered(data) {
-        const grid = document.getElementById('postGrid');
-        grid.innerHTML = data.map(post => `
-            <div class="post-card" onclick="goToDetail('${post.slug}')">
-                <img src="${post.img}" class="post-img" alt="${post.title}">
-                <div class="post-info">
-                    <span class="post-cat">${post.cat}</span>
-                    <h3 class="post-title">${post.title}</h3>
-                </div>
+    grid.innerHTML = displayData.map(post => `
+        <article class="post-card" onclick="goToDetail('${post.slug}')">
+            <img src="${post.img}" class="post-img" alt="${post.title}" loading="lazy">
+            <div class="post-info">
+                <span class="post-cat">${post.cat}</span>
+                <h3 class="post-title">${post.title}</h3>
+                <p style="font-size:0.9rem; color:var(--text-muted)">${post.desc}</p>
             </div>
-        `).join('');
-        document.getElementById('load-more').style.display = 'none';
-    }
+        </article>
+    `).join('');
 
-    // SIDEBAR POPULER
-    function renderPopular() {
-        const pop = articles.slice(0, 4);
-        document.getElementById('popularPosts').innerHTML = pop.map(p => `
-            <div style="display:flex; gap:12px; margin-bottom:15px; cursor:pointer;" onclick="goToDetail('${p.slug}')">
-                <img src="${p.img}" style="width:60px; height:60px; border-radius:8px; object-fit:cover;">
-                <h4 style="font-size:0.85rem; line-height:1.2;">${p.title}</h4>
+    const loadMoreBtn = document.getElementById('load-more');
+    if (loadMoreBtn) {
+        loadMoreBtn.style.display = filtered.length > limit ? 'block' : 'none';
+    }
+    
+    updateSEO("Kang Ruli | Solusi Digital & Portal Edukasi Web", "Tutorial pemrograman dan SEO terlengkap.");
+}
+
+// 4. RENDER DETAIL ARTIKEL
+function renderDetail(slug) {
+    const post = articles.find(a => a.slug === slug);
+    if (!post) return goHome();
+
+    document.getElementById('home-view').style.display = 'none';
+    document.getElementById('detail-view').style.display = 'grid';
+
+    document.getElementById('articleContent').innerHTML = `
+        <a href="#" onclick="goHome(event)" style="color:var(--primary); text-decoration:none; font-weight:600;"><i class="fas fa-arrow-left"></i> Kembali</a>
+        <div style="margin-top:20px;">
+            <span class="post-cat">${post.cat}</span>
+            <h1 style="font-size:2.5rem; margin:15px 0 30px;">${post.title}</h1>
+            <img src="${post.img}" alt="${post.title}" style="width:100%; border-radius:15px;">
+            <div class="content" style="margin-top:30px;">${post.content}</div>
+        </div>
+    `;
+
+    updateSEO(`${post.title} - Kang Ruli`, post.desc);
+    window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+// --- FUNGSI PEMBANTU ---
+function goToDetail(slug) { window.location.hash = '#/' + slug; }
+
+function goHome(e) { 
+    if(e) e.preventDefault(); 
+    window.location.hash = ''; 
+    renderGrid(); 
+}
+
+function filterByCat(cat) {
+    currentFilter = cat;
+    itemsToShow = 6;
+    document.querySelectorAll('.cat-btn').forEach(btn => {
+        const btnText = btn.innerText.replace('Web Dev', 'Web').replace('Semua', 'All');
+        btn.classList.toggle('active', btnText === cat);
+    });
+    renderGrid();
+}
+
+function loadMorePosts() {
+    itemsToShow += 6;
+    renderGrid(itemsToShow);
+}
+
+function runSearch() {
+    const query = document.getElementById('searchInput').value.toLowerCase();
+    const filtered = articles.filter(a => a.title.toLowerCase().includes(query) || a.desc.toLowerCase().includes(query));
+    renderFiltered(filtered);
+}
+
+function renderFiltered(data) {
+    const grid = document.getElementById('postGrid');
+    grid.innerHTML = data.map(post => `
+        <div class="post-card" onclick="goToDetail('${post.slug}')">
+            <img src="${post.img}" class="post-img" alt="${post.title}">
+            <div class="post-info">
+                <span class="post-cat">${post.cat}</span>
+                <h3 class="post-title">${post.title}</h3>
             </div>
-        `).join('');
-    }
+        </div>
+    `).join('');
+    document.getElementById('load-more').style.display = 'none';
+}
 
-    // DARK MODE & UI
-    document.getElementById('dark-mode-toggle').onclick = () => {
-        document.body.classList.toggle('dark-mode');
-        const icon = document.querySelector('#dark-mode-toggle i');
-        icon.classList.toggle('fa-moon');
-        icon.classList.toggle('fa-sun');
-    };
+function renderPopular() {
+    const pop = articles.slice(0, 4);
+    document.getElementById('popularPosts').innerHTML = pop.map(p => `
+        <div style="display:flex; gap:12px; margin-bottom:15px; cursor:pointer;" onclick="goToDetail('${p.slug}')">
+            <img src="${p.img}" style="width:60px; height:60px; border-radius:8px; object-fit:cover;">
+            <h4 style="font-size:0.85rem; line-height:1.2;">${p.title}</h4>
+        </div>
+    `).join('');
+}
 
-    window.onscroll = () => {
-        let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-        let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        document.getElementById("progress-bar").style.width = (winScroll / height) * 100 + "%";
-    };
+function updateSEO(title, desc) {
+    document.title = title;
+    const meta = document.getElementById('meta-desc');
+    if(meta) meta.content = desc;
+}
 
-    function updateSEO(title, desc) {
-        document.title = title;
-        document.getElementById('meta-desc').content = desc;
-        document.getElementById('og-title').content = title;
-        document.getElementById('canonical-url').href = window.location.href;
-    }
-
-    window.addEventListener('hashchange', init);
-    window.onload = init;
+// Event Listeners
+window.addEventListener('hashchange', init);
+window.onload = loadArticles; // Mulai dengan memuat file JSON
 </script>
 
 </body>
