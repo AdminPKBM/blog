@@ -1,721 +1,162 @@
-[
-  /* --- KATEGORI SEO (1-25) --- */
-  {
-    "slug": "panduan-seo-2025-pemula",
-    "cat": "SEO",
-    "title": "Panduan Lengkap SEO Modern 2025 untuk Pemula",
-    "desc": "Kuasai teknik SEO terbaru 2025 mulai dari EEAT hingga optimasi Search Generative Experience (SGE).",
-    "img": "https://images.unsplash.com/photo-1571721738239-7b2111d4d73b?w=600",
-    "content": "<h3>Evolusi SEO di Era AI</h3><p>SEO tahun 2025 tidak lagi hanya tentang kata kunci, melainkan tentang <b>User Intent</b>. Google semakin pintar dalam memahami konteks konten melalui sistem SGE (Search Generative Experience).</p><h4>Pilar Utama SEO 2025:</h4><ul><li><b>EEAT:</b> Menonjolkan pengalaman nyata (Experience) dan kredibilitas penulis.</li><li><b>Core Web Vitals:</b> Kecepatan loading (LCP) dan stabilitas visual (CLS) tetap menjadi ranking factor utama.</li><li><b>Semantic Search:</b> Fokus pada topik yang mendalam, bukan sekadar pengulangan kata kunci.</li></ul><p>Optimasi untuk pencarian suara (Voice Search) juga menjadi krusial seiring meningkatnya penggunaan asisten digital.</p>"
-  },
-  {
-    "slug": "optimasi-lcp-core-web-vitals",
-    "cat": "SEO",
-    "title": "Cara Memperbaiki Skor LCP di Core Web Vitals",
-    "desc": "Teknik mempercepat loading gambar utama website agar lolos audit Google Search Console.",
-    "img": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600",
-    "content": "<h3>Apa itu LCP?</h3><p>Largest Contentful Paint (LCP) mengukur waktu yang dibutuhkan untuk menampilkan elemen visual terbesar di layar. Skor di bawah 2.5 detik dianggap sangat baik oleh Google.</p><h4>Langkah Memperbaiki LCP:</h4><ul><li><b>Optimasi Gambar:</b> Konversi gambar ke format WebP atau Avif dan gunakan teknik kompresi tanpa mengurangi kualitas.</li><li><b>Preload Image:</b> Gunakan tag &lt;link rel='preload'&gt; untuk gambar pahlawan (hero image).</li><li><b>Hapus Render-Blocking:</b> Tunda pemuatan JavaScript yang tidak diperlukan di awal render.</li></ul>"
-  },
-  {
-    "slug": "strategi-backlink-pbn-aman",
-    "cat": "SEO",
-    "title": "Strategi Backlink PBN Aman 2025",
-    "desc": "Cara membangun jaringan blog pribadi tanpa terkena penalti Google.",
-    "img": "https://images.unsplash.com/photo-1562577309-4932fdd64cd1?w=600",
-    "content": "<h3>Keamanan Jaringan PBN</h3><p>Private Blog Network (PBN) masih efektif jika dikelola dengan teknik <b>Footprint Zero</b>. Kuncinya adalah membuat jaringan terlihat seperti situs mandiri yang organik.</p><h4>Aturan Main PBN Aman:</h4><ul><li><b>Hosting Berbeda:</b> Gunakan layanan hosting dengan IP Address yang berbeda (A-Class atau B-Class).</li><li><b>Registrar Beragam:</b> Jangan mendaftarkan semua domain di satu akun registrar yang sama.</li><li><b>Konten Berkualitas:</b> Hindari konten spin. PBN harus diisi artikel yang bermanfaat bagi manusia, bukan hanya bot.</li></ul>"
-  },
-  {
-    "slug": "cara-riset-keyword-gratisan",
-    "cat": "SEO",
-    "title": "Riset Keyword Menggunakan Tools Gratisan 100%",
-    "desc": "Memanfaatkan Google Trends dan Suggest untuk ide konten viral.",
-    "img": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600",
-    "content": "<h3>Riset Tanpa Biaya</h3><p>Banyak pemula menganggap riset keyword butuh modal besar, padahal Google sendiri menyediakan data melimpah secara gratis.</p><h4>Metode Riset Efektif:</h4><ul><li><b>Google Autocomplete:</b> Ketik kata kunci dan lihat saran yang muncul. Gunakan teknik alfabet (keyword + a, keyword + b).</li><li><b>Google Trends:</b> Cek apakah topik tersebut sedang naik daun atau musiman.</li><li><b>People Also Ask:</b> Manfaatkan kolom pertanyaan di hasil pencarian untuk membuat sub-judul artikel.</li></ul>"
-  },
-  {
-    "slug": "optimasi-voice-search",
-    "cat": "SEO",
-    "title": "Optimasi Blog untuk Pencarian Suara",
-    "desc": "Cara agar artikel muncul di Google Assistant atau Siri.",
-    "img": "https://images.unsplash.com/photo-1589254065878-42c9da997008?w=600",
-    "content": "<h3>Conversational SEO</h3><p>Pencarian suara cenderung lebih panjang dan menggunakan bahasa sehari-hari (percakapan). Optimasi ini sangat penting untuk target pengguna mobile.</p><h4>Cara Optimasi:</h4><ul><li>Gunakan pertanyaan sebagai judul (Siapa, Apa, Di mana, Bagaimana).</li><li>Tulis jawaban ringkas di awal paragraf (kurang dari 40 kata).</li><li>Gunakan <b>Schema Markup</b> FAQ untuk membantu asisten digital membaca konten Anda.</li></ul>"
-  },
-  {
-    "slug": "mobile-first-indexing-guide",
-    "cat": "SEO",
-    "title": "Panduan Mobile-First Indexing 2025",
-    "desc": "Memastikan tampilan mobile sempurna di mata Google Bot.",
-    "img": "https://images.unsplash.com/photo-1522199755839-a2bacb67c546?w=600",
-    "content": "<h3>Mobile Priority</h3><p>Google kini memprioritaskan versi mobile untuk indexing dan ranking. Jika situs Anda tidak mobile-friendly, jangan harap bisa duduk di peringkat satu.</p><h4>Checklist Mobile-First:</h4><ul><li><b>Responsive Design:</b> Pastikan teks tidak terlalu kecil dan tombol mudah diklik.</li><li><b>Hapus Pop-up Mengganggu:</b> Interstitial yang menutupi konten di mobile akan dipenalti.</li><li><b>Kecepatan Mobile:</b> Prioritaskan script yang ringan untuk koneksi 4G/5G.</li></ul>"
-  },
-  {
-    "slug": "penggunaan-tag-canonical",
-    "cat": "SEO",
-    "title": "Cara Penggunaan Tag Canonical yang Benar",
-    "desc": "Menghindari masalah konten duplikat yang merusak otoritas.",
-    "img": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=600",
-    "content": "<h3>Fungsi Canonical Tag</h3><p>Rel='canonical' memberi tahu mesin pencari URL mana yang merupakan versi utama. Ini sangat penting jika Anda memiliki halaman produk serupa atau konten sindikasi.</p><h4>Tips Implementasi:</h4><ul><li>Gunakan URL absolut (lengkap dengan https).</li><li>Pastikan halaman canonical dapat diindeks (status 200 OK).</li><li>Self-referencing canonical (halaman menunjuk ke dirinya sendiri) sangat disarankan.</li></ul>"
-  },
-  {
-    "slug": "cara-setting-redirect-301",
-    "cat": "SEO",
-    "title": "Tutorial Redirect 301 Tanpa Kehilangan Trafik",
-    "desc": "Cara memindahkan URL lama ke baru dengan aman.",
-    "img": "https://images.unsplash.com/photo-1558494949-ef010cbdcc51?w=600",
-    "content": "<h3>Pentingnya Redirect 301</h3><p>Redirect 301 adalah kode status permanen yang memindahkan otoritas (link juice) dari URL lama ke URL baru sebesar 90-99%.</p><h4>Kapan Menggunakannya?</h4><ul><li>Saat mengganti struktur permalink artikel.</li><li>Saat melakukan migrasi dari HTTP ke HTTPS.</li><li>Saat menggabungkan dua artikel menjadi satu artikel pilar yang lebih kuat.</li></ul>"
-  },
-  {
-    "slug": "meningkatkan-domain-authority",
-    "cat": "SEO",
-    "title": "Cara Menaikkan Domain Authority (DA) Cepat",
-    "desc": "Strategi meningkatkan reputasi website di mata Moz dan Google.",
-    "img": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600",
-    "content": "<h3>DA vs Otoritas Nyata</h3><p>Meskipun DA bukan metrik resmi Google, angka ini mencerminkan kekuatan profil backlink Anda. Menaikkan DA membutuhkan waktu dan konsistensi.</p><h4>Strategi Jitu:</h4><ul><li>Cari backlink dari situs dengan niche relevan dan DA tinggi.</li><li>Hapus atau <b>Disavow</b> backlink spam yang menurunkan kualitas skor Anda.</li><li>Optimasi Internal Linking agar distribusi otoritas merata ke seluruh halaman.</li></ul>"
-  },
-  {
-    "slug": "analisis-competitor-seo",
-    "cat": "SEO",
-    "title": "Cara Analisis SEO Kompetitor",
-    "desc": "Mempelajari strategi lawan untuk mendominasi peringkat satu.",
-    "img": "https://images.unsplash.com/photo-1551288049-bbbda536ad0a?w=600",
-    "content": "<h3>Spying SEO</h3><p>Menganalisis kompetitor membantu Anda menemukan celah keyword yang belum mereka garap. Gunakan tools seperti Ahrefs, Semrush, atau Ubersuggest.</p><h4>Langkah Analisis:</h4><ul><li>Identifikasi 5 kompetitor utama di niche Anda.</li><li>Lihat 'Top Pages' mereka untuk mengetahui artikel apa yang paling banyak menyumbang trafik.</li><li>Analisis profil backlink mereka dan coba dapatkan link dari sumber yang sama.</li></ul>"
-  },
-  {
-    "slug": "seo-ecommerce-toko-online",
-    "cat": "SEO",
-    "title": "Strategi SEO untuk Toko Online",
-    "desc": "Meningkatkan penjualan lewat trafik organik pencarian produk.",
-    "img": "https://images.unsplash.com/photo-1557821552-17105176677c?w=600",
-    "content": "<h3>Product SEO</h3><p>Tantangan terbesar e-commerce adalah halaman duplikat dan deskripsi yang tipis. Optimasi kategori adalah kunci utama.</p><h4>Tips Optimasi:</h4><ul><li>Tulis deskripsi produk unik minimal 300 kata (jangan copas produsen).</li><li>Gunakan <b>Schema Markup Product</b> agar harga dan rating muncul di hasil pencarian.</li><li>Optimasi kecepatan gambar katalog agar pengguna betah browsing.</li></ul>"
-  },
-  {
-    "slug": "featured-snippets-tips",
-    "cat": "SEO",
-    "title": "Cara Mendapatkan Ranking 0 Google",
-    "desc": "Strategi agar artikel muncul di kotak jawaban paling atas.",
-    "img": "https://images.unsplash.com/photo-1432888495245-3d11fef9258b?w=600",
-    "content": "<h3>Featured Snippets</h3><p>Ranking 0 adalah posisi di atas hasil pencarian organik pertama. Ini memberikan eksposur yang luar biasa besar.</p><h4>Cara Menang:</h4><ul><li>Gunakan tag H2 atau H3 yang berisi pertanyaan populer.</li><li>Berikan jawaban langsung di bawah header dalam format <b>List (ol/ul)</b> atau paragraf pendek (40-50 kata).</li><li>Pastikan artikel Anda sudah berada di halaman pertama terlebih dahulu.</li></ul>"
-  },
-  {
-    "slug": "long-tail-keyword-mastery",
-    "cat": "SEO",
-    "title": "Kekuatan Long-tail Keyword",
-    "desc": "Mengapa kata kunci panjang lebih menguntungkan blogger baru.",
-    "img": "https://images.unsplash.com/photo-1553413077-190dd305871c?w=600",
-    "content": "<h3>Keyword Spesifik</h3><p>Long-tail keyword adalah frasa yang terdiri dari 3 kata atau lebih. Meski volumenya rendah, kompetisinya jauh lebih mudah dimenangkan.</p><h4>Keuntungan:</h4><ul><li><b>Konversi Tinggi:</b> Orang yang mencari 'sepatu lari nike pria size 42' lebih siap membeli dibanding yang hanya mencari 'sepatu'.</li><li><b>Mudah Ranking:</b> Sangat cocok untuk domain baru dengan authority rendah.</li></ul>"
-  },
-  {
-    "slug": "schema-markup-tutorial",
-    "cat": "SEO",
-    "title": "Tutorial Pasang Schema Markup JSON-LD",
-    "desc": "Membantu Google memahami konteks website Anda lebih cepat.",
-    "img": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600",
-    "content": "<h3>Structured Data</h3><p>Schema Markup adalah bahasa yang digunakan mesin pencari untuk menampilkan cuplikan kaya (rich snippets). Format yang paling direkomendasikan adalah JSON-LD.</p><h4>Tipe Schema Populer:</h4><ul><li><b>Article:</b> Memberi tahu Google ini adalah berita atau blog.</li><li><b>Recipe:</b> Menampilkan estimasi waktu masak dan kalori.</li><li><b>FAQ:</b> Menampilkan daftar tanya jawab langsung di Google.</li></ul>"
-  },
-  {
-    "slug": "seo-lokal-gmb",
-    "cat": "SEO",
-    "title": "Optimasi SEO Lokal untuk Bisnis",
-    "desc": "Cara mendominasi hasil pencarian di Google Maps.",
-    "img": "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?w=600",
-    "content": "<h3>GMB Strategy</h3><p>SEO Lokal sangat krusial bagi bisnis fisik seperti cafe, bengkel, atau klinik. Fokusnya adalah muncul di 'Map Pack' Google.</p><h4>Langkah Optimasi:</h4><ul><li>Verifikasi akun <b>Google Business Profile</b> (GMB).</li><li>Pastikan NAP (Name, Address, Phone) konsisten di seluruh internet.</li><li>Minta ulasan positif dari pelanggan asli dan balas ulasan tersebut.</li></ul>"
-  },
-  {
-    "slug": "audit-seo-mandiri",
-    "cat": "SEO",
-    "title": "Panduan Audit SEO Website Sendiri",
-    "desc": "Cara cek kesehatan blog tanpa bantuan jasa SEO.",
-    "img": "https://images.unsplash.com/photo-1454165833767-1396b4b76ef4?w=600",
-    "content": "<h3>Audit Checklist</h3><p>Melakukan audit berkala mencegah penurunan trafik secara mendadak akibat error teknis atau perubahan algoritma.</p><h4>Poin Penting Audit:</h4><ul><li>Cari dan perbaiki <b>Broken Link (404)</b>.</li><li>Periksa apakah semua halaman penting sudah terindeks.</li><li>Analisis konten yang performanya turun dan lakukan update informasi.</li></ul>"
-  },
-  {
-    "slug": "mencegah-kanibalisasi-keyword",
-    "cat": "SEO",
-    "title": "Cara Mengatasi Kanibalisasi Kata Kunci",
-    "desc": "Mencegah dua halaman bersaing untuk keyword yang sama.",
-    "img": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600",
-    "content": "<h3>SEO Clean</h3><p>Kanibalisasi terjadi ketika Anda memiliki dua artikel yang membahas hal yang sama persis. Akibatnya, Google bingung menentukan mana yang paling otoritatif.</p><h4>Solusi:</h4><ul><li>Gabungkan kedua artikel tersebut menjadi satu panduan yang sangat lengkap.</li><li>Gunakan 301 Redirect dari artikel yang lebih lemah ke artikel utama.</li><li>Ubah target keyword salah satu halaman ke variasi yang berbeda.</li></ul>"
-  },
-  {
-    "slug": "internal-linking-efektif",
-    "cat": "SEO",
-    "title": "Teknik Internal Linking yang Powerfull",
-    "desc": "Mendistribusikan link juice agar halaman dalam cepat terindex.",
-    "img": "https://images.unsplash.com/photo-1558494949-ef010cbdcc51?w=600",
-    "content": "<h3>Link Flow</h3><p>Internal link membantu crawler Google menemukan halaman baru dan memahami konteks antar konten dalam satu website.</p><h4>Aturan Internal Link:</h4><ul><li>Gunakan <b>Anchor Text</b> yang mengandung keyword target halaman tujuan.</li><li>Link dari halaman dengan trafik tinggi ke halaman yang baru dipublikasikan.</li><li>Jangan berlebihan, pastikan link diletakkan secara alami di dalam kalimat.</li></ul>"
-  },
-  {
-    "slug": "bahaya-copas-artikel",
-    "cat": "SEO",
-    "title": "Bahaya Konten Duplikat & Copas",
-    "desc": "Mengapa Anda harus menghindari copy-paste artikel orang lain.",
-    "img": "https://images.unsplash.com/photo-1579389083078-4e7018379f7e?w=600",
-    "content": "<h3>Plagiarism</h3><p>Copy-paste adalah cara tercepat untuk menghancurkan masa depan blog Anda. Google memiliki algoritma canggih untuk mendeteksi pencurian konten.</p><h4>Risiko Copas:</h4><ul><li><b>De-index:</b> Seluruh domain Anda bisa dihapus dari pencarian Google.</li><li><b>Pelanggaran Hak Cipta:</b> Potensi tuntutan hukum dari pemilik konten asli.</li><li><b>Sulit Diterima AdSense:</b> Google AdSense menolak keras situs dengan konten tidak orisinal.</li></ul>"
-  },
-  {
-    "slug": "optimasi-alt-image-seo",
-    "cat": "SEO",
-    "title": "Optimasi Alt Text Gambar SEO",
-    "desc": "Cara agar gambar Anda mendatangkan trafik dari Google Images.",
-    "img": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600",
-    "content": "<h3>Fungsi Alt Text</h3><p>Mesin pencari tidak bisa 'melihat' gambar, mereka membaca deskripsi teksnya. Alt text juga membantu aksesibilitas bagi penyandang tunanetra.</p><h4>Cara Menulis Alt Text:</h4><ul><li>Deskripsikan gambar secara akurat dan spesifik.</li><li>Masukan kata kunci target secara natural (jangan spamming).</li><li>Jangan mengawali dengan 'gambar dari...' karena bot sudah tahu itu gambar.</li></ul>"
-  },
-  {
-    "slug": "meningkatkan-dwell-time",
-    "cat": "SEO",
-    "title": "Cara Meningkatkan Dwell Time Pengunjung",
-    "desc": "Tips agar orang betah berlama-lama membaca blog Anda.",
-    "img": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600",
-    "content": "<h3>User Engagement</h3><p>Dwell time adalah durasi waktu pengunjung berada di halaman Anda sebelum kembali ke hasil pencarian. Semakin lama, semakin bagus sinyal SEO-nya.</p><h4>Tips Meningkatkan Dwell Time:</h4><ul><li>Gunakan paragraf pendek dan poin-poin agar mudah dipindai.</li><li>Embed video yang relevan untuk menahan audiens lebih lama.</li><li>Tulis pembukaan (Hook) yang menarik rasa penasaran.</li></ul>"
-  },
-  {
-    "slug": "external-link-authority",
-    "cat": "SEO",
-    "title": "Pentingnya Link ke Situs Otoritas",
-    "desc": "Memberikan referensi ke situs besar untuk meningkatkan kepercayaan.",
-    "img": "https://images.unsplash.com/photo-1434626881859-194d67b2b86f?w=600",
-    "content": "<h3>Trust Signal</h3><p>Menghubungkan konten Anda ke sumber eksternal yang terpercaya (seperti Wikipedia atau situs pemerintah) menunjukkan bahwa informasi Anda valid.</p><h4>Manfaat External Link:</h4><ul><li>Membangun kredibilitas konten (EEAT).</li><li>Membantu algoritma Google memahami niche situs Anda.</li><li>Memberikan nilai tambah bagi pembaca untuk riset lebih lanjut.</li></ul>"
-  },
-  {
-    "slug": "optimasi-url-slug-seo",
-    "cat": "SEO",
-    "title": "Cara Membuat URL Slug Ramah SEO",
-    "desc": "Tips menyusun link artikel yang disukai mesin pencari.",
-    "img": "https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?w=600",
-    "content": "<h3>URL Structure</h3><p>URL yang bersih lebih mudah diingat manusia dan lebih disukai bot pencari. Hindari URL yang berisi angka atau karakter aneh.</p><h4>Aturan URL:</h4><ul><li>Gunakan tanda hubung (-) sebagai pemisah kata, bukan underscore (_).</li><li>Buat sependek mungkin namun tetap mengandung keyword utama.</li><li>Jangan gunakan kata depan yang tidak perlu (seperti: di, ke, dari).</li></ul>"
-  },
-  {
-    "slug": "seo-for-news-sites",
-    "cat": "SEO",
-    "title": "SEO untuk Blog Berita (Google News)",
-    "desc": "Cara agar artikel muncul di tab Berita Google.",
-    "img": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=600",
-    "content": "<h3>Fast Indexing</h3><p>Berita bersifat sangat dinamis dan cepat basi. Oleh karena itu, kecepatan indeks adalah prioritas nomor satu bagi situs berita.</p><h4>Syarat Google News:</h4><ul><li>Gunakan <b>Sitemap Berita</b> khusus.</li><li>Tampilkan tanggal publikasi dan nama penulis yang jelas.</li><li>Gunakan teknologi AMP (Accelerated Mobile Pages) untuk loading instan.</li></ul>"
-  },
-  {
-    "slug": "future-of-seo-ai",
-    "cat": "SEO",
-    "title": "Masa Depan SEO di Era AI 2026",
-    "desc": "Bagaimana cara bertahan saat AI menjawab semua pertanyaan user.",
-    "img": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600",
-    "content": "<h3>AI Survival</h3><p>Dengan hadirnya ChatGPT dan Google Gemini, banyak pencarian informatif kini dijawab langsung oleh AI. Strategi SEO pun harus bergeser.</p><h4>Fokus di Masa Depan:</h4><ul><li><b>Personal Branding:</b> Orang akan tetap mencari opini dari manusia yang mereka percayai.</li><li><b>Original Research:</b> Sajikan data unik hasil survei atau eksperimen sendiri yang belum tersedia di database AI.</li><li><b>Content Experience:</b> Buat konten yang sangat interaktif dan kaya visual.</li></ul>"
-  },
+<script>
+    // DATA ARTIKEL LENGKAP (SEO & ADSENSE)
+    const articles = [
+        /* --- KATEGORI SEO --- */
+        {
+            "slug": "panduan-seo-2025-pemula",
+            "cat": "SEO",
+            "title": "Panduan Lengkap SEO Modern 2025 untuk Pemula",
+            "desc": "Kuasai teknik SEO terbaru 2025 mulai dari EEAT hingga optimasi Search Generative Experience (SGE).",
+            "img": "https://images.unsplash.com/photo-1571721738239-7b2111d4d73b?w=600",
+            "content": "<h3>Evolusi SEO di Era AI</h3><p>SEO tahun 2025 tidak lagi hanya tentang kata kunci, melainkan tentang <b>User Intent</b>. Google semakin pintar dalam memahami konteks konten melalui sistem SGE (Search Generative Experience).</p><h4>Pilar Utama SEO 2025:</h4><ul><li><b>EEAT:</b> Menonjolkan pengalaman nyata (Experience) dan kredibilitas penulis.</li><li><b>Core Web Vitals:</b> Kecepatan loading (LCP) dan stabilitas visual (CLS) tetap menjadi ranking factor utama.</li><li><b>Semantic Search:</b> Fokus pada topik yang mendalam, bukan sekadar pengulangan kata kunci.</li></ul>"
+        },
+        {
+            "slug": "optimasi-lcp-core-web-vitals",
+            "cat": "SEO",
+            "title": "Cara Memperbaiki Skor LCP di Core Web Vitals",
+            "desc": "Teknik mempercepat loading gambar utama website agar lolos audit Google Search Console.",
+            "img": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600",
+            "content": "<h3>Apa itu LCP?</h3><p>Largest Contentful Paint (LCP) mengukur waktu yang dibutuhkan untuk menampilkan elemen visual terbesar di layar.</p>"
+        },
+        {
+            "slug": "strategi-backlink-pbn-aman",
+            "cat": "SEO",
+            "title": "Strategi Backlink PBN Aman 2025",
+            "desc": "Cara membangun jaringan blog pribadi tanpa terkena penalti Google.",
+            "img": "https://images.unsplash.com/photo-1562577309-4932fdd64cd1?w=600",
+            "content": "<h3>Keamanan Jaringan PBN</h3><p>Kuncinya adalah membuat jaringan terlihat seperti situs mandiri yang organik.</p>"
+        },
+        {
+            "slug": "cara-riset-keyword-gratisan",
+            "cat": "SEO",
+            "title": "Riset Keyword Menggunakan Tools Gratisan 100%",
+            "desc": "Memanfaatkan Google Trends dan Suggest untuk ide konten viral.",
+            "img": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600",
+            "content": "<h3>Riset Tanpa Biaya</h3><p>Manfaatkan Google Autocomplete dan Google Trends secara maksimal.</p>"
+        },
+        {
+            "slug": "optimasi-voice-search",
+            "cat": "SEO",
+            "title": "Optimasi Blog untuk Pencarian Suara",
+            "desc": "Cara agar artikel muncul di Google Assistant atau Siri.",
+            "img": "https://images.unsplash.com/photo-1589254065878-42c9da997008?w=600",
+            "content": "<h3>Conversational SEO</h3><p>Gunakan bahasa sehari-hari dan format pertanyaan-jawaban.</p>"
+        },
+        {
+            "slug": "mobile-first-indexing-guide",
+            "cat": "SEO",
+            "title": "Panduan Mobile-First Indexing 2025",
+            "desc": "Memastikan tampilan mobile sempurna di mata Google Bot.",
+            "img": "https://images.unsplash.com/photo-1522199755839-a2bacb67c546?w=600",
+            "content": "<h3>Mobile Priority</h3><p>Google kini memprioritaskan versi mobile untuk indexing dan ranking.</p>"
+        },
+        {
+            "slug": "penggunaan-tag-canonical",
+            "cat": "SEO",
+            "title": "Cara Penggunaan Tag Canonical yang Benar",
+            "desc": "Menghindari masalah konten duplikat yang merusak otoritas.",
+            "img": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=600",
+            "content": "<h3>Fungsi Canonical Tag</h3><p>Memberi tahu mesin pencari URL mana yang merupakan versi utama.</p>"
+        },
 
-  /* --- KATEGORI ADSENSE (26-50) --- */
-  {
-    "slug": "cara-daftar-adsense-cepat-approve",
-    "cat": "AdSense",
-    "title": "Cara Daftar AdSense 2025 Agar Cepat Diterima",
-    "desc": "Tips rahasia menyiapkan blog agar lolos review AdSense kurang dari 48 jam.",
-    "img": "https://images.unsplash.com/photo-1554224155-169641357599?w=600",
-    "content": "<h3>Kesiapan Blog AdSense</h3><p>Google AdSense sangat ketat dalam menyaring publisher baru. Navigasi yang berantakan atau konten tipis pasti akan ditolak.</p><h4>Syarat Lolos Review:</h4><ul><li>Minimal 15-20 artikel orisinal dengan panjang 600+ kata.</li><li>Gunakan Domain TLD (.com, .id, .net) untuk profesionalisme.</li><li>Lengkapi halaman wajib: Privacy Policy, About Us, dan Contact.</li></ul>"
-  },
-  {
-    "slug": "meningkatkan-cpc-adsense-indonesia",
-    "cat": "AdSense",
-    "title": "Cara Meningkatkan CPC AdSense Blog Indonesia",
-    "desc": "Strategi menaikkan nilai klik iklan agar setara dengan blog luar negeri.",
-    "img": "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=600",
-    "content": "<h3>Niche dengan Bayaran Tinggi</h3><p>CPC (Cost Per Click) di Indonesia memang lebih rendah dibanding US, namun Anda bisa meningkatkannya dengan memilih niche yang tepat.</p><h4>Niche CPC Tinggi:</h4><ul><li><b>Finance & Banking:</b> Pinjaman, kartu kredit, asuransi.</li><li><b>Health:</b> Obat-obatan herbal, tips diet profesional.</li><li><b>Tech & Business:</b> Web hosting, trading saham, dan crypto.</li></ul>"
-  },
-  {
-    "slug": "optimasi-multiplex-ads",
-    "cat": "AdSense",
-    "title": "Cara Pasang Multiplex Ads Terbaik",
-    "desc": "Meningkatkan CTR dengan unit iklan rekomendasi konten.",
-    "img": "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600",
-    "content": "<h3>Unit Multiplex Ads</h3><p>Multiplex Ads adalah jenis iklan rekomendasi yang muncul menyerupai artikel terkait. Iklan ini sangat efektif diletakkan di bagian akhir tulisan.</p><h4>Keuntungan Multiplex:</h4><ul><li><b>CTR Tinggi:</b> Pengguna sering menganggap iklan ini sebagai bagian dari konten situs.</li><li><b>Layout Responsif:</b> Menyesuaikan otomatis dengan tampilan mobile atau desktop.</li></ul>"
-  },
-  {
-    "slug": "mengatasi-limit-adsense",
-    "cat": "AdSense",
-    "title": "Cara Mengatasi Limit Iklan AdSense",
-    "desc": "Solusi ampuh jika iklan tidak muncul karena pembatasan trafik.",
-    "img": "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=600",
-    "content": "<h3>Penyebab Iklan Dibatasi</h3><p>Ad limit biasanya terjadi karena Google mendeteksi adanya trafik yang tidak valid atau lonjakan trafik dari sosial media yang tidak wajar.</p><h4>Cara Mengatasinya:</h4><ul><li>Hapus sementara unit iklan di area yang paling banyak klik.</li><li>Fokus membangun trafik organik dari mesin pencari.</li><li>Jangan melakukan share link blog secara berlebihan di grup WA atau FB.</li></ul>"
-  },
-  {
-    "slug": "tips-lolos-pin-adsense",
-    "cat": "AdSense",
-    "title": "Tips Cepat Dapat PIN AdSense",
-    "desc": "Cara agar surat PIN sampai ke rumah tanpa nyasar.",
-    "img": "https://images.unsplash.com/photo-1566837945700-300575276d46?w=600",
-    "content": "<h3>Verifikasi Alamat</h3><p>PIN AdSense dikirim melalui pos fisik dari luar negeri. Banyak publisher gagal menerimanya karena alamat yang tidak lengkap.</p><h4>Tips Surat Cepat Sampai:</h4><ul><li>Tulis alamat lengkap disertai RT/RW dan kode pos yang presisi.</li><li>Gunakan nomor HP aktif di baris kedua alamat agar kurir bisa menghubungi Anda.</li><li>Jika 3 minggu belum sampai, datangilah kantor pos cabang terdekat di kota Anda.</li></ul>"
-  },
-  {
-    "slug": "letak-iklan-mobile-tinggi-ctr",
-    "cat": "AdSense",
-    "title": "Letak Iklan Mobile Terbaik",
-    "desc": "Maksimalkan pendapatan dari pengguna smartphone.",
-    "img": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600",
-    "content": "<h3>Mobile Ad Placement</h3><p>Lebih dari 80% trafik internet saat ini berasal dari mobile. Penempatan iklan yang cerdas akan melejitkan penghasilan Anda.</p><h4>Posisi Strategis:</h4><ul><li><b>Anchor Ads:</b> Iklan melayang yang menempel di bawah layar.</li><li><b>Under Title:</b> Iklan tepat di bawah judul artikel utama.</li><li><b>In-Article:</b> Iklan yang disisipkan setiap 3-4 paragraf teks.</li></ul>"
-  },
-  {
-    "slug": "memahami-ads-txt-error",
-    "cat": "AdSense",
-    "title": "Cara Memperbaiki Error Ads.txt",
-    "desc": "Solusi notifikasi Penghasilan Beresiko di dashboard AdSense.",
-    "img": "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600",
-    "content": "<h3>Fungsi Ads.txt</h3><p>Ads.txt membantu pembeli iklan memverifikasi bahwa inventaris iklan Anda benar-benar milik Anda. Jika error, pendapatan Anda bisa menurun drastis.</p><h4>Langkah Perbaikan:</h4><ul><li>Download file ads.txt dari dashboard AdSense.</li><li>Upload ke root direktori website (misal: domain.com/ads.txt).</li><li>Pastikan file bisa diakses oleh publik tanpa redirect.</li></ul>"
-  },
-  {
-    "slug": "adsense-arbitrage-bahaya",
-    "cat": "AdSense",
-    "title": "Resiko AdSense Arbitrage",
-    "desc": "Beli trafik untuk AdSense, amankah dilakukan?",
-    "img": "https://images.unsplash.com/photo-1533750359089-6885c381351c?w=600",
-    "content": "<h3>Apa itu Arbitrage?</h3><p>Arbitrage adalah praktik membeli trafik murah (misal dari iklan FB atau native ads) untuk dikonversi menjadi pendapatan AdSense yang lebih besar.</p><h4>Risiko Utama:</h4><ul><li><b>Banned Permanen:</b> Jika trafik dianggap berkualitas rendah atau bot.</li><li><b>Invalid Click:</b> Risiko klik tidak sah meningkat sangat tinggi.</li><li><b>Biaya Rugi:</b> Biaya iklan lebih besar dibanding pendapatan AdSense.</li></ul>"
-  },
-  {
-    "slug": "gajian-adsense-via-bank",
-    "cat": "AdSense",
-    "title": "Cara Setting Pembayaran Bank Lokal",
-    "desc": "Panduan Wire Transfer AdSense ke Bank Indonesia.",
-    "img": "https://images.unsplash.com/photo-1550565118-3d143c462310?w=600",
-    "content": "<h3>Pembayaran AdSense</h3><p>Saat ini metode Western Union sudah tidak tersedia. Publisher wajib menggunakan Wire Transfer ke rekening bank lokal.</p><h4>Cara Setting:</h4><ul><li>Buka menu Payments Info di AdSense.</li><li>Pilih Add Payment Method.</li><li>Masukkan nama lengkap sesuai rekening dan <b>SWIFT Code</b> bank Anda.</li></ul>"
-  },
-  {
-    "slug": "optimasi-anchor-ads-sticky",
-    "cat": "AdSense",
-    "title": "Optimasi Anchor Ads Melayang",
-    "desc": "Meningkatkan tayangan iklan tanpa mengganggu user.",
-    "img": "https://images.unsplash.com/photo-1519389428731-1221bcad750f?w=600",
-    "content": "<h3>Sticky Anchor Ads</h3><p>Iklan ini tetap terlihat meskipun pengguna melakukan scroll ke bawah. Ini adalah salah satu unit dengan CTR paling konsisten.</p><h4>Tips Optimasi:</h4><ul><li>Aktifkan fitur Anchor Ads melalui menu Auto Ads.</li><li>Gunakan fitur 'Top Anchor' jika menu navigasi Anda berada di bawah.</li><li>Tes di berbagai perangkat untuk memastikan tidak menutupi konten penting.</li></ul>"
-  },
-  {
-    "slug": "analisis-ecpm-adsense",
-    "cat": "AdSense",
-    "title": "Cara Menganalisis Nilai eCPM",
-    "desc": "Memahami potensi pendapatan per 1000 tayangan iklan.",
-    "img": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600",
-    "content": "<h3>Memahami eCPM</h3><p>eCPM (effective Cost Per Mille) adalah estimasi penghasilan yang Anda dapatkan untuk setiap 1.000 tayangan iklan.</p><h4>Cara Menaikkan eCPM:</h4><ul><li>Gunakan niche yang kompetitif (High CPC).</li><li>Target pengunjung dari negara premium (USA, UK, Canada).</li><li>Pastikan unit iklan diletakkan di area yang sering dilihat (Above the fold).</li></ul>"
-  },
-  {
-    "slug": "blocking-iklan-judi-adsense",
-    "cat": "AdSense",
-    "title": "Cara Blokir Iklan Sensitif",
-    "desc": "Menghapus iklan judi atau konten tidak pantas dari blog.",
-    "img": "https://images.unsplash.com/photo-1589561084283-930aa7b1ce50?w=600",
-    "content": "<h3>Filter Iklan AdSense</h3><p>Banyak publisher ingin menjaga kualitas kontennya dengan cara memblokir iklan judi, alkohol, atau konten dewasa.</p><h4>Langkah Memblokir:</h4><ul><li>Buka menu Brand Safety di dashboard AdSense.</li><li>Pilih Content > Blocking Controls.</li><li>Cari kategori 'Sensitive Categories' dan nonaktifkan iklan yang tidak Anda inginkan.</li></ul>"
-  },
-  {
-    "slug": "adsense-high-paying-niche",
-    "cat": "AdSense",
-    "title": "Daftar Niche AdSense Termahal 2025",
-    "desc": "Topik blog yang memberikan bayaran dolar tertinggi.",
-    "img": "https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=600",
-    "content": "<h3>Niche Raja Dolar</h3><p>Memilih niche bukan hanya soal hobi, tapi soal potensi pasar pengiklan yang besar. Semakin banyak perusahaan bersaing iklan di topik tersebut, semakin tinggi bayarannya.</p><h4>Top 3 Niche 2025:</h4><ul><li><b>SaaS & Cloud:</b> Layanan software bisnis.</li><li><b>Personal Finance:</b> Investasi, crypto, dan perbankan digital.</li><li><b>Cybersecurity:</b> Layanan keamanan data dan VPN.</li></ul>"
-  },
-  {
-    "slug": "mencegah-invalid-click",
-    "cat": "AdSense",
-    "title": "Cara Mencegah Bom Klik Iklan",
-    "desc": "Melindungi akun AdSense dari serangan kompetitor jahat.",
-    "img": "https://images.unsplash.com/photo-1563986768494-0dd256c09296?w=600",
-    "content": "<h3>Serangan Bom Klik</h3><p>Bom klik adalah tindakan jahat mengklik iklan berulang kali untuk menjatuhkan akun AdSense orang lain.</p><h4>Cara Proteksi:</h4><ul><li>Gunakan plugin <b>AdSense Invalid Click Protector (AICP)</b> untuk WordPress.</li><li>Pantau trafik mencurigakan melalui Google Analytics.</li><li>Laporkan secara manual ke Google jika Anda menemukan aktivitas klik yang tidak wajar.</li></ul>"
-  },
-  {
-    "slug": "privacy-policy-adsense-generator",
-    "cat": "AdSense",
-    "title": "Membuat Halaman Wajib AdSense",
-    "desc": "Contoh Privacy Policy yang disukai Google AdSense.",
-    "img": "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?w=600",
-    "content": "<h3>Dokumen Legal Blog</h3><p>Halaman Privacy Policy bukan sekadar hiasan. Google mewajibkan Anda memberitahu pembaca bahwa Anda menggunakan cookie pihak ketiga.</p><h4>Isi Wajib Privacy Policy:</h4><ul><li>Pemberitahuan penggunaan Google Cookies (DART cookie).</li><li>Informasi tentang data apa yang dikumpulkan dari pengunjung.</li><li>Cara pengunjung bisa menonaktifkan pelacakan iklan.</li></ul>"
-  },
-  {
-    "slug": "adsense-vs-affiliate",
-    "cat": "AdSense",
-    "title": "AdSense atau Afiliasi?",
-    "desc": "Mana yang lebih cepat menghasilkan uang untuk pemula.",
-    "img": "https://images.unsplash.com/photo-1434626881859-194d67b2b86f?w=600",
-    "content": "<h3>Mana Lebih Untung?</h3><p>Kedua metode ini memiliki kelebihan masing-masing. AdSense cocok untuk situs informasi umum, sedangkan Afiliasi cocok untuk situs review produk.</p><h4>Perbandingannya:</h4><ul><li><b>AdSense:</b> Bayaran per klik, butuh trafik jutaan untuk kaya.</li><li><b>Affiliate:</b> Bayaran per penjualan, trafik sedikit tapi tertarget bisa untung besar.</li></ul>"
-  },
-  {
-    "slug": "smart-pricing-avoid",
-    "cat": "AdSense",
-    "title": "Cara Menghindari Smart Pricing",
-    "desc": "Mencegah penurunan nilai klik secara permanen.",
-    "img": "https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=600",
-    "content": "<h3>Apa itu Smart Pricing?</h3><p>Smart Pricing adalah mekanisme Google yang menurunkan nilai CPC Anda jika iklan yang diklik di blog Anda jarang menghasilkan konversi bagi pengiklan.</p><h4>Cara Menghindarinya:</h4><ul><li>Hapus iklan di halaman dengan trafik 'junk' atau berkualitas rendah.</li><li>Fokus pada konten yang mendorong aksi nyata dari pembaca.</li><li>Gunakan niche yang relevan dengan iklan yang muncul.</li></ul>"
-  },
-  {
-    "slug": "adsense-youtube-setup",
-    "cat": "AdSense",
-    "title": "Panduan AdSense untuk YouTube",
-    "desc": "Menghubungkan channel ke AdSense untuk gajian pertama.",
-    "img": "https://images.unsplash.com/photo-1521316730702-829a8e30dfd0?w=600",
-    "content": "<h3>YouTube Monetization</h3><p>Untuk mendapatkan uang dari YouTube, Anda harus bergabung dengan YouTube Partner Program (YPP).</p><h4>Syarat Terbaru:</h4><ul><li>Minimal 1.000 Subscriber.</li><li>4.000 jam waktu tonton publik dalam 12 bulan terakhir ATAU 10 Juta views YouTube Shorts.</li><li>Mematuhi pedoman komunitas dan hak cipta.</li></ul>"
-  },
-  {
-    "slug": "native-ads-optimization",
-    "cat": "AdSense",
-    "title": "Optimasi Iklan Native AdSense",
-    "desc": "Membuat iklan menyatu dengan teks artikel.",
-    "img": "https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?w=600",
-    "content": "<h3>Iklan Native</h3><p>Iklan native didesain agar tidak terlihat seperti iklan tradisional. Ini memberikan pengalaman pengguna (UX) yang lebih halus.</p><h4>Tips Pasang:</h4><ul><li>Sesuaikan font dan warna judul iklan dengan desain template Anda.</li><li>Gunakan unit 'In-Feed Ads' untuk disisipkan di antara daftar artikel di homepage.</li></ul>"
-  },
-  {
-    "slug": "revenue-adsense-tips",
-    "cat": "AdSense",
-    "title": "Tips Melejitkan Penghasilan AdSense",
-    "desc": "Meningkatkan pendapatan tanpa harus menambah trafik.",
-    "img": "https://images.unsplash.com/photo-1554224155-169641357599?w=600",
-    "content": "<h3>Profit Optimization</h3><p>Seringkali trafik besar tidak menjamin pendapatan besar. Anda perlu mengoptimalkan rasio klik (CTR) dan nilai per klik (CPC).</p><h4>Strategi Melejitkan Earning:</h4><ul><li>Pasang iklan di area 'Above the Fold' (terlihat tanpa scroll).</li><li>Gunakan ukuran iklan responsif yang lebar.</li><li>Blokir kategori iklan dengan performa buruk namun bayaran rendah.</li></ul>"
-  },
-  {
-    "slug": "policy-center-adsense",
-    "cat": "AdSense",
-    "title": "Cara Cek Pelanggaran Kebijakan",
-    "desc": "Memastikan blog Anda selalu bersih dari konten dilarang.",
-    "img": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600",
-    "content": "<h3>Menghindari Banned</h3><p>Google sering melakukan update kebijakan secara tiba-tiba. Policy Center adalah tempat pertama untuk mengetahui jika ada masalah pada artikel tertentu.</p><h4>Langkah Rutin:</h4><ul><li>Cek Policy Center seminggu sekali.</li><li>Segera perbaiki atau hapus artikel yang mendapat peringatan 'Violations'.</li><li>Jangan biarkan masalah menumpuk karena bisa menyebabkan akun ditangguhkan.</li></ul>"
-  },
-  {
-    "slug": "auto-ads-vs-manual-ads",
-    "cat": "AdSense",
-    "title": "Iklan Otomatis vs Manual",
-    "desc": "Mana yang lebih menghasilkan banyak uang?",
-    "img": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600",
-    "content": "<h3>Perang Jenis Iklan</h3><p>Iklan Otomatis menggunakan AI Google untuk menaruh iklan, sedangkan iklan manual diletakkan oleh Anda sendiri.</p><h4>Mana yang Terbaik?</h4><ul><li><b>Manual Ads:</b> Memberikan kontrol penuh, bagus untuk menjaga desain situs.</li><li><b>Auto Ads:</b> Bagus untuk menemukan celah pendapatan yang terlewat, namun kadang merusak UI.</li><li><b>Saran:</b> Gunakan kombinasi keduanya secara seimbang.</li></ul>"
-  },
-  {
-    "slug": "adsense-tax-form-indonesia",
-    "cat": "AdSense",
-    "title": "Cara Isi Formulir Pajak AdSense",
-    "desc": "Panduan pajak Amerika Serikat untuk publisher Indonesia.",
-    "img": "https://images.unsplash.com/photo-1554224155-169641357599?w=600",
-    "content": "<h3>Pajak AdSense (W-8BEN)</h3><p>Jika Anda tidak mengisi formulir pajak, Google akan memotong pendapatan Anda secara flat sebesar 24-30% untuk seluruh dunia.</p><h4>Cara Mengisi:</h4><ul><li>Masukan NPWP Anda di kolom Tax Identification Number (TIN).</li><li>Pilih klaim tarif perjanjian pajak (Tax Treaty).</li><li>Dengan mengisi NPWP, potongan pajak dari trafik US hanya akan sebesar 10%.</li></ul>"
-  },
-  {
-    "slug": "matched-content-strategy",
-    "cat": "AdSense",
-    "title": "Strategi Matched Content Terbaru",
-    "desc": "Mengganti fitur matched content yang sudah dihapus.",
-    "img": "https://images.unsplash.com/photo-1551288049-bbbda536ad0a?w=600",
-    "content": "<h3>Evolusi Matched Content</h3><p>Dulu, Matched Content menampilkan rekomendasi artikel blog Anda. Sekarang fitur tersebut telah diganti sepenuhnya menjadi <b>Multiplex Ads</b>.</p><h4>Strategi Baru:</h4><ul><li>Gunakan plugin Related Post untuk navigasi artikel internal.</li><li>Pasang unit Multiplex Ads tepat di bawah widget Related Post tersebut untuk pendapatan ekstra.</li></ul>"
-  },
-  {
-    "slug": "gajian-adsense-tiap-bulan",
-    "cat": "AdSense",
-    "title": "Cara Gajian AdSense Tiap Bulan",
-    "desc": "Strategi mencapai threshold $100 secara konsisten.",
-    "img": "https://images.unsplash.com/photo-1550565118-3d143c462310?w=600",
-    "content": "<h3>Threshold Consitency</h3><p>Banyak pemula hanya gajian 3-4 bulan sekali. Kuncinya untuk gajian rutin adalah volume konten dan kualitas trafik.</p><h4>Resep Gajian Rutin:</h4><ul><li>Tulis minimal 3 artikel berkualitas per minggu.</li><li>Targetkan keyword musiman yang sedang tren.</li><li>Bangun komunitas di Telegram/WA agar trafik tetap stabil saat algoritma berubah.</li></ul>"
-  },
+        /* --- KATEGORI ADSENSE --- */
+        {
+            "slug": "cara-daftar-adsense-cepat-approve",
+            "cat": "AdSense",
+            "title": "Cara Daftar AdSense 2025 Agar Cepat Diterima",
+            "desc": "Tips rahasia menyiapkan blog agar lolos review AdSense kurang dari 48 jam.",
+            "img": "https://images.unsplash.com/photo-1554224155-169641357599?w=600",
+            "content": "<h3>Kesiapan Blog AdSense</h3><p>Navigasi yang berantakan atau konten tipis pasti akan ditolak.</p>"
+        },
+        {
+            "slug": "meningkatkan-cpc-adsense-indonesia",
+            "cat": "AdSense",
+            "title": "Cara Meningkatkan CPC AdSense Blog Indonesia",
+            "desc": "Strategi menaikkan nilai klik iklan agar setara dengan blog luar negeri.",
+            "img": "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=600",
+            "content": "<h3>Niche CPC Tinggi</h3><p>Pilih topik Finance, Health, atau Tech untuk bayaran lebih tinggi.</p>"
+        },
+        {
+            "slug": "mengatasi-limit-adsense",
+            "cat": "AdSense",
+            "title": "Cara Mengatasi Limit Iklan AdSense",
+            "desc": "Solusi ampuh jika iklan tidak muncul karena pembatasan trafik.",
+            "img": "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=600",
+            "content": "<h3>Penyebab Iklan Dibatasi</h3><p>Biasanya karena trafik tidak valid atau lonjakan medsos tidak wajar.</p>"
+        }
+        // ... (Tambahkan sisa artikel lainnya di sini dengan format yang sama)
+    ];
 
-  /* --- KATEGORI CODE (51-75) --- */
-  {
-    "slug": "belajar-html5-untuk-seo",
-    "cat": "Code",
-    "title": "Optimasi Struktur HTML5 agar Ramah SEO",
-    "desc": "Belajar menggunakan tag semantik HTML5 seperti header, main, dan article.",
-    "img": "https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=600",
-    "content": "<h3>Semantic HTML</h3><p>Tag semantik membantu robot mesin pencari memahami struktur konten website Anda secara logis.</p><h4>Contoh Penggunaan:</h4><ul><li>&lt;header&gt;: Untuk logo dan navigasi.</li><li>&lt;main&gt;: Untuk isi utama halaman.</li><li>&lt;article&gt;: Sangat penting untuk membungkus konten blog agar Google tahu itu artikel pilar.</li></ul>"
-  },
-  {
-    "slug": "belajar-javascript-dasar-blogger",
-    "cat": "Code",
-    "title": "JavaScript Dasar untuk Modifikasi Blogger",
-    "desc": "Tutorial JS sederhana untuk membuat fitur dark mode sendiri.",
-    "img": "https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?w=600",
-    "content": "<h3>Manipulasi DOM</h3><p>JavaScript memungkinkan website statis menjadi interaktif. Untuk pengguna Blogger, JS adalah kunci modifikasi tingkat lanjut.</p><h4>Konsep Dasar:</h4><ul><li><b>Variable:</b> Menyimpan data.</li><li><b>Event Listener:</b> Mendeteksi aksi seperti 'click' atau 'scroll'.</li><li><b>LocalStorage:</b> Menyimpan settingan user di browser mereka.</li></ul>"
-  },
-  {
-    "slug": "optimasi-gambar-webp-github",
-    "cat": "Code",
-    "title": "Cara Konversi Gambar ke WebP",
-    "desc": "Memastikan aset gambar blog ringan dan cepat dimuat.",
-    "img": "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=600",
-    "content": "<h3>Format Gambar Modern</h3><p>WebP adalah format gambar yang dikembangkan Google. Ukurannya jauh lebih kecil dari JPEG namun kualitasnya setara.</p><h4>Cara Menggunakan:</h4><ul><li>Gunakan tools online seperti TinyPNG atau aplikasi Photoshop.</li><li>Pastikan template Anda mendukung atribut &lt;picture&gt; untuk fallback jika browser jadul tidak mendukung WebP.</li></ul>"
-  },
-  {
-    "slug": "membuat-favicon-web-statis",
-    "cat": "Code",
-    "title": "Cara Membuat Favicon Blog",
-    "desc": "Tips branding agar logo muncul di tab browser.",
-    "img": "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=600",
-    "content": "<h3>Identitas Visual</h3><p>Favicon adalah ikon kecil yang muncul di tab browser dan hasil pencarian mobile Google. Ini sangat penting untuk profesionalitas brand.</p><h4>Ketentuan Favicon:</h4><ul><li>Ukuran ideal adalah kelipatan 48px (48x48, 96x96, dll).</li><li>Gunakan format .ico atau .png transparan.</li><li>Simpan di root direktori atau panggil melalui meta tag di bagian &lt;head&gt;.</li></ul>"
-  },
-  {
-    "slug": "meta-og-graph-tutorial",
-    "cat": "Code",
-    "title": "Optimasi Meta Open Graph",
-    "desc": "Memperbaiki tampilan share link di media sosial.",
-    "img": "https://images.unsplash.com/photo-1562577309-4932fdd64cd1?w=600",
-    "content": "<h3>Open Graph SEO</h3><p>Pernahkah Anda membagikan link ke WA atau FB tapi gambarnya tidak muncul? Itu karena Anda belum memasang Meta Open Graph.</p><h4>Tag Wajib:</h4><ul><li>og:title: Judul saat dibagikan.</li><li>og:image: Link gambar thumbnail yang menarik.</li><li>og:description: Penjelasan singkat isi artikel.</li></ul>"
-  },
-  {
-    "slug": "konfigurasi-robots-txt-benar",
-    "cat": "Code",
-    "title": "Konfigurasi Robots.txt Sempurna",
-    "desc": "Mengatur bot mana yang boleh masuk ke website Anda.",
-    "img": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600",
-    "content": "<h3>Robots Guide</h3><p>Robots.txt adalah file teks yang mengarahkan robot mesin pencari. Salah setting bisa membuat website hilang dari Google.</p><h4>Best Practice:</h4><ul><li>Jangan 'disallow' folder CSS dan JS.</li><li>Panggil link <b>Sitemap</b> Anda di dalam file robots.txt.</li><li>Pastikan area admin diblokir agar tidak muncul di pencarian.</li></ul>"
-  },
-  {
-    "slug": "manfaat-https-ssl",
-    "cat": "Code",
-    "title": "Cara Pasang SSL Gratis di GitHub",
-    "desc": "Keamanan data pengunjung dan pengaruhnya ke SEO.",
-    "img": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600",
-    "content": "<h3>Website Aman (HTTPS)</h3><p>Google telah lama menjadikan HTTPS sebagai faktor peringkat. Situs tanpa SSL akan dilabeli 'Not Secure' oleh Chrome.</p><h4>Solusi SSL Gratis:</h4><ul><li>Gunakan GitHub Pages yang sudah menyertakan SSL otomatis.</li><li>Hubungkan website ke <b>Cloudflare</b> untuk mendapatkan proteksi SSL fleksibel.</li><li>Pastikan semua aset (gambar/js) dimuat melalui protokol https.</li></ul>"
-  },
-  {
-    "slug": "css-media-queries-responsive",
-    "cat": "Code",
-    "title": "Belajar CSS Media Queries",
-    "desc": "Membuat blog tampil rapi di semua ukuran layar.",
-    "img": "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=600",
-    "content": "<h3>Responsive Web Design</h3><p>Media queries adalah fitur CSS yang menerapkan gaya hanya jika kondisi tertentu terpenuhi (seperti lebar layar).</p><h4>Breakpoint Umum:</h4><ul><li><b>Mobile:</b> Max-width 767px.</li><li><b>Tablet:</b> 768px - 1024px.</li><li><b>Desktop:</b> 1025px ke atas.</li></ul>"
-  },
-  {
-    "slug": "javascript-async-defer-guide",
-    "cat": "Code",
-    "title": "Cara Pakai Async dan Defer",
-    "desc": "Mencegah render-blocking script di blog Anda.",
-    "img": "https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?w=600",
-    "content": "<h3>Optimasi Script</h3><p>Script JavaScript pihak ketiga seringkali membuat loading website terasa berat atau 'patah-patah'.</p><h4>Perbedaannya:</h4><ul><li><b>Async:</b> Script didownload sambil render HTML, tapi eksekusi langsung saat selesai download (bisa menghambat render).</li><li><b>Defer:</b> Script didownload sambil render HTML, tapi baru dieksekusi setelah HTML selesai dirender. (Direkomendasikan).</li></ul>"
-  },
-  {
-    "slug": "preconnect-dns-prefetch-hack",
-    "cat": "Code",
-    "title": "Teknik Preconnect Resource",
-    "desc": "Mempercepat loading aset dari domain pihak ketiga.",
-    "img": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600",
-    "content": "<h3>Speed Hack Teknis</h3><p>Jika situs Anda memuat font dari Google atau script dari AdSense, Anda bisa mempercepat koneksinya dengan teknik preconnect.</p><h4>Kode Implementasi:</h4><p>&lt;link rel='preconnect' href='https://fonts.googleapis.com'&gt;</p><p>Ini memberi tahu browser untuk melakukan jabat tangan (handshake) DNS lebih awal sebelum file diminta.</p>"
-  },
-  {
-    "slug": "lazy-loading-images-manual",
-    "cat": "Code",
-    "title": "Cara Pasang Lazy Load Gambar",
-    "desc": "Menghemat bandwidth pengunjung secara efektif.",
-    "img": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600",
-    "content": "<h3>Lazy Loading</h3><p>Lazy loading memastikan gambar hanya akan didownload ketika pengguna melakukan scroll ke area tersebut.</p><h4>Metode Modern:</h4><p>Cukup tambahkan atribut <b>loading='lazy'</b> pada tag &lt;img&gt; Anda. Hampir semua browser modern saat ini sudah mendukung fitur native ini.</p>"
-  },
-  {
-    "slug": "browser-caching-setup",
-    "cat": "Code",
-    "title": "Memahami Browser Caching",
-    "desc": "Membuat loading halaman lebih instan bagi pengunjung lama.",
-    "img": "https://images.unsplash.com/photo-1558494949-ef010cbdcc51?w=600",
-    "content": "<h3>Caching Strategi</h3><p>Browser caching menyimpan elemen website di komputer pengunjung, sehingga saat mereka kembali, website tidak perlu didownload ulang.</p><h4>Langkah Setup:</h4><ul><li>Atur Cache-Control header melalui file .htaccess (jika pakai Apache).</li><li>Aktifkan fitur Caching di dashboard Cloudflare.</li><li>Tentukan durasi cache (misal: 1 bulan untuk gambar, 1 jam untuk HTML).</li></ul>"
-  },
-  {
-    "slug": "minify-html-css-js-online",
-    "cat": "Code",
-    "title": "Cara Minify Kode Website",
-    "desc": "Mengecilkan ukuran file untuk kecepatan maksimal.",
-    "img": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=600",
-    "content": "<h3>Minifikasi Kode</h3><p>Minify adalah proses menghapus spasi, baris baru, dan komentar dalam kode tanpa merubah fungsi aslinya.</p><h4>Alat Minify Gratis:</h4><ul><li>CSSMinifier.com</li><li>UglifyJS (untuk JavaScript).</li><li>HTMLCompressor.</li></ul>"
-  },
-  {
-    "slug": "alt-text-automation-js",
-    "cat": "Code",
-    "title": "Otomatisasi Alt Text dengan JS",
-    "desc": "Skrip sederhana agar semua gambar punya deskripsi.",
-    "img": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600",
-    "content": "<h3>JS Automation</h3><p>Lupa mengisi alt text untuk ratusan gambar? Anda bisa mengakalinya dengan JavaScript sederhana yang mengambil judul artikel sebagai alt text default.</p><h4>Contoh Logika:</h4><p>Ambil semua tag img, jika alt kosong, isi dengan judul halaman. Namun, tetap disarankan mengisi manual untuk kualitas SEO terbaik.</p>"
-  },
-  {
-    "slug": "design-404-custom-seo",
-    "cat": "Code",
-    "title": "Desain Halaman 404 Kustom",
-    "desc": "Agar pengunjung tidak kabur saat menemukan link mati.",
-    "img": "https://images.unsplash.com/photo-1594322436404-5a0526db4d13?w=600",
-    "content": "<h3>Pentingnya Halaman 404</h3><p>Halaman 404 standar bawaan server sangat membosankan dan sering membuat user langsung menutup website.</p><h4>Tips Desain 404:</h4><ul><li>Gunakan elemen humor atau ilustrasi menarik.</li><li>Berikan tombol 'Kembali ke Beranda'.</li><li>Tampilkan daftar artikel populer agar mereka tetap berada di blog Anda.</li></ul>"
-  },
-  {
-    "slug": "nav-bar-sticky-css",
-    "cat": "Code",
-    "title": "Membuat Sticky Nav dengan CSS",
-    "desc": "Tips UI/UX agar navigasi selalu terlihat saat scroll.",
-    "img": "https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?w=600",
-    "content": "<h3>Sticky Navigation</h3><p>Menu yang menempel memudahkan pengguna untuk berpindah halaman tanpa harus scroll kembali ke atas.</p><h4>Kode CSS Sederhana:</h4><p>header { position: sticky; top: 0; z-index: 100; }</p><p>Pastikan memberikan background color agar teks artikel tidak tumpang tindih dengan menu saat di-scroll.</p>"
-  },
-  {
-    "slug": "breadcrumbs-schema-seo",
-    "cat": "Code",
-    "title": "Cara Pasang Breadcrumbs SEO",
-    "desc": "Membantu bot memahami struktur hierarki blog.",
-    "img": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600",
-    "content": "<h3>Breadcrumbs Navigation</h3><p>Breadcrumbs adalah jejak navigasi (misal: Home > SEO > Panduan). Ini sangat membantu user experience dan Google Search Console.</p><h4>Implementasi:</h4><ul><li>Gunakan tag HTML &lt;nav&gt;.</li><li>Bungkus dengan <b>Schema.org/BreadcrumbList</b> agar muncul di hasil pencarian Google.</li></ul>"
-  },
-  {
-    "slug": "font-awesome-icon-cdn",
-    "cat": "Code",
-    "title": "Integrasi Icon Font Awesome",
-    "desc": "Menambahkan ikon cantik tanpa membebani server.",
-    "img": "https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=600",
-    "content": "<h3>Ikon Web</h3><p>Ikon membantu memperjelas maksud menu atau tombol. Font Awesome adalah library ikon paling populer di dunia.</p><h4>Cara Pasang:</h4><ul><li>Gunakan CDN agar loading ikon lebih cepat karena diambil dari server terdekat.</li><li>Pilih ikon versi Free agar tidak melanggar lisensi.</li></ul>"
-  },
-  {
-    "slug": "pwa-github-pages-tutorial",
-    "cat": "Code",
-    "title": "Memasang PWA di GitHub Pages",
-    "desc": "Mengubah website menjadi aplikasi mobile sederhana.",
-    "img": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600",
-    "content": "<h3>Progressive Web App</h3><p>PWA memungkinkan pengunjung 'menginstal' website Anda ke layar utama HP mereka layaknya aplikasi Android/iOS.</p><h4>Syarat PWA:</h4><ul><li>Website wajib HTTPS.</li><li>Memiliki file <b>manifest.json</b> untuk identitas aplikasi.</li><li>Memiliki <b>Service Worker</b> untuk fitur offline caching.</li></ul>"
-  },
-  {
-    "slug": "custom-scroll-bar-css",
-    "cat": "Code",
-    "title": "Membuat Scroll Bar Kustom",
-    "desc": "Mempercantik tampilan scroll browser dengan CSS.",
-    "img": "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=600",
-    "content": "<h3>UI Styling</h3><p>Secara default, scroll bar browser terlihat kaku. Anda bisa mengubah warna dan ukurannya agar sesuai dengan desain blog.</p><h4>Pseudo-elements:</h4><ul><li>::-webkit-scrollbar: Area utama scroll.</li><li>::-webkit-scrollbar-thumb: Bagian yang digerakkan.</li><li>::-webkit-scrollbar-track: Latar belakang scroll.</li></ul>"
-  },
-  {
-    "slug": "dark-mode-js-localstorage",
-    "cat": "Code",
-    "title": "Dark Mode dengan LocalStorage",
-    "desc": "Menyimpan pilihan tema pengunjung agar tidak reset.",
-    "img": "https://images.unsplash.com/photo-1550439062-609e1531270e?w=600",
-    "content": "<h3>Fitur Dark Mode</h3><p>Mode gelap mengurangi kelelahan mata pengunjung di malam hari. Agar settingan tidak hilang saat pindah halaman, kita butuh LocalStorage.</p><h4>Cara Kerja:</h4><p>Saat tombol diklik, JS akan menambahkan class 'dark-mode' ke body dan menyimpan nilai 'enabled' ke memori browser.</p>"
-  },
-  {
-    "slug": "github-actions-blog-auto",
-    "cat": "Code",
-    "title": "Otomasi Blog dengan GitHub Actions",
-    "desc": "Deploy otomatis setiap kali Anda melakukan push kode.",
-    "img": "https://images.unsplash.com/photo-1558494949-ef010cbdcc51?w=600",
-    "content": "<h3>CI/CD untuk Blogger</h3><p>GitHub Actions memungkinkan Anda memproses file (seperti minify atau generate sitemap) secara otomatis setiap kali ada perubahan kode.</p><h4>Langkah Setup:</h4><ul><li>Buat folder .github/workflows.</li><li>Buat file main.yml yang berisi perintah build.</li><li>Sekarang setiap Anda edit artikel di GitHub, website akan update otomatis.</li></ul>"
-  },
-  {
-    "slug": "google-font-swap-display",
-    "cat": "Code",
-    "title": "Optimasi Google Font Display",
-    "desc": "Mencegah teks hilang saat font sedang dimuat.",
-    "img": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=600",
-    "content": "<h3>FOIT vs FOUT</h3><p>FOIT (Flash of Invisible Text) terjadi jika font custom belum termuat tapi browser menyembunyikan teks aslinya.</p><h4>Solusi:</h4><p>Tambahkan <b>&display=swap</b> di akhir URL Google Font Anda. Ini akan memaksa browser menampilkan font sistem terlebih dahulu sebelum menggantinya ke font custom.</p>"
-  },
-  {
-    "slug": "membuat-sitemap-xml-otomatis",
-    "cat": "Code",
-    "title": "Sitemap XML Otomatis Blog",
-    "desc": "Memastikan Google tahu setiap ada update artikel baru.",
-    "img": "https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?w=600",
-    "content": "<h3>Sitemap Guide</h3><p>Sitemap adalah peta jalan bagi bot Google untuk merayapi semua link di website Anda tanpa ada yang terlewat.</p><h4>Cara Automasi:</h4><ul><li>Jika Anda menggunakan website statis, gunakan script JS untuk mengekstrak slug artikel ke dalam format XML.</li><li>Submit link sitemap.xml Anda ke <b>Google Search Console</b>.</li></ul>"
-  },
-  {
-    "slug": "clonning-repo-github-pages",
-    "cat": "Code",
-    "title": "Cara Clonning Repo GitHub Pages",
-    "desc": "Langkah aman menyalin template blog orang lain.",
-    "img": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600",
-    "content": "<h3>Git Workflow</h3><p>Clonning memungkinkan Anda menduplikasi proyek ke komputer lokal untuk dikembangkan lebih lanjut secara offline.</p><h4>Perintah Utama:</h4><ul><li>git clone [URL-Repository]</li><li>git add .</li><li>git commit -m 'pesan update'</li><li>git push origin main</li></ul>"
-  },
+    let currentLimit = 6;
+    let filteredArticles = [...articles];
 
-  /* --- KATEGORI AI & MARKETING (76-100) --- */
-  {
-    "slug": "prompt-ai-nulis-artikel-pilar",
-    "cat": "AI",
-    "title": "Prompt ChatGPT Rahasia untuk Artikel Pilar",
-    "desc": "Teknik prompt engineering untuk konten panjang yang tetap humanis.",
-    "img": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600",
-    "content": "<h3>AI Writing Hack</h3><p>Jangan hanya meminta 'buatkan artikel'. Gunakan perintah bertahap untuk hasil yang lebih berkualitas dan tidak kaku.</p><h4>Contoh Prompt:</h4><p>'Bertindaklah sebagai ahli SEO senior. Buat kerangka artikel mendalam tentang [Topik] dengan menyertakan data teknis dan sudut pandang praktis.'</p>"
-  },
-  {
-    "slug": "midjourney-for-blog-images",
-    "cat": "AI",
-    "title": "Cara Pakai Midjourney untuk Blog",
-    "desc": "Membuat ilustrasi artikel unik yang tidak ada di Google.",
-    "img": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600",
-    "content": "<h3>Visual AI</h3><p>Gambar unik (bukan dari stock photo) memberikan sinyal positif bagi Google karena dianggap sebagai konten orisinal.</p><h4>Tips Promp Gambar:</h4><ul><li>Tentukan gaya (misal: Minimalist, 3D Render, atau Oil Painting).</li><li>Gunakan rasio aspek yang tepat (misal: --ar 16:9 untuk banner blog).</li></ul>"
-  },
-  {
-    "slug": "linkedin-marketing-strategy",
-    "cat": "AI",
-    "title": "Strategi Marketing Lewat LinkedIn",
-    "desc": "Mendapatkan trafik berkualitas dari kalangan profesional.",
-    "img": "https://images.unsplash.com/photo-1611944212129-29977ae1398c?w=600",
-    "content": "<h3>Professional Outreach</h3><p>LinkedIn adalah tambang emas untuk trafik niche B2B atau edukasi karir. Artikel yang Anda bagikan di sini cenderung lebih dihargai oleh audiens yang dewasa.</p><h4>Cara Main:</h4><ul><li>Tulis summary artikel yang memancing diskusi.</li><li>Gunakan 3-5 hashtag relevan.</li><li>Balas setiap komentar untuk menaikkan jangkauan organik.</li></ul>"
-  },
-  {
-    "slug": "pinterest-traffic-hack-2025",
-    "cat": "AI",
-    "title": "Rahasia Trafik Pinterest 2025",
-    "desc": "Mendatangkan ribuan pengunjung dari mesin pencari visual.",
-    "img": "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=600",
-    "content": "<h3>Pinterest SEO</h3><p>Pinterest bukan sekadar medsos, melainkan visual search engine. Sangat powerfull untuk niche desain, masak, dan lifestyle.</p><h4>Langkah Sukses:</h4><ul><li>Buat pin vertikal (rasio 2:3).</li><li>Gunakan kata kunci di judul Pin dan deskripsi Board.</li><li>Konsistensi adalah kunci; posting minimal 1-2 pin setiap hari.</li></ul>"
-  },
-  {
-    "slug": "email-marketing-newsletter",
-    "cat": "AI",
-    "title": "Otomasi Email Marketing Blog",
-    "desc": "Cara tetap terhubung dengan pembaca setia secara otomatis.",
-    "img": "https://images.unsplash.com/photo-1557200134-90327ee9fafa?w=600",
-    "content": "<h3>Email List Building</h3><p>Email adalah aset yang Anda miliki sepenuhnya, berbeda dengan trafik medsos yang tergantung algoritma.</p><h4>Strategi Email:</h4><ul><li>Berikan 'Lead Magnet' (Ebook gratis) sebagai imbalan langganan.</li><li>Kirimkan update artikel terbaru setiap minggu secara otomatis melalui RSS to Email.</li></ul>"
-  },
-  {
-    "slug": "copywriting-aida-formula",
-    "cat": "AI",
-    "title": "Belajar Formula Copywriting AIDA",
-    "desc": "Cara menulis pembukaan artikel yang menghipnotis pembaca.",
-    "img": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=600",
-    "content": "<h3>Formula AIDA</h3><p>Tingkatkan konversi klik pada judul dan artikel Anda dengan teknik AIDA yang sudah terbukti selama puluhan tahun.</p><h4>Penerapan:</h4><ul><li><b>Attention:</b> Judul yang bombastis tapi jujur.</li><li><b>Interest:</b> Paragraf pembuka yang relevan dengan masalah pembaca.</li><li><b>Desire:</b> Menjelaskan manfaat solusi yang Anda tawarkan.</li><li><b>Action:</b> Tombol beli atau klik link artikel selanjutnya.</li></ul>"
-  },
-  {
-    "slug": "influencer-outreach-tips",
-    "cat": "AI",
-    "title": "Tips Kolaborasi Influencer",
-    "desc": "Meningkatkan jangkauan blog dengan bekerjasama dengan pakar.",
-    "img": "https://images.unsplash.com/photo-1533750359089-6885c381351c?w=600",
-    "content": "<h3>Networking Blog</h3><p>Mendapatkan mention dari seorang ahli di niche Anda bisa mendatangkan lonjakan trafik dan otoritas backlink seketika.</p><h4>Cara Outreach:</h4><ul><li>Puji konten mereka secara tulus di media sosial sebelum mengirim email.</li><li>Tawarkan nilai tambah, misalnya menawarkan untuk mereview produk mereka secara gratis di blog Anda.</li></ul>"
-  },
-  {
-    "slug": "content-repurposing-guide",
-    "cat": "AI",
-    "title": "Strategi Content Repurposing",
-    "desc": "Cara mengubah 1 artikel blog menjadi 10 konten medsos.",
-    "img": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600",
-    "content": "<h3>Efisiensi Konten</h3><p>Jangan biarkan artikel lama Anda mati terkubur. Satu artikel pilar bisa dipecah menjadi berbagai format konten lainnya.</p><h4>Ide Repurpose:</h4><ul><li>Ubah poin-poin artikel menjadi thread di X (Twitter).</li><li>Ubah kesimpulan artikel menjadi slide Carousel di Instagram.</li><li>Buat video ringkasan artikel berdurasi 60 detik untuk TikTok.</li></ul>"
-  },
-  {
-    "slug": "google-analytics-4-mastery",
-    "cat": "AI",
-    "title": "Panduan Lengkap GA4 2025",
-    "desc": "Menganalisis perilaku pengunjung dengan data akurat.",
-    "img": "https://images.unsplash.com/photo-1551288049-bbbda536ad0a?w=600",
-    "content": "<h3>Data Analysis</h3><p>Google Analytics 4 (GA4) berfokus pada event dan perilaku pengguna secara real-time, sangat berbeda dengan Universal Analytics lama.</p><h4>Metrik Penting:</h4><ul><li><b>Engagement Rate:</b> Pengganti Bounce Rate yang lebih akurat.</li><li><b>Conversion Events:</b> Melacak tindakan khusus seperti klik tombol WhatsApp.</li></ul>"
-  },
-  {
-    "slug": "hotjar-heatmap-blogger",
-    "cat": "AI",
-    "title": "Analisis User dengan Heatmap",
-    "desc": "Melihat bagian mana dari blog Anda yang paling sering diklik.",
-    "img": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600",
-    "content": "<h3>Visualisasi Perilaku</h3><p>Heatmap memberikan gambaran visual area mana saja di website Anda yang mendapatkan interaksi paling banyak (panas) atau jarang dilirik (dingin).</p><h4>Manfaat Heatmap:</h4><ul><li>Mengetahui apakah iklan Anda diletakkan di tempat yang benar.</li><li>Melihat apakah pengunjung benar-benar membaca artikel sampai bawah.</li></ul>"
-  },
-  {
-    "slug": "backlink-outreach-template",
-    "cat": "AI",
-    "title": "Template Email Outreach Backlink",
-    "desc": "Cara kirim email ke pemilik blog lain tanpa dianggap spam.",
-    "img": "https://images.unsplash.com/photo-1557200134-90327ee9fafa?w=600",
-    "content": "<h3>Link Building Outreach</h3><p>Backlink berkualitas tidak datang dengan sendirinya. Anda perlu melakukan jemput bola dengan mengirim email ke pemilik situs lain.</p><h4>Struktur Email:</h4><ul><li>Subjek yang menarik dan personal.</li><li>Pujian singkat pada konten mereka.</li><li>Tunjukkan artikel Anda yang bisa melengkapi atau memberikan nilai tambah pada tulisan mereka.</li></ul>"
-  },
-  {
-    "slug": "podcasting-for-bloggers-tips",
-    "cat": "AI",
-    "title": "Podcast Sebagai Pendukung Blog",
-    "desc": "Membangun koneksi lebih dalam melalui konten audio.",
-    "img": "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=600",
-    "content": "<h3>Audio Engagement</h3><p>Podcast memungkinkan audiens menikmati konten Anda sambil melakukan aktivitas lain (seperti mengemudi atau olahraga).</p><h4>Tips Podcast:</h4><ul><li>Gunakan naskah artikel Anda sebagai kerangka pembicaraan.</li><li>Embed audio podcast tersebut di awal artikel blog untuk variasi format konten.</li></ul>"
-  },
-  {
-    "slug": "community-building-blog",
-    "cat": "AI",
-    "title": "Membangun Komunitas Pembaca",
-    "desc": "Cara membuat grup Telegram atau WA untuk pembaca setia.",
-    "img": "https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=600",
-    "content": "<h3>Owned Audience</h3><p>Algoritma mesin pencari bisa berubah kapan saja, tapi komunitas pembaca yang setia akan selalu mencari brand Anda secara langsung.</p><h4>Cara Membangunnya:</h4><ul><li>Sediakan kolom komentar yang aktif dan balas setiap tanggapan.</li><li>Buat grup eksklusif bagi pelanggan newsletter Anda.</li><li>Adakan diskusi rutin atau Q&A session.</li></ul>"
-  },
-  {
-    "slug": "brand-storytelling-kang-ruli",
-    "cat": "AI",
-    "title": "Teknik Storytelling Brand",
-    "desc": "Cara bercerita agar orang jatuh cinta dengan personal brand Anda.",
-    "img": "https://images.unsplash.com/photo-1512428559083-a40ce10b8857?w=600",
-    "content": "<h3>The Power of Story</h3><p>Manusia lebih mudah mengingat cerita daripada sekadar data dan tutorial teknis. Personal branding dibangun melalui kejujuran dan pengalaman.</p><h4>Tips Storytelling:</h4><ul><li>Ceritakan kegagalan Anda sebelum mencapai sukses.</li><li>Gunakan gaya bahasa yang manusiawi (aku/kamu).</li><li>Tunjukkan proses di balik layar blog Anda agar terasa lebih autentik.</li></ul>"
-  }
-]
+    function init() {
+        const hash = window.location.hash;
+        if (hash.startsWith('#/')) {
+            const slug = hash.replace('#/', '');
+            const post = articles.find(a => a.slug === slug);
+            if (post) { showDetail(post); return; }
+        }
+        showHome();
+    }
+
+    function showHome() {
+        document.getElementById('home-view').style.display = 'block';
+        document.getElementById('detail-view').style.display = 'none';
+        renderPosts();
+        renderPopular();
+    }
+
+    function showDetail(post) {
+        document.getElementById('home-view').style.display = 'none';
+        document.getElementById('detail-view').style.display = 'grid';
+        document.getElementById('articleContent').innerHTML = `
+            <button onclick="goHome(event)" style="margin-bottom:20px; color:var(--primary); border:none; background:none; cursor:pointer; font-weight:bold;">
+                <i class="fas fa-arrow-left"></i> Kembali
+            </button>
+            <h1>${post.title}</h1>
+            <img src="${post.img}" style="width:100%; border-radius:15px; margin:20px 0;">
+            <div class="content-text">${post.content}</div>
+        `;
+        window.scrollTo(0,0);
+    }
+
+    function renderPosts() {
+        const grid = document.getElementById('postGrid');
+        const displayData = filteredArticles.slice(0, currentLimit);
+        
+        grid.innerHTML = displayData.map(post => `
+            <div class="post-card" onclick="location.hash='#/${post.slug}'">
+                <img src="${post.img}" class="post-img">
+                <div class="post-info">
+                    <small style="color:var(--primary); font-weight:bold;">${post.cat}</small>
+                    <h3 style="margin:10px 0">${post.title}</h3>
+                    <p style="font-size:0.9rem; color:var(--muted)">${post.desc}</p>
+                </div>
+            </div>
+        `).join('');
+
+        document.getElementById('load-more').style.display = currentLimit < filteredArticles.length ? 'block' : 'none';
+    }
+
+    function renderPopular() {
+        const pop = articles.slice(0, 5);
+        document.getElementById('popularPosts').innerHTML = pop.map(p => `
+            <div style="margin-bottom:15px; cursor:pointer; border-bottom:1px solid var(--border); padding-bottom:10px" onclick="location.hash='#/${p.slug}'">
+                <h4 style="font-size:0.9rem;">${p.title}</h4>
+            </div>
+        `).join('');
+    }
+
+    function filterByCat(cat) {
+        document.querySelectorAll('.cat-btn').forEach(btn => btn.classList.remove('active'));
+        filteredArticles = (cat === 'All') ? [...articles] : articles.filter(a => a.cat === cat);
+        currentLimit = 6;
+        renderPosts();
+    }
+
+    function goHome(e) { e.preventDefault(); window.location.hash = ''; showHome(); }
+
+    window.addEventListener('hashchange', init);
+    window.onload = init;
+</script>
