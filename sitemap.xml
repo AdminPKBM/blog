@@ -1,13 +1,43 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>http://blog.kangruli.web.id/</loc>
-    <lastmod>2025-12-31</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://blog.kangruli.web.id/</loc>
-    <lastmod>2025-12-31</lastmod>
-    <priority>1.0</priority>
-  </url>
-</urlset>
+<?php
+// Mengatur header agar file dibaca sebagai XML
+header("Content-Type: application/xml; charset=utf-8");
+
+// URL dasar blog Anda
+$base_url = "http://blog.kangruli.web.id/";
+
+echo '<?xml version="1.0" encoding="UTF-8"?>';
+echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
+
+// 1. Tambahkan Halaman Utama
+echo '<url>
+        <loc>'.$base_url.'</loc>
+        <lastmod>'.date('Y-m-d').'</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+      </url>';
+
+// 2. Koneksi ke Database (Contoh menggunakan MySQLi)
+// Sesuaikan dengan konfigurasi database Anda
+$conn = new mysqli("localhost", "username", "password", "nama_database");
+
+if (!$conn->connect_error) {
+    // Ambil data artikel dari database
+    // Pastikan tabel dan kolom sesuai (contoh: tabel 'posts' kolom 'slug' dan 'updated_at')
+    $sql = "SELECT slug, updated_at FROM posts ORDER BY updated_at DESC";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        while($row = $result->fetch_assoc()) {
+            $date = date('Y-m-d', strtotime($row['updated_at']));
+            echo '<url>
+                    <loc>'.$base_url.'post/'.$row['slug'].'</loc>
+                    <lastmod>'.$date.'</lastmod>
+                    <changefreq>weekly</changefreq>
+                    <priority>0.8</priority>
+                  </url>';
+        }
+    }
+}
+
+echo '</urlset>';
+?>
