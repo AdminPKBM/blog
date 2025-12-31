@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kang Ruli | Portal Edukasi Digital 100 Artikel</title>
+    <title>Kang Ruli | Portal Edukasi Digital</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -37,13 +37,13 @@
 
 <div id="home-view">
     <header class="hero">
-        <h1>Portal Edukasi Digital 100 Artikel</h1>
+        <h1>Portal Edukasi Digital</h1>
         <p>Strategi SEO, AdSense, dan Teknologi Terupdate 2025</p>
     </header>
     <div class="main-wrapper">
         <main>
-            <div id="postGrid" class="blog-grid"></div>
-            <button id="load-more" onclick="loadMorePosts()" style="margin: 40px auto; display: block; padding: 10px 30px; border: 2px solid var(--primary); background: none; color: var(--primary); border-radius: 50px; cursor: pointer; font-weight: bold;">Muat Lebih Banyak</button>
+            <div id="postGrid" class="blog-grid">Memuat artikel...</div>
+            <button id="load-more" onclick="loadMorePosts()" style="margin: 40px auto; display: none; padding: 10px 30px; border: 2px solid var(--primary); background: none; color: var(--primary); border-radius: 50px; cursor: pointer; font-weight: bold;">Muat Lebih Banyak</button>
         </main>
         <aside id="popularPosts"></aside>
     </div>
@@ -58,21 +58,24 @@
 <button class="save-btn" onclick="downloadPage()"><i class="fas fa-save"></i> Simpan File Portal</button>
 
 <script>
-    const articles = [
-        {
-            slug: "panduan-seo-2025",
-            cat: "SEO",
-            title: "Strategi SEO Modern 2025: Panduan Lengkap Pemula",
-            desc: "Kuasai teknik SEO terbaru mulai dari EEAT hingga SGE berbasis AI untuk dominasi Google.",
-            img: "https://images.unsplash.com/photo-1571721795195-a2ca2d3370a9?w=800",
-            content: `<h3>Evolusi SEO di Era AI</h3><p>SEO 2025 bukan lagi soal keyword density, melainkan User Intent. Google kini menggunakan SGE (Search Generative Experience) untuk menjawab pertanyaan secara langsung...</p><h4>Pilar EEAT Modern</h4><ul><li>Experience: Pengalaman nyata penulis.</li><li>Expertise: Keahlian teknis.</li><li>Authoritativeness: Otoritas domain.</li><li>Trustworthiness: Keamanan & validitas data.</li></ul>`
-        },
-        // ... (Artikel lainnya hingga 100 artikel)
-    ];
-
+    let articles = []; // Data akan diisi dari JSON
     let currentLimit = 6;
 
-    function init() {
+    async function init() {
+        try {
+            // Mengambil data dari articles.json
+            const response = await fetch('articles.json');
+            if (!response.ok) throw new Error('Gagal mengambil data');
+            articles = await response.json();
+            
+            checkRoute();
+        } catch (error) {
+            console.error('Error:', error);
+            document.getElementById('postGrid').innerHTML = '<p>Gagal memuat artikel. Pastikan file articles.json tersedia.</p>';
+        }
+    }
+
+    function checkRoute() {
         const hash = window.location.hash;
         if (hash.startsWith('#/')) {
             const slug = hash.replace('#/', '');
@@ -86,6 +89,7 @@
         document.getElementById('home-view').style.display = 'block';
         document.getElementById('detail-view').style.display = 'none';
         renderPosts();
+        renderPopular();
     }
 
     function showDetail(post) {
@@ -95,20 +99,36 @@
             <button onclick="goHome(event)" style="margin-bottom:20px; color:var(--primary); border:none; background:none; cursor:pointer; font-weight:bold;"><i class="fas fa-arrow-left"></i> Kembali</button>
             <h1>${post.title}</h1>
             <img src="${post.img}" style="width:100%; border-radius:15px; margin:20px 0;">
-            ${post.content}
+            <div class="content-text">${post.content}</div>
         `;
         window.scrollTo(0,0);
     }
 
     function renderPosts() {
         const grid = document.getElementById('postGrid');
-        grid.innerHTML = articles.slice(0, currentLimit).map(post => `
+        const visibleArticles = articles.slice(0, currentLimit);
+        
+        grid.innerHTML = visibleArticles.map(post => `
             <div class="post-card" onclick="location.hash='#/${post.slug}'">
-                <img src="${post.img}" style="width:100%; height:180px; object-fit:cover;">
+                <img src="${post.img}" style="width:100%; height:180px; object-fit:cover;" alt="${post.title}">
                 <div style="padding:20px;">
                     <small style="color:var(--primary); font-weight:bold;">${post.cat}</small>
-                    <h3 style="margin-top:10px;">${post.title}</h3>
+                    <h3 style="margin-top:10px; font-size:1.1rem; line-height:1.4;">${post.title}</h3>
                 </div>
+            </div>
+        `).join('');
+
+        // Tampilkan/sembunyikan tombol Load More
+        const btn = document.getElementById('load-more');
+        btn.style.display = currentLimit < articles.length ? 'block' : 'none';
+    }
+
+    function renderPopular() {
+        const popular = articles.slice(0, 5);
+        const container = document.getElementById('popularPosts');
+        container.innerHTML = '<h3>Artikel Populer</h3>' + popular.map(p => `
+            <div style="margin-bottom:15px; padding-bottom:10px; border-bottom:1px solid var(--border); cursor:pointer" onclick="location.hash='#/${p.slug}'">
+                <h4 style="font-size:0.9rem;">${p.title}</h4>
             </div>
         `).join('');
     }
@@ -129,9 +149,17 @@
         const blob = new Blob([content], { type: 'text/html' });
         const a = document.createElement('a');
         a.href = URL.createObjectURL(blob);
-        a.download = 'Portal_KangRuli_100_Artikel.html';
+        a.download = 'Portal_KangRuli_Update.html';
         a.click();
     }
+
+    // Toggle Dark Mode
+    document.getElementById('dark-mode-toggle').onclick = () => {
+        document.body.classList.toggle('dark-mode');
+        const icon = document.querySelector('#dark-mode-toggle i');
+        icon.classList.toggle('fa-moon');
+        icon.classList.toggle('fa-sun');
+    };
 
     window.onscroll = () => {
         let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
@@ -139,7 +167,7 @@
         document.getElementById("progress-bar").style.width = (winScroll / height) * 100 + "%";
     };
 
-    window.addEventListener('hashchange', init);
+    window.addEventListener('hashchange', checkRoute);
     window.onload = init;
 </script>
 </body>
