@@ -8,51 +8,46 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4454451699877502" crossorigin="anonymous"></script>
 
     <meta name="description" content="Pusat tutorial website, strategi SEO 2025, dan solusi digital modern. Temukan ratusan panduan pilar untuk meningkatkan trafik dan pendapatan AdSense Anda.">
-    <meta name="keywords" content="Kang Ruli, Tutorial Blog, SEO 2025, AdSense High CPC, Web Development Indonesia, Belajar Coding">
+    <meta name="keywords" content="Kang Ruli, Tutorial Blog, SEO 2025, AdSense High CPC, Web Development Indonesia">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     
     <style>
-        :root { --primary: #ff8c00; --secondary: #0056b3; --dark: #1a1a1a; --gray: #f4f7f6; --white: #ffffff; }
+        :root { --primary: #ff8c00; --secondary: #0056b3; --dark: #1a1a1a; --gray: #f4f7f6; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Poppins', sans-serif; background-color: var(--gray); color: #333; line-height: 1.6; }
 
         /* HEADER & NAV */
         nav { background: #fff; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        .logo { font-weight: 700; font-size: 1.5rem; color: var(--primary); text-decoration: none; letter-spacing: 1px; }
+        .logo { font-weight: 700; font-size: 1.5rem; color: var(--primary); text-decoration: none; }
         nav ul { display: flex; list-style: none; }
         nav ul li { margin-left: 20px; }
         nav ul li a { text-decoration: none; color: #444; font-weight: 500; font-size: 0.9rem; transition: 0.3s; }
         nav ul li a:hover { color: var(--primary); }
 
-        /* HERO SECTION */
-        .hero { background: linear-gradient(135deg, var(--dark) 0%, #333 100%); color: white; padding: 140px 5% 80px; text-align: center; }
-        .hero h1 { font-size: 2.5rem; margin-bottom: 15px; }
-        .hero p { font-size: 1.1rem; opacity: 0.9; max-width: 700px; margin: 0 auto 30px; }
-
         /* MAIN CONTENT */
-        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: 1fr 300px; gap: 30px; }
-        .section-header { margin-bottom: 25px; border-bottom: 3px solid var(--primary); display: inline-block; padding-bottom: 5px; font-size: 1.5rem; }
+        .container { max-width: 1200px; margin: 100px auto 50px; padding: 0 20px; display: grid; grid-template-columns: 1fr 300px; gap: 30px; }
+        .section-header { grid-column: 1 / -1; margin-bottom: 20px; border-bottom: 3px solid var(--primary); display: inline-block; padding-bottom: 5px; }
 
         /* ARTICLE GRID */
         .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
-        .article-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: 0.3s; border: 1px solid #eee; display: flex; flex-direction: column; }
-        .article-card:hover { transform: translateY(-8px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
-        .card-img { height: 180px; background-size: cover; background-position: center; background-repeat: no-repeat; background-color: #eee; }
+        .article-card { background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: 0.3s; display: flex; flex-direction: column; }
+        .article-card:hover { transform: translateY(-5px); }
+        .card-img { height: 180px; background-size: cover; background-position: center; background-repeat: no-repeat; }
         .card-body { padding: 20px; flex-grow: 1; }
-        .card-category { font-size: 10px; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; }
+        .card-category { font-size: 11px; font-weight: 700; color: var(--primary); text-transform: uppercase; }
         .card-body h3 { font-size: 1.1rem; margin: 10px 0; line-height: 1.4; color: #222; }
         .card-body p { font-size: 0.85rem; color: #666; margin-bottom: 15px; }
         .read-btn { font-size: 0.85rem; font-weight: 600; color: var(--secondary); text-decoration: none; }
 
         /* SIDEBAR */
-        aside { height: fit-content; position: sticky; top: 100px; }
-        .widget { background: #fff; padding: 20px; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        aside { background: #fff; padding: 20px; border-radius: 10px; height: fit-content; position: sticky; top: 100px; }
         .widget h4 { margin-bottom: 15px; border-left: 4px solid var(--primary); padding-left: 10px; }
+        .widget ul { list-style: none; }
+        .widget ul li { margin-bottom: 10px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        .widget ul li a { text-decoration: none; color: #555; font-size: 0.85rem; }
 
-        /* FOOTER */
-        footer { background: var(--dark); color: #fff; padding: 60px 5% 20px; text-align: center; margin-top: 50px; }
-        .copyright { border-top: 1px solid #333; padding-top: 20px; font-size: 0.8rem; opacity: 0.7; }
+        footer { background: var(--dark); color: #fff; padding: 50px 5% 20px; text-align: center; margin-top: 50px; }
 
         @media (max-width: 900px) { .container { grid-template-columns: 1fr; } }
     </style>
@@ -70,97 +65,72 @@
         </ul>
     </nav>
 
-    <header class="hero">
-        <h1>Kuasai Dunia Digital Bersama Kang Ruli</h1>
-        <p>Tutorial pemrograman, strategi SEO modern, dan panduan optimasi AdSense terlengkap.</p>
-    </header>
-
     <div class="container">
         <main>
-            <h2 class="section-header">Artikel Pilar Terpopuler</h2>
+            <h2 class="section-header">Artikel Pilar Unggulan</h2>
             
             <div class="blog-grid" id="article-container">
                 <script>
                     const articles = [
-                        { 
-                            cat: "SEO", 
-                            title: "Panduan Lengkap SEO 2025: Dominasi Google", 
-                            desc: "Teknik Semantic Search dan E-E-A-T untuk peringkat satu.",
-                            img: "http://googleusercontent.com/image_collection/image_retrieval/5779748084896282166_0"
-                        },
-                        { 
-                            cat: "Web Dev", 
-                            title: "Optimasi Core Web Vitals Skor 100", 
-                            desc: "Langkah teknis memperbaiki LCP, FID, dan CLS website Anda.",
-                            img: "http://googleusercontent.com/image_collection/image_retrieval/17291076118324552310_0"
-                        },
-                        { 
-                            cat: "AdSense", 
-                            title: "10 Niche Blog CPC Tertinggi 2025", 
-                            desc: "Daftar kategori blog yang membayar mahal per klik iklan.",
-                            img: "http://googleusercontent.com/image_collection/image_retrieval/16137060085896748839_0"
-                        },
-                        { 
-                            cat: "AI", 
-                            title: "Integrasi ChatGPT API ke WordPress", 
-                            desc: "Cara otomatisasi konten dan chatbot pintar di blog Anda.",
-                            img: "http://googleusercontent.com/image_collection/image_retrieval/12349480896531198144_0"
-                        },
-                        { 
-                            cat: "Programming", 
-                            title: "Belajar JavaScript Modern (ES6+)", 
-                            desc: "Kuasai dasar-dasar coding hingga mahir untuk industri.",
-                            img: "http://googleusercontent.com/image_collection/image_retrieval/1311111568111669205_0"
-                        },
-                        { 
-                            cat: "Business", 
-                            title: "Strategi LinkedIn Marketing Freelancer", 
-                            desc: "Bangun personal branding untuk menarik klien internasional.",
-                            img: "http://googleusercontent.com/image_collection/image_retrieval/13131596133194130908_0"
-                        },
-                        { 
-                            cat: "Security", 
-                            title: "Mengamankan WordPress dari Hacker", 
-                            desc: "Langkah hardening sistem agar data situs tetap terlindungi.",
-                            img: "http://googleusercontent.com/image_collection/image_retrieval/2405809263042945490_0"
-                        }
+                        { cat: "SEO", title: "Panduan Lengkap SEO 2025: Cara Rangking 1 Tanpa Backlink", desc: "Temukan rahasia optimasi konten menggunakan teknik Semantic Search dan User Intent.", img: "http://googleusercontent.com/image_collection/image_retrieval/9790535540956546030_0" },
+                        { cat: "Web Dev", title: "Cara Membuat Website Cepat dengan Core Web Vitals Skor 100", desc: "Optimasi LCP, FID, dan CLS untuk performa website maksimal di mata Google.", img: "http://googleusercontent.com/image_collection/image_retrieval/16046140028530981432_0" },
+                        { cat: "AdSense", title: "10 Niche Blog dengan CPC Tertinggi di Indonesia", desc: "Daftar topik yang memberikan bayaran iklan paling mahal bagi pemilik blog.", img: "http://googleusercontent.com/image_collection/image_retrieval/17966560608712955249_0" },
+                        { cat: "Digital", title: "Cara Integrasi ChatGPT API ke dalam Website WordPress", desc: "Gunakan kecerdasan buatan untuk fitur chatbot dan generator konten otomatis.", img: "http://googleusercontent.com/image_collection/image_retrieval/6483388846469939066_0" },
+                        { cat: "Programming", title: "Belajar JavaScript Modern (ES6) untuk Pemula", desc: "Panduan dasar hingga mahir menggunakan fitur-fitur terbaru JavaScript.", img: "http://googleusercontent.com/image_collection/image_retrieval/11352992255487758615_0" },
+                        { cat: "Business", title: "Strategi Membangun Personal Branding di LinkedIn", desc: "Cara mendapatkan proyek freelance high-ticket melalui optimasi profil LinkedIn.", img: "http://googleusercontent.com/image_collection/image_retrieval/11221693825778946055_0" },
+                        { cat: "Security", title: "7 Langkah Mengamankan WordPress dari Serangan Hacker", desc: "Lindungi data Anda dengan sistem keamanan berlapis dan proteksi database.", img: "http://googleusercontent.com/image_collection/image_retrieval/11093324703946977627_0" }
                     ];
 
-                    let htmlContent = "";
-                    // Loop untuk menampilkan artikel
+                    let blogHtml = "";
                     for (let i = 0; i < 12; i++) {
                         const art = articles[i % articles.length];
-                        htmlContent += `
+                        blogHtml += `
                             <article class="article-card">
-                                <div class="card-img" style="background-image: url('${art.img}')"></div>
+                                <div class="card-img" style="background-image: url('${art.img}');"></div>
                                 <div class="card-body">
                                     <span class="card-category">${art.cat}</span>
                                     <h3>${art.title}</h3>
                                     <p>${art.desc}</p>
-                                    <a href="#" class="read-btn">Baca Selengkapnya →</a>
+                                    <a href="#" class="read-btn">Selengkapnya →</a>
                                 </div>
                             </article>
                         `;
+                        if ((i + 1) % 4 === 0) {
+                            blogHtml += `
+                                <div class="article-card" style="background:#f9f9f9; display:flex; align-items:center; justify-content:center; min-height: 300px;">
+                                    <div style="text-align:center;">
+                                        <span style="font-size:10px; color:#999; display:block; margin-bottom:10px;">ADVERTISING</span>
+                                        <div style="width:250px; height:200px; background:#ddd; border:1px dashed #bbb; display:flex; align-items:center; justify-content:center; color:#888; font-size:12px;">Slot Iklan AdSense</div>
+                                    </div>
+                                </div>
+                            `;
+                        }
                     }
-                    document.getElementById('article-container').innerHTML = htmlContent;
+                    document.getElementById('article-container').innerHTML = blogHtml;
                 </script>
             </div>
         </main>
 
         <aside>
             <div class="widget">
-                <h4>Trending Topik</h4>
-                <ul style="list-style: none; font-size: 0.9rem;">
-                    <li><a href="#" style="text-decoration:none; color:#555;">• Cara Daftar AdSense 2025</a></li>
-                    <li><a href="#" style="text-decoration:none; color:#555;">• Belajar ReactJS Pemula</a></li>
-                    <li><a href="#" style="text-decoration:none; color:#555;">• Hosting Gratis Selamanya</a></li>
+                <h4>Trending di Google</h4>
+                <ul>
+                    <li><a href="#">Cara Daftar AdSense 2025</a></li>
+                    <li><a href="#">Tutorial Python Dasar</a></li>
+                    <li><a href="#">Optimasi Kecepatan Hosting</a></li>
+                    <li><a href="#">Belajar Digital Marketing</a></li>
+                    <li><a href="#">Review Tema WordPress Terbaik</a></li>
                 </ul>
             </div>
+            
             <div class="widget">
-                <span style="font-size:10px; color:#999;">ADVERTISEMENT</span>
-                <div style="height:250px; background:#f9f9f9; display:flex; align-items:center; justify-content:center; border:1px solid #eee;">
-                    <p style="font-size:12px; color:#ccc;">Space Iklan AdSense</p>
-                </div>
+                <h4>Kategori Populer</h4>
+                <ul>
+                    <li><a href="#">Web Development (24)</a></li>
+                    <li><a href="#">SEO & SEM (31)</a></li>
+                    <li><a href="#">Monetisasi (18)</a></li>
+                    <li><a href="#">Artificial Intelligence (12)</a></li>
+                </ul>
             </div>
         </aside>
     </div>
