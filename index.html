@@ -3,127 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title id="page-title">Kang Ruli | Solusi Digital & Portal Edukasi Web</title>
     <meta name="description" id="meta-desc" content="Tutorial pemrograman, strategi SEO modern 2025, dan optimasi AdSense terlengkap.">
-    <link rel="canonical" id="canonical-url" href="https://blog.kangruli.web.id/">
-
-    <meta property="og:type" content="website">
-    <meta property="og:title" id="og-title" content="Kang Ruli | Solusi Digital">
-    <meta property="og:image" id="og-img" content="assets/banner-hero.webp">
-
+    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style>
-        :root {
-            --primary: #ff8c00;
-            --primary-soft: #fff5e6;
-            --dark: #0f172a;
-            --bg: #f8fafc;
-            --card: #ffffff;
-            --text-main: #1e293b;
-            --text-muted: #64748b;
-            --border: #e2e8f0;
-        }
+        :root { --primary: #ff8c00; --dark: #0f172a; --bg: #f8fafc; --card: #ffffff; --text: #1e293b; --muted: #64748b; --border: #e2e8f0; }
+        body.dark-mode { --bg: #020617; --card: #0f172a; --text: #f1f5f9; --muted: #94a3b8; --border: #1e293b; }
 
-        body.dark-mode {
-            --bg: #020617;
-            --card: #0f172a;
-            --text-main: #f1f5f9;
-            --text-muted: #94a3b8;
-            --border: #1e293b;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.6; }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; transition: background 0.3s, border 0.3s; }
-        body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text-main); line-height: 1.6; }
+        nav { background: var(--card); height: 70px; display: flex; justify-content: space-between; align-items: center; padding: 0 5%; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border-bottom: 1px solid var(--border); }
+        .logo { font-weight: 800; font-size: 1.5rem; color: var(--primary); text-decoration: none; }
 
-        /* Navigation */
-        nav { 
-            background: var(--card); 
-            height: 70px; 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            padding: 0 5%; 
-            position: fixed; 
-            width: 100%; 
-            top: 0; 
-            z-index: 1000; 
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-            border-bottom: 1px solid var(--border);
-        }
-        .logo { font-weight: 800; font-size: 1.5rem; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 10px; }
-        .logo img { height: 35px; }
-
-        /* Progress Bar */
         #progress-bar { position: fixed; top: 0; left: 0; width: 0%; height: 4px; background: var(--primary); z-index: 1001; }
 
-        /* Hero Section */
-        .hero { 
-            background: var(--dark); 
-            color: white; 
-            padding: 140px 5% 60px; 
-            text-align: center;
-            background-image: radial-gradient(circle at top right, #334155, var(--dark));
-        }
+        .hero { background: var(--dark); color: white; padding: 140px 5% 60px; text-align: center; }
         .search-container { max-width: 600px; margin: 30px auto; position: relative; }
-        .search-container input { 
-            width: 100%; padding: 15px 25px; border-radius: 50px; border: none; 
-            font-size: 1rem; box-shadow: 0 10px 25px rgba(0,0,0,0.2); outline: none;
-        }
-        .search-container button { 
-            position: absolute; right: 5px; top: 5px; bottom: 5px; width: 50px; 
-            border-radius: 50%; border: none; background: var(--primary); color: white; cursor: pointer;
-        }
+        .search-container input { width: 100%; padding: 15px 25px; border-radius: 50px; border: none; outline: none; font-size: 1rem; }
+        .search-container button { position: absolute; right: 5px; top: 5px; bottom: 5px; width: 50px; border-radius: 50%; border: none; background: var(--primary); color: white; cursor: pointer; }
 
-        /* Category Tabs */
-        .category-wrapper { display: flex; justify-content: center; gap: 10px; margin-bottom: 30px; flex-wrap: wrap; }
-        .cat-btn { 
-            padding: 8px 20px; border-radius: 20px; border: 1px solid var(--border); 
-            background: var(--card); color: var(--text-main); cursor: pointer; font-size: 0.9rem;
-        }
+        .main-wrapper { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: 1fr 320px; gap: 40px; }
+        
+        .cat-btn { padding: 8px 20px; border-radius: 20px; border: 1px solid var(--border); background: var(--card); color: var(--text); cursor: pointer; margin: 5px; }
         .cat-btn.active { background: var(--primary); color: white; border-color: var(--primary); }
 
-        /* Layout */
-        .main-wrapper { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: 1fr 320px; gap: 40px; }
-
-        /* Blog Grid */
         .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px; }
-        .post-card { 
-            background: var(--card); border-radius: 16px; overflow: hidden; 
-            border: 1px solid var(--border); transition: 0.3s; cursor: pointer;
-        }
-        .post-card:hover { transform: translateY(-10px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); }
-        .post-img { width: 100%; height: 200px; object-fit: cover; }
+        .post-card { background: var(--card); border-radius: 16px; overflow: hidden; border: 1px solid var(--border); transition: 0.3s; cursor: pointer; }
+        .post-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .post-img { width: 100%; height: 180px; object-fit: cover; }
         .post-info { padding: 20px; }
-        .post-cat { color: var(--primary); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; }
-        .post-title { font-size: 1.25rem; margin: 10px 0; font-weight: 700; line-height: 1.3; }
 
-        /* Sidebar */
-        aside .widget { background: var(--card); padding: 24px; border-radius: 16px; border: 1px solid var(--border); margin-bottom: 25px; }
-        .widget-title { font-size: 1.1rem; margin-bottom: 20px; border-left: 4px solid var(--primary); padding-left: 10px; }
-
-        /* Detail View */
         #detail-view { display: none; margin-top: 100px; }
         .article-body { background: var(--card); padding: 40px; border-radius: 20px; border: 1px solid var(--border); }
-        .article-body img { width: 100%; border-radius: 12px; margin-bottom: 30px; }
-        .content { font-size: 1.1rem; line-height: 1.8; color: var(--text-main); }
-        .content h2, .content h3 { margin: 30px 0 15px; }
+        .article-body img { width: 100%; border-radius: 12px; margin-bottom: 25px; }
 
-        /* Footer */
-        footer { background: var(--dark); color: #94a3b8; padding: 60px 5%; text-align: center; margin-top: 80px; }
+        #load-more { display: block; margin: 40px auto; padding: 12px 30px; background: transparent; border: 2px solid var(--primary); color: var(--primary); border-radius: 50px; font-weight: 600; cursor: pointer; }
 
-        /* Mobile */
+        footer { background: var(--dark); color: #94a3b8; padding: 40px; text-align: center; margin-top: 50px; }
         @media (max-width: 992px) { .main-wrapper { grid-template-columns: 1fr; } }
-
-        /* Load More */
-        #load-more { 
-            display: block; margin: 40px auto; padding: 12px 30px; 
-            background: transparent; border: 2px solid var(--primary); 
-            color: var(--primary); border-radius: 50px; font-weight: 600; cursor: pointer;
-        }
-        #load-more:hover { background: var(--primary); color: white; }
     </style>
 </head>
 <body>
@@ -131,47 +52,37 @@
 <div id="progress-bar"></div>
 
 <nav>
-    <a href="#" onclick="goHome(event)" class="logo">
-        <img src="assets/logo-lengkap.webp" alt="Kang Ruli">
-        <span>KANG RULI</span>
-    </a>
-    <div id="dark-mode-toggle" style="cursor:pointer; font-size: 1.2rem; color: var(--primary);">
-        <i class="fas fa-moon"></i>
-    </div>
+    <a href="#" onclick="goHome(event)" class="logo">KANG RULI</a>
+    <div id="dark-mode-toggle" style="cursor:pointer; color: var(--primary);"><i class="fas fa-moon"></i></div>
 </nav>
 
 <div id="home-view">
     <header class="hero">
-        <h1>Kuasai Skill Digital Masa Depan</h1>
-        <p>Tutorial SEO Modern, AdSense, dan Coding dalam Bahasa Indonesia.</p>
+        <h1>Portal Edukasi Digital</h1>
+        <p>Tutorial SEO, AdSense, dan Web Development</p>
         <div class="search-container">
-            <input type="text" id="searchInput" placeholder="Cari materi..." onkeyup="handleSearch(event)">
+            <input type="text" id="searchInput" placeholder="Cari artikel..." onkeyup="if(event.key==='Enter') runSearch()">
             <button onclick="runSearch()"><i class="fas fa-search"></i></button>
         </div>
     </header>
 
     <div class="main-wrapper">
         <main>
-            <div class="category-wrapper" id="catFilters">
+            <div style="margin-bottom: 30px; text-align: center;">
                 <button class="cat-btn active" onclick="filterByCat('All')">Semua</button>
                 <button class="cat-btn" onclick="filterByCat('SEO')">SEO</button>
                 <button class="cat-btn" onclick="filterByCat('AdSense')">AdSense</button>
-                <button class="cat-btn" onclick="filterByCat('Web')">Web Dev</button>
+                <button class="cat-btn" onclick="filterByCat('Web')">Web</button>
             </div>
-            
-            <div class="blog-grid" id="postGrid"></div>
+            <div class="blog-grid" id="postGrid">
+                </div>
             <button id="load-more" onclick="loadMorePosts()">Muat Lebih Banyak</button>
         </main>
 
         <aside>
-            <div class="widget">
-                <h3 class="widget-title">Paling Dicari</h3>
+            <div style="background: var(--card); padding: 20px; border-radius: 15px; border: 1px solid var(--border);">
+                <h3 style="margin-bottom:15px">Populer</h3>
                 <div id="popularPosts"></div>
-            </div>
-            <div class="widget">
-                <div style="background:#f1f5f9; height:250px; border-radius:8px; display:flex; align-items:center; justify-content:center; color:#94a3b8; font-size:0.8rem; border:1px dashed #cbd5e1;">
-                    IKLAN ADSENSE
-                </div>
             </div>
         </aside>
     </div>
@@ -181,165 +92,139 @@
     <main class="article-body">
         <div id="articleContent"></div>
     </main>
-    <aside id="detailSidebar">
-        </aside>
 </div>
 
 <footer>
-    <p>&copy; 2025 KangRuli.web.id. All rights reserved.</p>
-    <p style="font-size: 0.8rem; margin-top: 10px;">Portal Edukasi Strategi Digital & Optimasi Web</p>
+    <p>&copy; 2025 KangRuli.web.id</p>
 </footer>
 
-// Variabel Global
-let articles = []; 
-let itemsToShow = 6;
-let currentFilter = 'All';
+<script>
+    let articles = []; 
+    let itemsToShow = 6;
+    let currentFilter = 'All';
 
-// 1. FUNGSI AMBIL DATA DARI JSON
-async function loadArticles() {
-    try {
-        const response = await fetch('articles.json'); // Mengambil file JSON
-        if (!response.ok) throw new Error("Gagal memuat data artikel");
-        
-        articles = await response.json();
-        
-        // Setelah data berhasil diambil, jalankan inisialisasi routing
-        init();
-        renderPopular();
-    } catch (error) {
-        console.error("Error:", error);
-        document.getElementById('postGrid').innerHTML = `<p style="grid-column: 1/-1; text-align: center; padding: 50px;">Gagal memuat artikel. Pastikan file 'articles.json' tersedia.</p>`;
+    // 1. Ambil data dari articles.json
+    async function loadArticles() {
+        try {
+            const response = await fetch('articles.json');
+            if (!response.ok) throw new Error("File articles.json tidak ditemukan!");
+            articles = await response.json();
+            init();
+            renderPopular();
+        } catch (error) {
+            console.error(error);
+            document.getElementById('postGrid').innerHTML = `<p style="text-align:center; grid-column:1/-1;">Gagal memuat artikel. Pastikan file <b>articles.json</b> ada di folder yang sama.</p>`;
+        }
     }
-}
 
-// 2. ROUTING LOGIC
-function init() {
-    const hash = window.location.hash.replace('#/', '');
-    if (hash) {
-        renderDetail(hash);
-    } else {
+    // 2. Inisialisasi Routing
+    function init() {
+        const hash = window.location.hash.replace('#/', '');
+        if (hash) {
+            renderDetail(hash);
+        } else {
+            renderGrid();
+        }
+    }
+
+    // 3. Render Beranda
+    function renderGrid(limit = itemsToShow) {
+        document.getElementById('home-view').style.display = 'block';
+        document.getElementById('detail-view').style.display = 'none';
+
+        const grid = document.getElementById('postGrid');
+        const filtered = articles.filter(a => currentFilter === 'All' || a.cat === currentFilter);
+        const displayData = filtered.slice(0, limit);
+        
+        grid.innerHTML = displayData.map(post => `
+            <div class="post-card" onclick="location.hash='#/${post.slug}'">
+                <img src="${post.img}" class="post-img" alt="${post.title}">
+                <div class="post-info">
+                    <small style="color:var(--primary)">${post.cat}</small>
+                    <h3 style="margin:10px 0">${post.title}</h3>
+                    <p style="font-size:0.9rem; color:var(--muted)">${post.desc}</p>
+                </div>
+            </div>
+        `).join('');
+
+        document.getElementById('load-more').style.display = filtered.length > limit ? 'block' : 'none';
+    }
+
+    // 4. Render Detail
+    function renderDetail(slug) {
+        const post = articles.find(a => a.slug === slug);
+        if (!post) return goHome();
+
+        document.getElementById('home-view').style.display = 'none';
+        document.getElementById('detail-view').style.display = 'grid';
+
+        document.getElementById('articleContent').innerHTML = `
+            <a href="#" onclick="goHome(event)" style="text-decoration:none; color:var(--primary); font-weight:bold;">&larr; Kembali</a>
+            <h1 style="margin:20px 0">${post.title}</h1>
+            <img src="${post.img}" alt="${post.title}">
+            <div style="font-size:1.1rem; line-height:1.8">${post.content}</div>
+        `;
+        window.scrollTo(0,0);
+    }
+
+    function goHome(e) {
+        if(e) e.preventDefault();
+        window.location.hash = '';
         renderGrid();
     }
-}
 
-// 3. RENDER GRID (BERANDA)
-function renderGrid(limit = itemsToShow) {
-    document.getElementById('home-view').style.display = 'block';
-    document.getElementById('detail-view').style.display = 'none';
-
-    const grid = document.getElementById('postGrid');
-    const filtered = articles.filter(a => currentFilter === 'All' || a.cat === currentFilter);
-    const displayData = filtered.slice(0, limit);
-    
-    if (displayData.length === 0) {
-        grid.innerHTML = "<p>Tidak ada artikel ditemukan.</p>";
-        return;
+    function filterByCat(cat) {
+        currentFilter = cat;
+        itemsToShow = 6;
+        document.querySelectorAll('.cat-btn').forEach(btn => {
+            btn.classList.toggle('active', btn.innerText === (cat === 'All' ? 'Semua' : cat));
+        });
+        renderGrid();
     }
 
-    grid.innerHTML = displayData.map(post => `
-        <article class="post-card" onclick="goToDetail('${post.slug}')">
-            <img src="${post.img}" class="post-img" alt="${post.title}" loading="lazy">
-            <div class="post-info">
-                <span class="post-cat">${post.cat}</span>
-                <h3 class="post-title">${post.title}</h3>
-                <p style="font-size:0.9rem; color:var(--text-muted)">${post.desc}</p>
-            </div>
-        </article>
-    `).join('');
-
-    const loadMoreBtn = document.getElementById('load-more');
-    if (loadMoreBtn) {
-        loadMoreBtn.style.display = filtered.length > limit ? 'block' : 'none';
+    function loadMorePosts() {
+        itemsToShow += 6;
+        renderGrid(itemsToShow);
     }
-    
-    updateSEO("Kang Ruli | Solusi Digital & Portal Edukasi Web", "Tutorial pemrograman dan SEO terlengkap.");
-}
 
-// 4. RENDER DETAIL ARTIKEL
-function renderDetail(slug) {
-    const post = articles.find(a => a.slug === slug);
-    if (!post) return goHome();
-
-    document.getElementById('home-view').style.display = 'none';
-    document.getElementById('detail-view').style.display = 'grid';
-
-    document.getElementById('articleContent').innerHTML = `
-        <a href="#" onclick="goHome(event)" style="color:var(--primary); text-decoration:none; font-weight:600;"><i class="fas fa-arrow-left"></i> Kembali</a>
-        <div style="margin-top:20px;">
-            <span class="post-cat">${post.cat}</span>
-            <h1 style="font-size:2.5rem; margin:15px 0 30px;">${post.title}</h1>
-            <img src="${post.img}" alt="${post.title}" style="width:100%; border-radius:15px;">
-            <div class="content" style="margin-top:30px;">${post.content}</div>
-        </div>
-    `;
-
-    updateSEO(`${post.title} - Kang Ruli`, post.desc);
-    window.scrollTo({top: 0, behavior: 'smooth'});
-}
-
-// --- FUNGSI PEMBANTU ---
-function goToDetail(slug) { window.location.hash = '#/' + slug; }
-
-function goHome(e) { 
-    if(e) e.preventDefault(); 
-    window.location.hash = ''; 
-    renderGrid(); 
-}
-
-function filterByCat(cat) {
-    currentFilter = cat;
-    itemsToShow = 6;
-    document.querySelectorAll('.cat-btn').forEach(btn => {
-        const btnText = btn.innerText.replace('Web Dev', 'Web').replace('Semua', 'All');
-        btn.classList.toggle('active', btnText === cat);
-    });
-    renderGrid();
-}
-
-function loadMorePosts() {
-    itemsToShow += 6;
-    renderGrid(itemsToShow);
-}
-
-function runSearch() {
-    const query = document.getElementById('searchInput').value.toLowerCase();
-    const filtered = articles.filter(a => a.title.toLowerCase().includes(query) || a.desc.toLowerCase().includes(query));
-    renderFiltered(filtered);
-}
-
-function renderFiltered(data) {
-    const grid = document.getElementById('postGrid');
-    grid.innerHTML = data.map(post => `
-        <div class="post-card" onclick="goToDetail('${post.slug}')">
-            <img src="${post.img}" class="post-img" alt="${post.title}">
-            <div class="post-info">
-                <span class="post-cat">${post.cat}</span>
-                <h3 class="post-title">${post.title}</h3>
+    function runSearch() {
+        const query = document.getElementById('searchInput').value.toLowerCase();
+        const filtered = articles.filter(a => a.title.toLowerCase().includes(query));
+        currentFilter = 'All'; // Reset filter saat cari
+        
+        const grid = document.getElementById('postGrid');
+        grid.innerHTML = filtered.map(post => `
+            <div class="post-card" onclick="location.hash='#/${post.slug}'">
+                <div class="post-info">
+                    <h3 style="margin:10px 0">${post.title}</h3>
+                </div>
             </div>
-        </div>
-    `).join('');
-    document.getElementById('load-more').style.display = 'none';
-}
+        `).join('');
+        document.getElementById('load-more').style.display = 'none';
+    }
 
-function renderPopular() {
-    const pop = articles.slice(0, 4);
-    document.getElementById('popularPosts').innerHTML = pop.map(p => `
-        <div style="display:flex; gap:12px; margin-bottom:15px; cursor:pointer;" onclick="goToDetail('${p.slug}')">
-            <img src="${p.img}" style="width:60px; height:60px; border-radius:8px; object-fit:cover;">
-            <h4 style="font-size:0.85rem; line-height:1.2;">${p.title}</h4>
-        </div>
-    `).join('');
-}
+    function renderPopular() {
+        const pop = articles.slice(0, 4);
+        document.getElementById('popularPosts').innerHTML = pop.map(p => `
+            <div style="margin-bottom:15px; cursor:pointer;" onclick="location.hash='#/${p.slug}'">
+                <h4 style="font-size:0.9rem">${p.title}</h4>
+            </div>
+        `).join('');
+    }
 
-function updateSEO(title, desc) {
-    document.title = title;
-    const meta = document.getElementById('meta-desc');
-    if(meta) meta.content = desc;
-}
+    // UI Logic
+    document.getElementById('dark-mode-toggle').onclick = () => {
+        document.body.classList.toggle('dark-mode');
+    };
 
-// Event Listeners
-window.addEventListener('hashchange', init);
-window.onload = loadArticles; // Mulai dengan memuat file JSON
+    window.onscroll = () => {
+        let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        document.getElementById("progress-bar").style.width = (winScroll / height) * 100 + "%";
+    };
+
+    window.addEventListener('hashchange', init);
+    window.onload = loadArticles;
 </script>
 
 </body>
