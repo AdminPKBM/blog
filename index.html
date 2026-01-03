@@ -106,19 +106,26 @@
 
     // FUNGSI UTAMA: Mengambil data dari file JSON
     async function loadData() {
-        try {
-            const response = await fetch('articles.json'); // Mengambil file eksternal
-            if (!response.ok) throw new Error("Gagal mengambil data JSON");
-            
-            articles = await response.json(); // Simpan data ke variabel articles
-            filteredArticles = [...articles]; // Copy data untuk filter
-            
-            init(); // Jalankan inisialisasi tampilan setelah data siap
-        } catch (error) {
-            console.error("Error:", error);
-            document.getElementById('postGrid').innerHTML = "<p style='text-align:center; grid-column:1/-1;'>Gagal memuat data artikel.</p>";
+    try {
+        // Arahkan ke sub-folder 'data'
+        const response = await fetch('data/articles.json'); 
+        
+        if (!response.ok) {
+            throw new Error(`Gagal memuat file (Status: ${response.status})`);
         }
+        
+        articles = await response.json();
+        filteredArticles = [...articles];
+        init();
+    } catch (error) {
+        console.error("Detail Error:", error);
+        document.getElementById('postGrid').innerHTML = `
+            <div style="grid-column: 1/-1; text-align:center; padding:50px;">
+                <p>Gagal memuat data artikel.</p>
+                <small style="color:red;">${error.message}</small>
+            </div>`;
     }
+}
 
     function init() {
         const hash = window.location.hash;
