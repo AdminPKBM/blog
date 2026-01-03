@@ -1,162 +1,82 @@
-<script>
-    // DATA ARTIKEL LENGKAP (SEO & ADSENSE)
-    const articles = [
-        /* --- KATEGORI SEO --- */
-        {
-            "slug": "panduan-seo-2025-pemula",
-            "cat": "SEO",
-            "title": "Panduan Lengkap SEO Modern 2025 untuk Pemula",
-            "desc": "Kuasai teknik SEO terbaru 2025 mulai dari EEAT hingga optimasi Search Generative Experience (SGE).",
-            "img": "https://images.unsplash.com/photo-1571721738239-7b2111d4d73b?w=600",
-            "content": "<h3>Evolusi SEO di Era AI</h3><p>SEO tahun 2025 tidak lagi hanya tentang kata kunci, melainkan tentang <b>User Intent</b>. Google semakin pintar dalam memahami konteks konten melalui sistem SGE (Search Generative Experience).</p><h4>Pilar Utama SEO 2025:</h4><ul><li><b>EEAT:</b> Menonjolkan pengalaman nyata (Experience) dan kredibilitas penulis.</li><li><b>Core Web Vitals:</b> Kecepatan loading (LCP) dan stabilitas visual (CLS) tetap menjadi ranking factor utama.</li><li><b>Semantic Search:</b> Fokus pada topik yang mendalam, bukan sekadar pengulangan kata kunci.</li></ul>"
-        },
-        {
-            "slug": "optimasi-lcp-core-web-vitals",
-            "cat": "SEO",
-            "title": "Cara Memperbaiki Skor LCP di Core Web Vitals",
-            "desc": "Teknik mempercepat loading gambar utama website agar lolos audit Google Search Console.",
-            "img": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600",
-            "content": "<h3>Apa itu LCP?</h3><p>Largest Contentful Paint (LCP) mengukur waktu yang dibutuhkan untuk menampilkan elemen visual terbesar di layar.</p>"
-        },
-        {
-            "slug": "strategi-backlink-pbn-aman",
-            "cat": "SEO",
-            "title": "Strategi Backlink PBN Aman 2025",
-            "desc": "Cara membangun jaringan blog pribadi tanpa terkena penalti Google.",
-            "img": "https://images.unsplash.com/photo-1562577309-4932fdd64cd1?w=600",
-            "content": "<h3>Keamanan Jaringan PBN</h3><p>Kuncinya adalah membuat jaringan terlihat seperti situs mandiri yang organik.</p>"
-        },
-        {
-            "slug": "cara-riset-keyword-gratisan",
-            "cat": "SEO",
-            "title": "Riset Keyword Menggunakan Tools Gratisan 100%",
-            "desc": "Memanfaatkan Google Trends dan Suggest untuk ide konten viral.",
-            "img": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600",
-            "content": "<h3>Riset Tanpa Biaya</h3><p>Manfaatkan Google Autocomplete dan Google Trends secara maksimal.</p>"
-        },
-        {
-            "slug": "optimasi-voice-search",
-            "cat": "SEO",
-            "title": "Optimasi Blog untuk Pencarian Suara",
-            "desc": "Cara agar artikel muncul di Google Assistant atau Siri.",
-            "img": "https://images.unsplash.com/photo-1589254065878-42c9da997008?w=600",
-            "content": "<h3>Conversational SEO</h3><p>Gunakan bahasa sehari-hari dan format pertanyaan-jawaban.</p>"
-        },
-        {
-            "slug": "mobile-first-indexing-guide",
-            "cat": "SEO",
-            "title": "Panduan Mobile-First Indexing 2025",
-            "desc": "Memastikan tampilan mobile sempurna di mata Google Bot.",
-            "img": "https://images.unsplash.com/photo-1522199755839-a2bacb67c546?w=600",
-            "content": "<h3>Mobile Priority</h3><p>Google kini memprioritaskan versi mobile untuk indexing dan ranking.</p>"
-        },
-        {
-            "slug": "penggunaan-tag-canonical",
-            "cat": "SEO",
-            "title": "Cara Penggunaan Tag Canonical yang Benar",
-            "desc": "Menghindari masalah konten duplikat yang merusak otoritas.",
-            "img": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=600",
-            "content": "<h3>Fungsi Canonical Tag</h3><p>Memberi tahu mesin pencari URL mana yang merupakan versi utama.</p>"
-        },
-
-        /* --- KATEGORI ADSENSE --- */
-        {
-            "slug": "cara-daftar-adsense-cepat-approve",
-            "cat": "AdSense",
-            "title": "Cara Daftar AdSense 2025 Agar Cepat Diterima",
-            "desc": "Tips rahasia menyiapkan blog agar lolos review AdSense kurang dari 48 jam.",
-            "img": "https://images.unsplash.com/photo-1554224155-169641357599?w=600",
-            "content": "<h3>Kesiapan Blog AdSense</h3><p>Navigasi yang berantakan atau konten tipis pasti akan ditolak.</p>"
-        },
-        {
-            "slug": "meningkatkan-cpc-adsense-indonesia",
-            "cat": "AdSense",
-            "title": "Cara Meningkatkan CPC AdSense Blog Indonesia",
-            "desc": "Strategi menaikkan nilai klik iklan agar setara dengan blog luar negeri.",
-            "img": "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=600",
-            "content": "<h3>Niche CPC Tinggi</h3><p>Pilih topik Finance, Health, atau Tech untuk bayaran lebih tinggi.</p>"
-        },
-        {
-            "slug": "mengatasi-limit-adsense",
-            "cat": "AdSense",
-            "title": "Cara Mengatasi Limit Iklan AdSense",
-            "desc": "Solusi ampuh jika iklan tidak muncul karena pembatasan trafik.",
-            "img": "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=600",
-            "content": "<h3>Penyebab Iklan Dibatasi</h3><p>Biasanya karena trafik tidak valid atau lonjakan medsos tidak wajar.</p>"
-        }
-        // ... (Tambahkan sisa artikel lainnya di sini dengan format yang sama)
-    ];
-
-    let currentLimit = 6;
-    let filteredArticles = [...articles];
-
-    function init() {
-        const hash = window.location.hash;
-        if (hash.startsWith('#/')) {
-            const slug = hash.replace('#/', '');
-            const post = articles.find(a => a.slug === slug);
-            if (post) { showDetail(post); return; }
-        }
-        showHome();
-    }
-
-    function showHome() {
-        document.getElementById('home-view').style.display = 'block';
-        document.getElementById('detail-view').style.display = 'none';
-        renderPosts();
-        renderPopular();
-    }
-
-    function showDetail(post) {
-        document.getElementById('home-view').style.display = 'none';
-        document.getElementById('detail-view').style.display = 'grid';
-        document.getElementById('articleContent').innerHTML = `
-            <button onclick="goHome(event)" style="margin-bottom:20px; color:var(--primary); border:none; background:none; cursor:pointer; font-weight:bold;">
-                <i class="fas fa-arrow-left"></i> Kembali
-            </button>
-            <h1>${post.title}</h1>
-            <img src="${post.img}" style="width:100%; border-radius:15px; margin:20px 0;">
-            <div class="content-text">${post.content}</div>
-        `;
-        window.scrollTo(0,0);
-    }
-
-    function renderPosts() {
-        const grid = document.getElementById('postGrid');
-        const displayData = filteredArticles.slice(0, currentLimit);
-        
-        grid.innerHTML = displayData.map(post => `
-            <div class="post-card" onclick="location.hash='#/${post.slug}'">
-                <img src="${post.img}" class="post-img">
-                <div class="post-info">
-                    <small style="color:var(--primary); font-weight:bold;">${post.cat}</small>
-                    <h3 style="margin:10px 0">${post.title}</h3>
-                    <p style="font-size:0.9rem; color:var(--muted)">${post.desc}</p>
-                </div>
-            </div>
-        `).join('');
-
-        document.getElementById('load-more').style.display = currentLimit < filteredArticles.length ? 'block' : 'none';
-    }
-
-    function renderPopular() {
-        const pop = articles.slice(0, 5);
-        document.getElementById('popularPosts').innerHTML = pop.map(p => `
-            <div style="margin-bottom:15px; cursor:pointer; border-bottom:1px solid var(--border); padding-bottom:10px" onclick="location.hash='#/${p.slug}'">
-                <h4 style="font-size:0.9rem;">${p.title}</h4>
-            </div>
-        `).join('');
-    }
-
-    function filterByCat(cat) {
-        document.querySelectorAll('.cat-btn').forEach(btn => btn.classList.remove('active'));
-        filteredArticles = (cat === 'All') ? [...articles] : articles.filter(a => a.cat === cat);
-        currentLimit = 6;
-        renderPosts();
-    }
-
-    function goHome(e) { e.preventDefault(); window.location.hash = ''; showHome(); }
-
-    window.addEventListener('hashchange', init);
-    window.onload = init;
-</script>
+[
+  {
+    "slug": "panduan-seo-2025-pemula",
+    "cat": "SEO",
+    "title": "Panduan Lengkap SEO Modern 2025 untuk Pemula",
+    "desc": "Kuasai teknik SEO terbaru 2025 mulai dari EEAT hingga optimasi Search Generative Experience (SGE).",
+    "img": "https://images.unsplash.com/photo-1571721738239-7b2111d4d73b?w=600",
+    "content": "<h3>Evolusi SEO di Era AI</h3><p>SEO tahun 2025 tidak lagi hanya tentang kata kunci, melainkan tentang <b>User Intent</b>. Google semakin pintar dalam memahami konteks konten melalui sistem SGE (Search Generative Experience).</p><h4>Pilar Utama SEO 2025:</h4><ul><li><b>EEAT:</b> Menonjolkan pengalaman nyata (Experience) dan kredibilitas penulis.</li><li><b>Core Web Vitals:</b> Kecepatan loading (LCP) dan stabilitas visual (CLS) tetap menjadi ranking factor utama.</li><li><b>Semantic Search:</b> Fokus pada topik yang mendalam, bukan sekadar pengulangan kata kunci.</li></ul>"
+  },
+  {
+    "slug": "optimasi-lcp-core-web-vitals",
+    "cat": "SEO",
+    "title": "Cara Memperbaiki Skor LCP di Core Web Vitals",
+    "desc": "Teknik mempercepat loading gambar utama website agar lolos audit Google Search Console.",
+    "img": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600",
+    "content": "<h3>Apa itu LCP?</h3><p>Largest Contentful Paint (LCP) mengukur waktu yang dibutuhkan untuk menampilkan elemen visual terbesar di layar.</p>"
+  },
+  {
+    "slug": "strategi-backlink-pbn-aman",
+    "cat": "SEO",
+    "title": "Strategi Backlink PBN Aman 2025",
+    "desc": "Cara membangun jaringan blog pribadi tanpa terkena penalti Google.",
+    "img": "https://images.unsplash.com/photo-1562577309-4932fdd64cd1?w=600",
+    "content": "<h3>Keamanan Jaringan PBN</h3><p>Kuncinya adalah membuat jaringan terlihat seperti situs mandiri yang organik.</p>"
+  },
+  {
+    "slug": "cara-riset-keyword-gratisan",
+    "cat": "SEO",
+    "title": "Riset Keyword Menggunakan Tools Gratisan 100%",
+    "desc": "Memanfaatkan Google Trends dan Suggest untuk ide konten viral.",
+    "img": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600",
+    "content": "<h3>Riset Tanpa Biaya</h3><p>Manfaatkan Google Autocomplete dan Google Trends secara maksimal.</p>"
+  },
+  {
+    "slug": "optimasi-voice-search",
+    "cat": "SEO",
+    "title": "Optimasi Blog untuk Pencarian Suara",
+    "desc": "Cara agar artikel muncul di Google Assistant atau Siri.",
+    "img": "https://images.unsplash.com/photo-1589254065878-42c9da997008?w=600",
+    "content": "<h3>Conversational SEO</h3><p>Gunakan bahasa sehari-hari dan format pertanyaan-jawaban.</p>"
+  },
+  {
+    "slug": "mobile-first-indexing-guide",
+    "cat": "SEO",
+    "title": "Panduan Mobile-First Indexing 2025",
+    "desc": "Memastikan tampilan mobile sempurna di mata Google Bot.",
+    "img": "https://images.unsplash.com/photo-1522199755839-a2bacb67c546?w=600",
+    "content": "<h3>Mobile Priority</h3><p>Google kini memprioritaskan versi mobile untuk indexing dan ranking.</p>"
+  },
+  {
+    "slug": "penggunaan-tag-canonical",
+    "cat": "SEO",
+    "title": "Cara Penggunaan Tag Canonical yang Benar",
+    "desc": "Menghindari masalah konten duplikat yang merusak otoritas.",
+    "img": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=600",
+    "content": "<h3>Fungsi Canonical Tag</h3><p>Memberi tahu mesin pencari URL mana yang merupakan versi utama.</p>"
+  },
+  {
+    "slug": "cara-daftar-adsense-cepat-approve",
+    "cat": "AdSense",
+    "title": "Cara Daftar AdSense 2025 Agar Cepat Diterima",
+    "desc": "Tips rahasia menyiapkan blog agar lolos review AdSense kurang dari 48 jam.",
+    "img": "https://images.unsplash.com/photo-1554224155-169641357599?w=600",
+    "content": "<h3>Kesiapan Blog AdSense</h3><p>Navigasi yang berantakan atau konten tipis pasti akan ditolak.</p>"
+  },
+  {
+    "slug": "meningkatkan-cpc-adsense-indonesia",
+    "cat": "AdSense",
+    "title": "Cara Meningkatkan CPC AdSense Blog Indonesia",
+    "desc": "Strategi menaikkan nilai klik iklan agar setara dengan blog luar negeri.",
+    "img": "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=600",
+    "content": "<h3>Niche CPC Tinggi</h3><p>Pilih topik Finance, Health, atau Tech untuk bayaran lebih tinggi.</p>"
+  },
+  {
+    "slug": "mengatasi-limit-adsense",
+    "cat": "AdSense",
+    "title": "Cara Mengatasi Limit Iklan AdSense",
+    "desc": "Solusi ampuh jika iklan tidak muncul karena pembatasan trafik.",
+    "img": "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=600",
+    "content": "<h3>Penyebab Iklan Dibatasi</h3><p>Biasanya karena trafik tidak valid atau lonjakan medsos tidak wajar.</p>"
+  }
+]
