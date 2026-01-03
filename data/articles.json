@@ -1,4 +1,166 @@
 [
+  {
+    "slug": "cara-riset-keyword-ai-2026",
+    "cat": "SEO",
+    "title": "Cara Riset Keyword Menggunakan AI: Akurasi 99%",
+    "desc": "Meninggalkan cara lama, inilah teknik riset keyword masa depan dengan bantuan LLM.",
+    "img": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600",
+    "content": "<h3>Efisiensi Riset Keyword</h3><p>Tahun ini, riset keyword bukan lagi soal volume, tapi soal 'Search Intent Cluster'. Menggunakan AI untuk memetakan apa yang sebenarnya diinginkan pengguna adalah kunci utama.</p>"
+  },
+  {
+    "slug": "niche-adsense-cpc-tertinggi-indonesia",
+    "cat": "AdSense",
+    "title": "10 Niche AdSense dengan CPC Tertinggi di Indonesia",
+    "desc": "Daftar topik blog yang memiliki bayaran per klik paling mahal untuk blogger lokal.",
+    "img": "https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=600",
+    "content": "<h3>Niche Berbayar Tinggi</h3><p>Topik seperti asuransi, perbankan, dan crypto masih mendominasi nilai CPC di Indonesia. Fokus pada artikel edukasi finansial untuk hasil maksimal.</p>"
+  },
+  {
+    "slug": "belajar-python-untuk-pemula-2026",
+    "cat": "Code",
+    "title": "Panduan Belajar Python 2026: Dari Nol Sampai Mahir",
+    "desc": "Bahasa pemrograman paling populer tahun ini. Pelajari kenapa Python wajib dikuasai.",
+    "img": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600",
+    "content": "<h3>Kenapa Python?</h3><p>Python adalah tulang punggung teknologi AI saat ini. Mempelajarinya membuka pintu karir di bidang Data Science dan Automation.</p>"
+  },
+  {
+    "slug": "cara-pakai-deepseek-ai-bisnis",
+    "cat": "AI",
+    "title": "Cara Menggunakan DeepSeek AI untuk Efisiensi Bisnis",
+    "desc": "Panduan memaksimalkan model AI terbaru yang lebih cerdas dan hemat biaya.",
+    "img": "https://images.unsplash.com/photo-1675557009875-436f595b18b4?w=600",
+    "content": "<h3>Revolusi DeepSeek</h3><p>DeepSeek menawarkan kemampuan penalaran yang luar biasa dengan biaya API yang jauh lebih murah dibanding kompetitor.</p>"
+  },
+  {
+    "slug": "rahasia-lolos-audit-core-web-vitals",
+    "cat": "SEO",
+    "title": "Rahasia Lolos Audit Core Web Vitals Tanpa Ribet",
+    "desc": "Tips teknis membuat website Anda mendapatkan skor hijau di Google PageSpeed Insights.",
+    "img": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600",
+    "content": "<h3>Kecepatan adalah Segalanya</h3><p>Google sangat membenci website lambat. Gunakan format gambar WebP dan optimalkan script JavaScript Anda.</p>"
+  },
+  {
+    "slug": "cara-pasang-adsense-di-wordpress",
+    "cat": "AdSense",
+    "title": "Cara Pasang Iklan AdSense di WordPress (Manual & Auto)",
+    "desc": "Tutorial lengkap penempatan iklan yang aman dan tidak mengganggu pengunjung.",
+    "img": "https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa?w=600",
+    "content": "<h3>Integrasi AdSense</h3><p>Gunakan plugin 'Site Kit by Google' atau pasang kode secara manual di header untuk kontrol penuh atas tata letak iklan.</p>"
+  },
+  {
+    "slug": "framework-javascript-terbaik-2026",
+    "cat": "Code",
+    "title": "5 Framework JavaScript yang Paling Banyak Dicari Perusahaan",
+    "desc": "Apakah React masih raja? Simak perbandingan React, Vue, Svelte, dan Next.js.",
+    "img": "https://images.unsplash.com/photo-1581291518655-9524cc24d90c?w=600",
+    "content": "<h3>Ekosistem JS</h3><p>Next.js tetap menjadi favorit karena fitur SSR (Server Side Rendering) yang sangat ramah terhadap SEO.</p>"
+  },
+  {
+    "slug": "membangun-agent-ai-sendiri",
+    "cat": "AI",
+    "title": "Cara Membangun Agent AI Sendiri Tanpa Coding",
+    "desc": "Langkah mudah membuat asisten pribadi cerdas untuk menjawab chat otomatis.",
+    "img": "https://images.unsplash.com/photo-1531746790731-6c087fecd05a?w=600",
+    "content": "<h3>AI Agent Populer</h3><p>Dengan platform No-Code, siapa pun kini bisa membuat AI yang memiliki tugas spesifik seperti customer service.</p>"
+  },
+  {
+    "slug": "local-seo-untuk-usaha-kecil",
+    "cat": "SEO",
+    "title": "Strategi Local SEO: Agar Toko Anda Muncul di Google Maps",
+    "desc": "Cara mendatangkan pelanggan sekitar dengan mengoptimalkan profil Google Business.",
+    "img": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=600",
+    "content": "<h3>Dominasi Lokal</h3><p>Pastikan nama, alamat, dan nomor telepon (NAP) Anda konsisten di seluruh internet untuk memenangkan ranking lokal.</p>"
+  },
+  {
+    "slug": "mengatasi-invalid-traffic-adsense",
+    "cat": "AdSense",
+    "title": "Cara Mencegah Klik Tidak Valid (Invalid Traffic) di AdSense",
+    "desc": "Lindungi akun Anda dari banned permanen akibat serangan klik bom.",
+    "img": "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600",
+    "content": "<h3>Keamanan Akun</h3><p>Gunakan plugin perlindungan klik atau filter IP untuk memblokir bot yang mencoba merusak performa iklan Anda.</p>"
+  },
+  {
+    "slug": "belajar-tailwind-css-cepat",
+    "cat": "Code",
+    "title": "Tutorial Tailwind CSS: Membuat UI Modern dalam 10 Menit",
+    "desc": "Lupakan CSS tradisional, gunakan utility-first framework untuk styling lebih cepat.",
+    "img": "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=600",
+    "content": "<h3>Utility-First CSS</h3><p>Tailwind memungkinkan Anda membangun desain kustom tanpa harus keluar dari file HTML Anda.</p>"
+  },
+  {
+    "slug": "etika-penggunaan-ai-konten",
+    "cat": "AI",
+    "title": "Etika Penggunaan AI: Agar Konten Tetap Manusiawi",
+    "desc": "Hindari deteksi AI dan berikan nilai tambah yang unik pada tulisan Anda.",
+    "img": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=600",
+    "content": "<h3>Sentuhan Manusia</h3><p>Google tidak melarang AI, tapi Google melarang konten sampah. Selalu edit hasil AI dengan gaya bahasa Anda sendiri.</p>"
+  },
+  {
+    "slug": "teknik-backlink-broken-link-building",
+    "cat": "SEO",
+    "title": "Teknik Broken Link Building: Cara Aman Cari Backlink Gratis",
+    "desc": "Mendapatkan link berkualitas dari situs besar dengan membantu memperbaiki error mereka.",
+    "img": "https://images.unsplash.com/photo-1558655146-d09347e92766?w=600",
+    "content": "<h3>Win-Win Solution</h3><p>Cari link mati di situs otoritas, lalu tawarkan konten Anda sebagai penggantinya. Ini teknik SEO white hat paling efektif.</p>"
+  },
+  {
+    "slug": "tips-adsense-arbitrage-aman",
+    "cat": "AdSense",
+    "title": "AdSense Arbitrage: Strategi Beli Trafik Jual Klik Iklan",
+    "desc": "Cara mendapatkan profit dari selisih biaya iklan Facebook/FB Ads dengan pendapatan AdSense.",
+    "img": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600",
+    "content": "<h3>Arbitrage 101</h3><p>Kuncinya adalah konten viral dan CTR tinggi. Pastikan landing page Anda mematuhi kebijakan Google.</p>"
+  },
+  {
+    "slug": "api-development-dengan-nodejs",
+    "cat": "Code",
+    "title": "Membangun REST API Cepat dengan Node.js dan Express",
+    "desc": "Panduan backend developer untuk membuat sistem komunikasi data yang handal.",
+    "img": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=600",
+    "content": "<h3>Backend Modern</h3><p>Node.js sangat efisien untuk menangani ribuan koneksi secara bersamaan berkat arsitektur non-blocking I/O.</p>"
+  },
+  {
+    "slug": "ai-untuk-video-editing-otomatis",
+    "cat": "AI",
+    "title": "Cara Edit Video Otomatis Menggunakan AI dalam Hitungan Detik",
+    "desc": "Ubah teks menjadi video profesional untuk YouTube dan TikTok tanpa kamera.",
+    "img": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600",
+    "content": "<h3>Content Creation AI</h3><p>Tools seperti HeyGen atau Sora memungkinkan pembuatan konten visual tanpa memerlukan skill editing rumit.</p>"
+  },
+  {
+    "slug": "optimasi-seo-gambar",
+    "cat": "SEO",
+    "title": "Panduan SEO Gambar: Muncul di Pencarian Foto Google",
+    "desc": "Jangan abaikan tag ALT dan kompresi gambar. Simak caranya di sini.",
+    "img": "https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=600",
+    "content": "<h3>Visual Search</h3><p>Menggunakan nama file yang relevan (bukan IMG_001.jpg) membantu bot Google memahami isi gambar Anda.</p>"
+  },
+  {
+    "slug": "pajak-adsense-indonesia-w8ben",
+    "cat": "AdSense",
+    "title": "Cara Isi Formulir Pajak W-8BEN AdSense Indonesia",
+    "desc": "Panduan agar pendapatan AdSense Anda tidak dipotong pajak AS sebesar 30%.",
+    "img": "https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=600",
+    "content": "<h3>Administrasi Pajak</h3><p>Sebagai warga negara Indonesia, Anda berhak atas tarif pajak yang lebih rendah berkat perjanjian tax treaty dengan AS.</p>"
+  },
+  {
+    "slug": "github-copilot-vs-cursor-ai",
+    "cat": "Code",
+    "title": "GitHub Copilot vs Cursor AI: Mana Code Editor Terbaik?",
+    "desc": "Perbandingan mendalam dua tools AI yang paling sering digunakan programmer saat ini.",
+    "img": "https://images.unsplash.com/photo-1605379399642-870262d3d051?w=600",
+    "content": "<h3>AI Pair Programming</h3><p>Cursor AI kini mulai mengungguli VS Code berkat integrasi model Claude 3.5 Sonnet yang sangat cerdas.</p>"
+  },
+  {
+    "slug": "masa-depan-pekerjaan-di-era-ai",
+    "cat": "AI",
+    "title": "Apakah AI Akan Menggantikan Programmer? Ini Faktanya",
+    "desc": "Analisis mendalam tentang pergeseran karir teknologi di tahun 2026.",
+    "img": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600",
+    "content": "<h3>Adaptasi atau Mati</h3><p>AI tidak akan menggantikan programmer, tapi programmer yang menggunakan AI akan menggantikan yang tidak menggunakannya.</p>"
+  }
+
+
   
   {
     "slug": "strategi-seo-2026-dominasi-sge",
