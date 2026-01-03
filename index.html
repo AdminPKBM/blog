@@ -112,33 +112,38 @@
     let filteredArticles = [];
 
     // 1. LOAD DATA DARI JSON
-    async function loadData() {
-        try {
-            // Mengambil file dari folder data/
-            const response = await fetch('data/articles.json');
-            
-            if (!response.ok) {
-                throw new Error(`File JSON tidak ditemukan (Status: ${response.status}). Pastikan file ada di folder 'data/articles.json'`);
-            }
-
-            const contentType = response.headers.get("content-type");
-            if (!contentType || !contentType.includes("application/json")) {
-                throw new Error("Ups! Server mengirim HTML, bukan JSON. Gunakan Live Server!");
-            }
-
-            articles = await response.json();
-            filteredArticles = [...articles];
-            init(); // Jalankan router setelah data siap
-        } catch (error) {
-            console.error("Detail Error:", error);
-            document.getElementById('postGrid').innerHTML = `
-                <div style="grid-column: 1/-1; text-align:center; padding:50px;">
-                    <i class="fas fa-exclamation-triangle" style="font-size:3rem; color:red;"></i>
-                    <p style="margin-top:15px; font-weight:bold;">${error.message}</p>
-                    <small>Buka Console (F12) untuk detail teknis.</small>
-                </div>`;
+async function loadData() {
+    try {
+        // Menggunakan path relatif 'data/articles.json'
+        // Tanpa '/' di awal agar mencari di folder yang sama dengan index.html
+        const response = await fetch('data/articles.json');
+        
+        if (!response.ok) {
+            // Jika 404, tampilkan pesan spesifik
+            throw new Error(`File tidak ditemukan (404). Pastikan file ada di folder 'blog/data/articles.json'`);
         }
+
+        const contentType = response.headers.get("content-type");
+        // Validasi apakah yang diterima benar-benar JSON
+        if (!contentType || !contentType.includes("application/json")) {
+            throw new Error("Server tidak mengirim JSON. Pastikan file 'articles.json' bukan berisi kode HTML.");
+        }
+
+        articles = await response.json();
+        filteredArticles = [...articles];
+        init(); // Jalankan router setelah data siap
+    } catch (error) {
+        console.error("Detail Error:", error);
+        document.getElementById('postGrid').innerHTML = `
+            <div style="grid-column: 1/-1; text-align:center; padding:50px;">
+                <i class="fas fa-exclamation-triangle" style="font-size:3rem; color:red;"></i>
+                <p style="margin-top:15px; font-weight:bold;">Gagal Memuat Data Artikel</p>
+                <p style="color:var(--muted);">${error.message}</p>
+                <br>
+                <small>Tips: Jika di GitHub, pastikan sudah ada file <b>.nojekyll</b> di root repository.</small>
+            </div>`;
     }
+}
 
     // 2. ROUTING (HASH NAVIGATION)
     function init() {
